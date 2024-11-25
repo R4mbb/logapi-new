@@ -20,9 +20,10 @@ project-root/
 │   │   └── collector.py       # 실시간 Apache 로그 수집
 ├── db/
 │   ├── __init__.py            # DB 초기화 및 작업 유틸리티
+│   ├── cleanup.py             # 주기적으로 디비 청소(압축 백업)
 ├── templates/
 │   ├── dashboard.html         # 대시보드 HTML 템플릿
-│   ├── upload_logs.html         # 대시보드 HTML 템플릿
+│   ├── upload_logs.html       # 대시보드 HTML 템플릿
 ├── Dockerfile                 # Docker 빌드 파일
 ├── docker-compose.yml         # Docker Compose 설정 파일
 └── requirements.txt           # Python 종속성
