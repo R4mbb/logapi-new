@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  logapi:
+    build: .
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./logs:/var/log/apache2
+

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log Analysis Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+</head>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h1 class="text-center">Log Analysis Dashboard</h1>
+        <p class="text-center">Analyze logs by level and date</p>
+        <div class="card mt-4">
+            <div class="card-body">
+                {{ plot | safe }}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
