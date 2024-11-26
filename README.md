@@ -49,12 +49,12 @@ project-root/
 
 ---
 
-#각 기능별 제안한 개선 가능성 정리
+# 각 기능별 제안한 개선 가능성 정리
 
 ---
 
 
-##1. app.py (메인 엔트리)
+## 1. app.py (메인 엔트리)
 
 ---
 
@@ -69,11 +69,11 @@ project-root/
 ---
 
 
-##2. Blueprint 모듈
+## 2. Blueprint 모듈
 
 ---
 
-###blueprints/analysis/analysis.py
+### blueprints/analysis/analysis.py
 
 - 기능 구현 필요: 로그 데이터 분석 기능 추가(Pandas 활용).
 
@@ -82,7 +82,7 @@ project-root/
 - 유닛 테스트 작성: 분석 함수의 정확도를 검증하는 테스트 추가.
 
 
-###blueprints/recent_logs/routes.py
+### blueprints/recent_logs/routes.py
 
 - SQL Injection 방지: SQLAlchemy 사용으로 쿼리의 안전성 확보.
 
@@ -96,7 +96,7 @@ project-root/
 - (완료???????)
 
 
-###blueprints/dashboard/routes.py
+### blueprints/dashboard/routes.py
 
 - 그래프 유효성 검사: 사용자 입력값(X, Y 축 등)을 검증하는 로직 추가.
 
@@ -105,7 +105,7 @@ project-root/
 - 시각화 강화: Dash 통합으로 대화형 대시보드 지원.
 
 
-###blueprints/get_logs/routes.py
+### blueprints/get_logs/routes.py
 
 - 결과 제한: 필터 없는 쿼리에 대해 기본 결과 제한 추가.
 
@@ -116,7 +116,7 @@ project-root/
 - (완료)
 
 
-###blueprints/upload_logs/routes.py
+### blueprints/upload_logs/routes.py
 
 - 대규모 파일 처리: 스트리밍 방식으로 메모리 사용 최적화.
 
@@ -127,7 +127,7 @@ project-root/
 - (완료)
 
 
-###blueprints/main/routes.py
+### blueprints/main/routes.py
 
 - UI/UX 강화.
 
@@ -140,7 +140,7 @@ project-root/
 - 페이지 네비게이션이나 다국어 지원을 추가하려면 별도의 config를 활용.
 
 
-###blueprints/collector/collector.py
+### blueprints/collector/collector.py
 
 - 위 개선사항들 적용 후 오류 수정. (Nginx 로그도 수집하도록 등등)
 
@@ -155,7 +155,7 @@ project-root/
 - 로깅 및 모니터링: 처리된 로그의 수와 실패 로그를 기록.
 
 
-###blueprints/dashboard/routes.py
+### blueprints/dashboard/routes.py
 
 - UI/UX 강화.
 
@@ -172,7 +172,7 @@ project-root/
 ---
 
 
-##3. Database Management (db/cleanup.py)
+## 3. Database Management (db/cleanup.py)
 
 ---
 
@@ -190,11 +190,11 @@ project-root/
 ---
 
 
-##4. Frontend Templates
+## 4. Frontend Templates
 
 ---
 
-###templates/main_page.html
+### templates/main_page.html
 
 - 확장성: 메뉴를 Navbar로 통합하여 페이지 확장성을 확보.
 
@@ -203,7 +203,7 @@ project-root/
 - 다국어 지원: 텍스트를 국제화(i18n) 처리.
 
 
-###templates/upload_logs.html
+### templates/upload_logs.html
 
 - 파일 유효성 검사: 파일 크기와 포맷에 대한 클라이언트 검증 추가.
 
@@ -212,7 +212,7 @@ project-root/
 - 보안 강화: 업로드 처리에 추가적인 보안 점검.
 
 
-###templates/recent_logs.html
+### templates/recent_logs.html
 
 - 비동기 검색: AJAX를 활용해 실시간 필터링.
 
@@ -223,17 +223,17 @@ project-root/
 ---
 
 
-##종합적으로:
+## 종합적으로:
 
 ---
 
-###성능 개선: 대규모 데이터 처리에 적합한 최적화.
+### 성능 개선: 대규모 데이터 처리에 적합한 최적화.
 
-###보안 강화: CSRF 방어와 SQL Injection 방지.
+### 보안 강화: CSRF 방어와 SQL Injection 방지.
 
-###사용자 경험 향상: 비동기 처리, 대시보드 통합, 직관적 UI 제공.
+### 사용자 경험 향상: 비동기 처리, 대시보드 통합, 직관적 UI 제공.
 
-###확장 가능성: 로그 포맷 지원 확대와 국제화(i18n) 적용.
+### 확장 가능성: 로그 포맷 지원 확대와 국제화(i18n) 적용.
 
 ---
 
