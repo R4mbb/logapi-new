@@ -3,11 +3,13 @@ import sqlite3
 import pandas as pd
 import gzip
 import shutil
+from datetime import datetime, timedelta
 
 DB_PATH = "logs.db"
 EXPORT_DIR = "exports/"
 MAX_DB_SIZE_MB = 50  # Maximum DB size in MB
 MAX_LOG_COUNT = 10000  # Maximum number of logs
+RETENTION_DAYS = 30  # 로그 유지 기간 (30일)
 
 def get_db_size():
     """Get the size of the database file in MB."""
@@ -46,12 +48,25 @@ def export_logs():
     return compressed_file
 
 def cleanup_database():
-    """Clean up the database after exporting logs."""
+    """Clean up old logs from the database."""
+    cutoff_date = (datetime.now() - timedelta(days=RETENTION_DAYS)).strftime("%Y-%m-%d %H:%M:%S")
     conn = sqlite3.connect(DB_PATH)
-    cursor = conn.cursor()
-    cursor.execute("DELETE FROM logs")
-    conn.commit()
-    conn.close()
+
+    try:
+        # 트랜잭션 시작 (동시성 문제 방지)
+        conn.execute("BEGIN IMMEDIATE")
+        cursor = conn.cursor()
+
+        # 오래된 로그 삭제
+        cursor.execute("DELETE FROM logs WHERE timestamp < ?", (cutoff_date,))
+        deleted_count = cursor.rowcount
+        conn.commit()
+        print(f"{deleted_count} old logs deleted.")
+    except sqlite3.Error as e:
+        print(f"Database cleanup failed: {e}")
+        conn.rollback()
+    finally:
+        conn.close()
 
 def manage_database():
     """Check database status and perform cleanup if necessary."""
@@ -62,8 +77,7 @@ def manage_database():
         print(f"Database size: {db_size:.2f} MB, Log count: {log_count}. Exporting logs...")
         compressed_file = export_logs()
         print(f"Logs exported and compressed to: {compressed_file}")
-        cleanup_database()
-        print("Database cleaned up.")
-    else:
-        print(f"Database size: {db_size:.2f} MB, Log count: {log_count}. No cleanup required.")
+
+    # Cleanup old logs
+    cleanup_database()
 

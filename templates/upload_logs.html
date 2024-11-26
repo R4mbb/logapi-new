@@ -5,24 +5,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upload Logs</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    <style>
+        /* 전체적인 다크 테마 스타일 */
+        body {
+            background-color: #121212;
+            color: #f8f9fa;
+        }
+        .card {
+            background-color: #1e1e1e;
+            border: 1px solid #2e2e2e;
+        }
+        .form-control, .form-select {
+            background-color: #2e2e2e;
+            color: #ffffff;
+            border: 1px solid #444;
+        }
+        .form-control:focus, .form-select:focus {
+            border-color: #666;
+            box-shadow: none;
+        }
+        .btn-primary {
+            background-color: #007bff;
+            border: none;
+            color: #ffffff;
+        }
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+        .upload-status {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .upload-status.success {
+            background-color: #28a745;
+            color: #ffffff;
+        }
+        .upload-status.error {
+            background-color: #dc3545;
+            color: #ffffff;
+        }
+        .upload-status i {
+            margin-right: 10px;
+        }
+    </style>
 </head>
-<body class="bg-light">
+<body>
     <div class="container mt-5">
-        <h1 class="text-center">Upload Logs</h1>
-	<p class="text-center">Upload log files in .log or .txt format</p>
-        <form action="/upload_logs/" method="post" enctype="multipart/form-data" class="mt-4">
-            <div class="mb-3">
-                <label for="file" class="form-label">Choose CSV file:</label>
-                <input type="file" class="form-control" id="file" name="file" required>
+        <h1 class="text-center mb-4">Upload Logs</h1>
+
+        <!-- 파일 업로드 카드 -->
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Upload Log File</h5>
+                <form id="upload-form" class="row g-3 mt-3" enctype="multipart/form-data">
+                    <div class="col-md-6">
+                        <label for="file" class="form-label">Select Log File</label>
+                        <input type="file" class="form-control" id="file" name="file" required>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="file-type" class="form-label">Log File Type</label>
+                        <select class="form-select" id="file-type" name="file-type">
+                            <option value="json">JSON</option>
+                            <option value="text">Text</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <button type="submit" class="btn btn-primary mt-4 w-100">Upload</button>
+                    </div>
+                </form>
             </div>
-            <button type="submit" class="btn btn-primary">Upload</button>
-        </form>
-        {% if message %}
-        <div class="alert alert-info mt-4" role="alert">
-            {{ message }}
         </div>
-        {% endif %}
+
+        <!-- 업로드 상태 -->
+        <div id="upload-status" class="upload-status" style="display: none;">
+            <!-- 업로드 메시지가 여기에 표시됩니다 -->
+        </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        // 파일 업로드 폼 제출 이벤트
+        $("#upload-form").on("submit", function (e) {
+            e.preventDefault();
+            const formData = new FormData(this);
+
+            // 업로드 상태 초기화
+            const statusDiv = $("#upload-status");
+            statusDiv.removeClass("success error").hide();
+
+            $.ajax({
+                url: "/upload_logs", // 업로드 로그를 처리하는 URL
+                method: "POST",
+                data: formData,
+                processData: false,
+                contentType: false,
+                success: function () {
+                    // 업로드 성공 메시지
+                    statusDiv
+                        .addClass("success")
+                        .html('<i class="bi bi-check-circle-fill"></i> File successfully uploaded!')
+                        .fadeIn();
+                },
+                error: function () {
+                    // 업로드 실패 메시지
+                    statusDiv
+                        .addClass("error")
+                        .html('<i class="bi bi-exclamation-circle-fill"></i> Failed to upload the file.')
+                        .fadeIn();
+                }
+            });
+        });
+    </script>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
 </body>
 </html>
 

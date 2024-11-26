@@ -11,9 +11,8 @@ def init_db():
             timestamp TEXT,
             level TEXT,
             message TEXT,
-            source TEXT,
-            destination TEXT
-
+            method TEXT,
+            source TEXT
         )
     ''')
     cursor.execute('''
@@ -26,13 +25,13 @@ def init_db():
     conn.commit()
     conn.close()
 
-def insert_log(timestamp, level, message, source, destination):
+def insert_log(timestamp, level, message, method, source):
     conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
     cursor.execute('''
-        INSERT INTO logs (timestamp, level, message, source, destination)
+        INSERT INTO logs (timestamp, level, message, method, source)
         VALUES (?, ?, ?, ?, ?)
-    ''', (timestamp, level, message, source, destination))
+    ''', (timestamp, level, message, method, source))
     conn.commit()
     conn.close()
 

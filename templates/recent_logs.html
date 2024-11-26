@@ -6,176 +6,225 @@
     <title>Recent Logs</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
     <style>
-        .table-striped tbody tr.highlight {
-            background-color: #f7f7f7;
+        /* 전체적인 다크 테마 스타일 */
+        body {
+            background-color: #121212;
+            color: #f8f9fa;
         }
-        .table thead th {
+        .card {
+            background-color: #1e1e1e;
+            border: 1px solid #2e2e2e;
+        }
+        .form-control, .form-select {
+            background-color: #2e2e2e;
+            color: #ffffff;
+            border: 1px solid #444;
+        }
+        .form-control:focus, .form-select:focus {
+            border-color: #666;
+            box-shadow: none;
+        }
+        .btn-primary {
             background-color: #007bff;
-            color: #fff;
-            text-align: center;
+            border: none;
+            color: #ffffff;
         }
-        .table tbody td {
-            text-align: center;
+        .btn-primary:hover {
+            background-color: #0056b3;
         }
-        .ip-field {
+        .table-wrapper {
+            overflow: hidden; /* 좌우 스크롤 제거 */
+        }
+        .table {
+            background-color: #1e1e1e;
+            color: #ffffff;
+            table-layout: fixed; /* 각 칸 너비 고정 */
+            width: 100%;
+	    --bs-table-striped-color: #ffffff;
+	    --bs-table-hover-color: #f7dada
+        }
+        .table th, .table td {
+            overflow: hidden;
+            text-overflow: ellipsis; /* 텍스트가 칸을 넘어가면 말줄임표 */
+            white-space: nowrap; /* 줄바꿈 방지 */
+        }
+        .table th {
+            background-color: #333;
+        }
+        .results-header {
+            font-size: 1.2rem;
             font-weight: bold;
-            color: #007bff;
+            color: #ffffff;
+        }
+        .no-results {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #aaaaaa;
         }
     </style>
 </head>
 <body>
     <div class="container mt-5">
-        <h1 class="text-center">Recent Logs</h1>
-        <form id="filter-form" class="row g-3 mt-4">
-            <div class="col-md-3">
-                <label for="level" class="form-label">Log Level</label>
-                <select class="form-select" id="level" name="level">
-                    <option value="">All</option>
-                    <option value="INFO">INFO</option>
-                    <option value="WARNING">WARNING</option>
-                    <option value="ERROR">ERROR</option>
-                    <option value="REDIRECT">REDIRECT</option>
-                </select>
+        <h1 class="text-center mb-4">Recent Logs</h1>
+
+        <!-- 필터 카드 -->
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Filters</h5>
+                <form id="filter-form" class="row g-3 mt-3">
+                    <div class="col-md-3">
+                        <label for="id" class="form-label">Log ID</label>
+                        <input type="number" class="form-control" id="id" name="id" placeholder="Enter Log ID">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="level" class="form-label">Log Level</label>
+                        <select class="form-select" id="level" name="level">
+                            <option value="">All Levels</option>
+                            <option value="INFO">INFO</option>
+                            <option value="WARNING">WARNING</option>
+                            <option value="ERROR">ERROR</option>
+                            <option value="DEBUG">DEBUG</option>
+                        </select>
+                    </div>
+                    <div class="col-md-3">
+                        <label for="start-date" class="form-label">Start Date</label>
+                        <input type="date" class="form-control" id="start-date" name="start_date">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="end-date" class="form-label">End Date</label>
+                        <input type="date" class="form-control" id="end-date" name="end_date">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="message" class="form-label">Keyword</label>
+                        <input type="text" class="form-control" id="keyword" name="message" placeholder="Search in Message">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="method" class="form-label">Method</label>
+                        <input type="text" class="form-control" id="method" name="method" placeholder="Enter Method">
+                    </div>
+                    <div class="col-md-3">
+                        <label for="source" class="form-label">Source</label>
+                        <input type="text" class="form-control" id="source" name="source" placeholder="Enter Source">
+                    </div>
+                    <div class="col-md-3">
+                        <button type="button" class="btn btn-primary mt-4 w-100" id="search-btn">Search</button>
+                    </div>
+                </form>
             </div>
-            <div class="col-md-3">
-                <label for="start-date" class="form-label">Start Date</label>
-                <input type="date" class="form-control" id="start-date" name="start_date">
+        </div>
+
+        <!-- 검색 결과 -->
+        <div class="card mt-4">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h5 class="card-title">Results</h5>
+                    <p class="results-header" id="results-count">No results yet.</p>
+                </div>
+                <div class="table-wrapper">
+                    <table class="table table-striped table-hover mt-3">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Timestamp</th>
+                                <th>Level</th>
+                                <th>Message</th>
+                                <th>Method</th>
+                                <th>Source</th>
+                            </tr>
+                        </thead>
+                        <tbody id="logs-table-body">
+                            <!-- 결과는 JavaScript로 채워집니다 -->
+                        </tbody>
+                    </table>
+                </div>
+                <!-- 페이지네이션 -->
+                <nav>
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item">
+                            <button class="page-link" id="prev-page">Previous</button>
+                        </li>
+                        <li class="page-item">
+                            <button class="page-link" id="next-page">Next</button>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-            <div class="col-md-3">
-                <label for="end-date" class="form-label">End Date</label>
-                <input type="date" class="form-control" id="end-date" name="end_date">
-            </div>
-            <div class="col-md-3">
-                <label for="keyword" class="form-label">Keyword</label>
-                <input type="text" class="form-control" id="keyword" name="keyword">
-            </div>
-            <div class="col-md-3">
-                <label for="source-ip" class="form-label">Source IP</label>
-                <input type="text" class="form-control" id="source-ip" name="source_ip">
-            </div>
-            <div class="col-md-3">
-                <label for="destination-ip" class="form-label">Destination IP</label>
-                <input type="text" class="form-control" id="destination-ip" name="destination_ip">
-            </div>
-            <div class="col-md-12 text-center mt-3">
-                <button type="button" class="btn btn-primary" id="search-logs">Search Logs</button>
-            </div>
-        </form>
-        <div class="table-responsive mt-4">
-            <table class="table table-striped table-hover">
-                <thead>
-                    <tr>
-                        <th>Timestamp</th>
-                        <th>Level</th>
-                        <th>Message</th>
-                        <th>Source</th>
-                        <th>Destination</th>
-                    </tr>
-                </thead>
-                <tbody id="logs-table">
-                    <!-- Rows will be dynamically populated -->
-                </tbody>
-            </table>
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
-	function fetchRecentLogs() {
-	    const filters = {
-		level: '',
-		start_date: '',
-		end_date: '',
-		keyword: '',
-		source_ip: '',
-		destination_ip: ''
-	    };
+        let currentPage = 1;
 
-	    $.ajax({
-		url: '/recent_logs/search',
-		method: 'POST',
-		contentType: 'application/json',
-		data: JSON.stringify(filters),
-		success: function(data) {
-		    const tbody = $('#logs-table');
-		    tbody.empty();
+        // 검색 버튼 클릭 이벤트
+        $("#search-btn").on("click", function () {
+            fetchLogs();
+        });
 
-		    if (data.length === 0) {
-			tbody.append('<tr><td colspan="5" class="text-center">No logs found</td></tr>');
-			return;
-		    }
+        // 페이지네이션 버튼
+        $("#prev-page").on("click", function () {
+            if (currentPage > 1) {
+                currentPage--;
+                fetchLogs();
+            }
+        });
 
-		    data.forEach(log => {
-			tbody.append(`
-			    <tr>
-				<td>${log.timestamp}</td>
-				<td>${log.level}</td>
-				<td>${log.message}</td>
-				<td>${log.source}</td>
-				<td>${log.destination}</td>
-			    </tr>
-			`);
-		    });
-		},
-		error: function(response) {
-		    const tbody = $('#logs-table');
-		    tbody.empty();
-		    tbody.append(`<tr><td colspan="5" class="text-center">${response.responseJSON.error}</td></tr>`);
-		}
-	    });
-	}
+        $("#next-page").on("click", function () {
+            currentPage++;
+            fetchLogs();
+        });
 
-	// Fetch logs on page load
-	$(document).ready(fetchRecentLogs);
-
-	// Attach event to search button
-	$('#search-logs').on('click', fetchRecentLogs);
-
-        function searchLogs() {
+        // 로그 데이터 가져오기
+        function fetchLogs() {
             const filters = {
-                level: $('#level').val(),
-                start_date: $('#start-date').val(),
-                end_date: $('#end-date').val(),
-                keyword: $('#keyword').val(),
-                source_ip: $('#source-ip').val(),
-                destination_ip: $('#destination-ip').val()
+                id: $("#id").val(),
+                level: $("#level").val(),
+                start_date: $("#start-date").val(),
+                end_date: $("#end-date").val(),
+                message: $("#keyword").val(),
+                method: $("#method").val(),
+                source: $("#source").val(),
+                page: currentPage,
+                per_page: 20
             };
 
             $.ajax({
-                url: '/recent_logs/search',
-                method: 'POST',
-                contentType: 'application/json',
+                url: "/recent_logs/search",
+                method: "POST",
+                contentType: "application/json",
                 data: JSON.stringify(filters),
-                success: function(data) {
-                    const tbody = $('#logs-table');
-                    tbody.empty();
-
-                    if (data.length === 0) {
-                        tbody.append('<tr><td colspan="5" class="text-center">No logs found</td></tr>');
-                        return;
-                    }
-
-                    data.forEach(log => {
-                        tbody.append(`
-                            <tr>
-                                <td>${log.timestamp}</td>
-                                <td>${log.level}</td>
-                                <td>${log.message}</td>
-                                <td class="ip-field">${log.source}</td>
-                                <td class="ip-field">${log.destination}</td>
-                            </tr>
-                        `);
-                    });
+                success: function (response) {
+                    renderLogs(response.logs);
+                    $("#results-count").text(`Showing ${response.logs.length} of ${response.total} results.`);
                 },
-                error: function(response) {
-                    const tbody = $('#logs-table');
-                    tbody.empty();
-                    tbody.append(`<tr><td colspan="5" class="text-center">${response.responseJSON.error}</td></tr>`);
+                error: function () {
+                    alert("Failed to fetch logs.");
                 }
             });
         }
 
-        $('#search-logs').on('click', searchLogs);
+        // 테이블에 로그 데이터 렌더링
+        function renderLogs(logs) {
+            const tableBody = $("#logs-table-body");
+            tableBody.empty();
+            if (logs.length === 0) {
+                tableBody.append('<tr><td colspan="6" class="no-results">No results found.</td></tr>');
+                return;
+            }
+            logs.forEach(log => {
+                const row = `
+                    <tr>
+                        <td>${log.id}</td>
+                        <td>${log.timestamp}</td>
+                        <td>${log.level}</td>
+                        <td>${log.message}</td>
+                        <td>${log.method || "-"}</td>
+                        <td>${log.source || "-"}</td>
+                    </tr>
+                `;
+                tableBody.append(row);
+            });
+        }
     </script>
 </body>
 </html>
