@@ -51,12 +51,8 @@ project-root/
 
 # 각 기능별 제안한 개선 가능성 정리
 
----
-
 
 ## 1. app.py (메인 엔트리)
-
----
 
 - Thread 안전성: 작업 스케줄링에는 Flask-APScheduler 같은 라이브러리를 사용해 스레드 충돌 방지.
 
@@ -70,8 +66,6 @@ project-root/
 
 
 ## 2. Blueprint 모듈
-
----
 
 ### blueprints/analysis/analysis.py
 
@@ -174,8 +168,6 @@ project-root/
 
 ## 3. Database Management (db/cleanup.py)
 
----
-
 - 동시성 문제 해결: 트랜잭션과 데이터베이스 락 활용.
 
 - 로그 보관: 내보낸 로그를 외부 스토리지로 업로드하는 옵션 추가.
@@ -191,8 +183,6 @@ project-root/
 
 
 ## 4. Frontend Templates
-
----
 
 ### templates/main_page.html
 
@@ -224,8 +214,6 @@ project-root/
 
 
 ## 종합적으로:
-
----
 
 ### 성능 개선: 대규모 데이터 처리에 적합한 최적화.
 
