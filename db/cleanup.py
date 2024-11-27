@@ -34,7 +34,8 @@ def export_logs():
         os.makedirs(EXPORT_DIR)
 
     # Save logs to a CSV file
-    export_file = os.path.join(EXPORT_DIR, "logs_export.csv")
+    filename = datetime.now().strftime("%Y-%m-%d_%H:%M:%S") + "_logs_export.log"
+    export_file = os.path.join(EXPORT_DIR, filename)
     df.to_csv(export_file, index=False)
 
     # Compress the CSV file

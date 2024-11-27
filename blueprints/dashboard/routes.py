@@ -1,149 +1,224 @@
-from flask import Blueprint, render_template, request, jsonify
-from db import query_logs
-
+from flask import Blueprint, redirect, url_for, request, jsonify
+from dash import Dash, dcc, html, Input, Output, State
 import pandas as pd
 import plotly.express as px
-import os, json
+from db import query_logs
 
 dashboard_bp = Blueprint('dashboard', __name__, url_prefix='/dashboard')
 
-STORAGE_FILE = 'stored_graphs.json'
+# 저장된 그래프 리스트
+stored_graphs = []
 
-def load_graphs():
-    """Load graphs from JSON file."""
-    if os.path.exists(STORAGE_FILE):
-        with open(STORAGE_FILE, 'r') as f:
-            return json.load(f)
-    return []
+def init_dashboard_dash(app):
+    dash_app = Dash(__name__, server=app, url_base_pathname='/dashboard/')
 
-def save_graphs():
-    """Save graphs to JSON file."""
-    with open(STORAGE_FILE, 'w') as f:
-        json.dump(stored_graphs, f)
+    # Dash Layout
+    dash_app.layout = html.Div([
+        html.H1("Create a New Dashboard", style={'textAlign': 'center'}),
 
-@dashboard_bp.route('/')
-def dashboard():
-    """Render dashboard with stored graphs."""
-    #print("Stored Graphs:", stored_graphs)  # 디버깅용 출력
-    return render_template('dashboard.html', graphs=stored_graphs)
+        html.Label("Log Type"),
+        dcc.Dropdown(
+            id='log-type-dropdown',
+            options=[
+                {'label': 'Apache2 Logs', 'value': 'apache2_logs'},
+                {'label': 'Nginx Logs', 'value': 'nginx_logs'}
+            ],
+            placeholder="Select Log Type"
+        ),
 
-@dashboard_bp.route('/columns', methods=['GET'])
-def get_columns():
-    """Fetch column names from the logs table."""
-    query = "PRAGMA table_info(logs)"
-    rows = query_logs(query)
-    columns = [row[1] for row in rows]  # Extract column names
-    return jsonify(columns)
+        html.Label("X-Axis"),
+        dcc.Dropdown(id='x-axis-dropdown', placeholder='Select X-axis'),
 
-@dashboard_bp.route('/create_graph', methods=['GET'])
-def create_graph_page():
-    """Render the graph creation page."""
-    return render_template('create_graph.html')
+        html.Label("Y-Axis"),
+        dcc.Dropdown(id='y-axis-dropdown', placeholder='Select Y-axis'),
 
-@dashboard_bp.route('/create_graph', methods=['POST'])
-def create_graph():
-    """Generate a graph based on user-selected options."""
-    data = request.json
-    print("Request Data:", data)
+        html.Label("Color (Optional)"),
+        dcc.Dropdown(id='color-dropdown', placeholder='Select Color'),
 
-    x_axis = data.get('x')
-    y_axis = data.get('y')
-    color = data.get('color')
-    title = data.get('title')
+        html.Label("Graph Title"),
+        dcc.Input(id='graph-title', type='text', placeholder='Enter Graph Title'),
 
-    if not x_axis or not y_axis:
-        return jsonify({"error": "X-axis and Y-axis must be selected."}), 400
+        html.Button("Preview", id="preview-btn", n_clicks=0),
+        html.Div(id='preview-container', style={'marginTop': '20px'})
+    ])
 
-    # 데이터베이스 쿼리
-    query = f"SELECT {x_axis}, {y_axis}, {color} FROM logs" if color else f"SELECT {x_axis}, {y_axis} FROM logs"
-    rows = query_logs(query)
-    if not rows:
-        print("Query Result Rows: Empty")
-        return jsonify({"error": "No data available for the selected criteria."}), 404
+    # 콜백: Log Type 선택에 따라 드롭다운 옵션 업데이트
+    @dash_app.callback(
+        [Output('x-axis-dropdown', 'options'),
+         Output('y-axis-dropdown', 'options'),
+         Output('color-dropdown', 'options')],
+        [Input('log-type-dropdown', 'value')]
+    )
+    def update_dropdowns(log_type):
+        if not log_type:
+            return [], [], []
 
-    # 데이터프레임 생성
-    columns = [x_axis, y_axis, color] if color else [x_axis, y_axis]
-    try:
-        df = pd.DataFrame(rows, columns=columns)
-    except ValueError as e:
-        print(f"DataFrame Error: {str(e)}")
-        return jsonify({"error": f"Error processing data: {str(e)}"}), 400
+        try:
+            # Log Type에 따라 컬럼 정보를 가져옴
+            query = f"PRAGMA table_info({log_type})"
+            rows = query_logs(query)
+            if not rows:
+                return [], [], []
+            columns = [{'label': col[1], 'value': col[1]} for col in rows]
+            return columns, columns, columns
+        except Exception as e:
+            print(f"Error fetching columns: {e}")
+            return [], [], []
 
-    if df.empty:
-        print("DataFrame is empty.")
-        return jsonify({"error": "No data available for the selected criteria."}), 404
+    # 콜백: Preview 버튼 클릭 시 그래프 생성
+    @dash_app.callback(
+        Output('preview-container', 'children'),
+        [Input('preview-btn', 'n_clicks')],
+        [State('log-type-dropdown', 'value'),
+         State('x-axis-dropdown', 'value'),
+         State('y-axis-dropdown', 'value'),
+         State('color-dropdown', 'value'),
+         State('graph-title', 'value')]
+    )
+    def preview_graph(n_clicks, log_type, x_axis, y_axis, color, title):
+        if n_clicks == 0:
+            return ""
 
-    # Plotly 그래프 생성
-    try:
+        if not log_type or not x_axis or not y_axis:
+            return html.Div("Please select Log Type, X-axis, and Y-axis.", style={'color': 'red'})
+
+        # Query logs and generate graph
+        query = f"SELECT {x_axis}, {y_axis}, {color} FROM {log_type}" if color else f"SELECT {x_axis}, {y_axis} FROM {log_type}"
+        rows = query_logs(query)
+        if not rows:
+            return html.Div("No data available for the selected criteria.", style={'color': 'red'})
+
+        df = pd.DataFrame(rows, columns=[x_axis, y_axis, color] if color else [x_axis, y_axis])
         fig = px.bar(
-            df,
-            x=x_axis, y=y_axis, color=color if color in df.columns else None,
+            df, x=x_axis, y=y_axis, color=color,
             labels={x_axis: x_axis.capitalize(), y_axis: y_axis.capitalize()},
             title=title or "Custom Graph",
             template='plotly_white'
         )
-        fig.update_layout(margin=dict(l=20, r=20, t=40, b=20))
+        return dcc.Graph(figure=fig)
+
+    return dash_app
+
+
+def init_create_dash(app):
+    dash_create = Dash(__name__, server=app, url_base_pathname='/dashboard/create_dash/')
+
+    # Layout for creating a dashboard
+    dash_create.layout = html.Div([
+        html.H1("Create a New Dashboard", style={'textAlign': 'center'}),
+
+        html.Label("Log Type"),
+        dcc.Dropdown(
+            id='log-type-dropdown',
+            options=[
+                {'label': 'Apache2 Logs', 'value': 'apache2_logs'},
+                {'label': 'Nginx Logs', 'value': 'nginx_logs'}
+            ],
+            placeholder="Select Log Type"
+        ),
+
+        html.Label("X-Axis"),
+        dcc.Dropdown(id='x-axis-dropdown', placeholder='Select X-axis'),
+
+        html.Label("Y-Axis"),
+        dcc.Dropdown(id='y-axis-dropdown', placeholder='Select Y-axis'),
+
+        html.Label("Color (Optional)"),
+        dcc.Dropdown(id='color-dropdown', placeholder='Select Color'),
+
+        html.Label("Graph Title"),
+        dcc.Input(id='graph-title', type='text', placeholder='Enter Graph Title'),
+
+        html.Button("Preview", id="preview-btn", n_clicks=0),
+        html.Button("Save Dashboard", id="save-btn", n_clicks=0, style={'marginLeft': '10px'}),
+
+        html.Div(id='preview-container', style={'marginTop': '20px'})
+    ])
+
+    # Update dropdowns based on selected log type
+    @dash_create.callback(
+        [Output('x-axis-dropdown', 'options'),
+         Output('y-axis-dropdown', 'options'),
+         Output('color-dropdown', 'options')],
+        [Input('log-type-dropdown', 'value')]
+    )
+    def update_dropdowns(log_type):
+        if not log_type:
+            return [], [], []
+
+        try:
+            query = f"PRAGMA table_info({log_type})"
+            rows = query_logs(query)
+            if not rows:
+                return [], [], []
+            columns = [{'label': col[1], 'value': col[1]} for col in rows]
+            return columns, columns, columns
+        except Exception as e:
+            print(f"Error fetching columns: {e}")
+            return [], [], []
+
+    # Preview graph
+    @dash_create.callback(
+        Output('preview-container', 'children'),
+        [Input('preview-btn', 'n_clicks')],
+        [State('log-type-dropdown', 'value'),
+         State('x-axis-dropdown', 'value'),
+         State('y-axis-dropdown', 'value'),
+         State('color-dropdown', 'value'),
+         State('graph-title', 'value')]
+    )
+    def preview_graph(n_clicks, log_type, x_axis, y_axis, color, title):
+        if n_clicks == 0:
+            return ""
+
+        if not log_type or not x_axis or not y_axis:
+            return html.Div("Please select Log Type, X-axis, and Y-axis.", style={'color': 'red'})
+
+        # Query data and generate graph
+        query = f"SELECT {x_axis}, {y_axis}, {color} FROM {log_type}" if color else f"SELECT {x_axis}, {y_axis} FROM {log_type}"
+        rows = query_logs(query)
+        if not rows:
+            return html.Div("No data available for the selected criteria.", style={'color': 'red'})
+
+        df = pd.DataFrame(rows, columns=[x_axis, y_axis, color] if color else [x_axis, y_axis])
+        fig = px.bar(
+            df, x=x_axis, y=y_axis, color=color,
+            labels={x_axis: x_axis.capitalize(), y_axis: y_axis.capitalize()},
+            title=title or "Custom Graph",
+            template='plotly_white'
+        )
+        return dcc.Graph(figure=fig)
+
+    # Save graph
+    @dash_create.callback(
+        Output('preview-container', 'children'),
+        [Input('save-btn', 'n_clicks')],
+        [State('log-type-dropdown', 'value'),
+         State('x-axis-dropdown', 'value'),
+         State('y-axis-dropdown', 'value'),
+         State('color-dropdown', 'value'),
+         State('graph-title', 'value')]
+    )
+    def save_graph(n_clicks, log_type, x_axis, y_axis, color, title):
+        if n_clicks == 0:
+            return ""
+
+        if not log_type or not x_axis or not y_axis:
+            return html.Div("Please select Log Type, X-axis, and Y-axis.", style={'color': 'red'})
+
+        # Save graph to stored_graphs
+        query = f"SELECT {x_axis}, {y_axis}, {color} FROM {log_type}" if color else f"SELECT {x_axis}, {y_axis} FROM {log_type}"
+        rows = query_logs(query)
+        df = pd.DataFrame(rows, columns=[x_axis, y_axis, color] if color else [x_axis, y_axis])
+        fig = px.bar(
+            df, x=x_axis, y=y_axis, color=color,
+            labels={x_axis: x_axis.capitalize(), y_axis: y_axis.capitalize()},
+            title=title or "Custom Graph",
+            template='plotly_white'
+        )
         graph_html = fig.to_html(full_html=False)
-        return jsonify({"graph": graph_html, "data": data})  # 데이터 반환
-    except Exception as e:
-        print(f"Plotly Error: {str(e)}")
-        return jsonify({"error": f"Error generating graph: {str(e)}"}), 500
+        stored_graphs.append({"graph_html": graph_html, "title": title})
+        return html.Div("Graph saved successfully.", style={'color': 'green'})
 
-
-
-# 저장된 그래프 목록
-stored_graphs = load_graphs()
-
-@dashboard_bp.route('/save_graph', methods=['POST'])
-def save_graph():
-    """Save the generated graph to the dashboard."""
-    data = request.json
-    graph_html = data.get("graph_html")
-    title = data.get("title")
-
-    if not graph_html or not title:
-        return jsonify({"error": "Invalid graph data."}), 400
-
-    # 그래프 저장
-    stored_graphs.append({"graph_html": graph_html, "title": title})
-    save_graphs()  # 파일에 저장
-    return jsonify({"message": "Graph saved successfully."}), 200
-
-@dashboard_bp.route('/delete_graph', methods=['POST'])
-def delete_graph():
-    """Delete a graph from the dashboard."""
-    data = request.json
-    title = data.get("title")
-
-    if not title:
-        return jsonify({"error": "Graph title is required."}), 400
-
-    # 삭제할 그래프 찾기
-    global stored_graphs
-    stored_graphs = [graph for graph in stored_graphs if graph["title"] != title]
-
-    save_graphs()  # 파일에 저장
-    return jsonify({"message": "Graph deleted successfully."}), 200
-
-@dashboard_bp.route('/update_order', methods=['POST'])
-def update_order():
-    """Update the order of graphs in the dashboard."""
-    data = request.json
-    order = data.get("order")
-
-    if not order or not isinstance(order, list):
-        return jsonify({"error": "Invalid order data."}), 400
-
-    # 새로운 순서에 따라 stored_graphs 정렬
-    global stored_graphs
-    new_graphs = []
-    for title in order:
-        for graph in stored_graphs:
-            if graph["title"] == title:
-                new_graphs.append(graph)
-                break
-
-    stored_graphs = new_graphs
-    save_graphs()  # 파일에 저장
-    return jsonify({"message": "Graph order updated successfully."}), 200
+    return dash_create
 

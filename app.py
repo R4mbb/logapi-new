@@ -2,7 +2,7 @@
 from flask import Flask
 from blueprints.upload_logs import upload_logs_bp
 from blueprints.get_logs import get_logs_bp
-from blueprints.dashboard import dashboard_bp
+from blueprints.dashboard.routes import init_dashboard_dash, init_create_dash
 from blueprints.main import main_bp
 from blueprints.recent_logs import recent_logs_bp
 from blueprints.collector import start_log_collector
@@ -19,7 +19,7 @@ init_db()
 # 블루프린트 등록
 app.register_blueprint(upload_logs_bp)
 app.register_blueprint(get_logs_bp)
-app.register_blueprint(dashboard_bp)
+#app.register_blueprint(dashboard_bp)
 app.register_blueprint(main_bp)
 app.register_blueprint(recent_logs_bp)
 
@@ -30,8 +30,9 @@ scheduler = BackgroundScheduler()
 scheduler.add_job(
     func=start_log_collector,
     trigger="interval",  # 일정 간격으로 실행
-    seconds=5,          # 5초 간격으로 실행
+    seconds=10,          # 1초 간격으로 실행
     id="log_collector",
+    max_instances=1,
     replace_existing=True
 )
 
@@ -41,11 +42,16 @@ scheduler.add_job(
     trigger="interval",  # 일정 간격으로 실행
     minutes=5,             # 5분 간격으로 실행
     id="database_cleanup",
+    max_instances=1,
     replace_existing=True
 )
 
 # 스케줄러 시작
 scheduler.start()
+
+# 대시보드 활성화
+init_dashboard_dash(app)
+init_create_dash(app)
 
 # 애플리케이션 실행
 if __name__ == "__main__":

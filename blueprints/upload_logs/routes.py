@@ -9,15 +9,15 @@ upload_logs_bp = Blueprint('upload_logs', __name__, url_prefix='/upload_logs')
 
 # 로그 정규식 패턴
 APACHE_LOG_PATTERN = (
-    r'(?P<ip_address>\S+) '          # IP Address
-    r'(?P<identity>\S+) '            # Identity (ignored)
-    r'(?P<userid>\S+) '              # UserID (ignored)
-    r'\[(?P<timestamp>[^\]]+)\] '    # Timestamp
-    r'"(?P<method>\S+) '             # HTTP Method
-    r'(?P<url>[^\s]+) '              # URL
-    r'(?P<protocol>[^\s]+)" '        # Protocol
-    r'(?P<status>\d{3}) '            # Status Code
-    r'(?P<size>\S+)'                 # Response Size
+    r'(?P<ip_address>\S+) '
+    r'(?P<identity>\S+) '
+    r'(?P<userid>\S+) '
+    r'\[(?P<timestamp>[^\]]+)\] '
+    r'"(?P<method>\S+) '
+    r'(?P<url>[^\s]+) '
+    r'(?P<protocol>[^\s]+)" '
+    r'(?P<status>\d{3}) '
+    r'(?P<size>\S+)'
 )
 
 NGINX_LOG_PATTERN = (
@@ -26,11 +26,8 @@ NGINX_LOG_PATTERN = (
     r'(?P<status>\d{3}) (?P<size>\d+)'
 )
 
+# 로그 레벨 결정 함수
 def determine_level(method, status):
-    """
-    Method와 Status Code에 따라 Log Level을 결정합니다.
-    """
-    # Method 기준 TRACE, DEBUG 설정
     method = method.upper() if method else "UNKNOWN"
     if method in {"GET", "HEAD"}:
         return "TRACE"
@@ -39,7 +36,6 @@ def determine_level(method, status):
     elif method == "OPTIONS":
         return "INFO"
 
-    # Status Code 기준 INFO, WARN, ERROR, FATAL 설정
     try:
         status_code = int(status)
         if 200 <= status_code < 300:
@@ -53,68 +49,35 @@ def determine_level(method, status):
     except ValueError:
         pass
 
-    # 기본값
     return "INFO"
 
-@upload_logs_bp.route('/', methods=['GET', 'POST'])
-def upload_logs():
-    if request.method == 'GET':
-        return render_template('upload_logs.html')
-
-    # POST 요청 처리
-    file = request.files.get('file')
-    if not file:
-        return render_template('upload_logs.html', message="No file uploaded")
-    if not file.filename.endswith(('.log', '.txt', '.json')):
-        return render_template('upload_logs.html', message="Supported formats: .log, .txt, .json")
-
-    try:
-        filename = secure_filename(file.filename)
-        file_stream = file.stream
-
-        # JSON 형식 로그 처리
-        if filename.endswith('.json'):
-            process_json_logs(file_stream)
-
-        # 텍스트 형식 로그 처리
-        elif filename.endswith(('.log', '.txt')):
-            process_text_logs(file_stream)
-
-        return render_template('upload_logs.html', message="Logs successfully uploaded and processed")
-
-    except Exception as e:
-        return render_template('upload_logs.html', message=f"Error processing file: {e}")
-
-# Apache/Nginx 타임스탬프 형식을 파싱하기 위한 함수
+# Apache/Nginx 타임스탬프 파싱
 def parse_timestamp(raw_timestamp):
     try:
-        # Apache/Nginx 로그 형식 변환: '17/May/2015:23:05:58 +0000'
-        return datetime.strptime(raw_timestamp, "%d/%b/%Y:%H:%M:%S %z")
+        if "+" in raw_timestamp:
+            dt = raw_timestamp.split()
+            return dt[0]
     except ValueError:
-        # 기본 ISO 형식 처리
-        try:
-            return datetime.fromisoformat(raw_timestamp)
-        except ValueError:
-            return None  # 변환 실패 시 None 반환
+        return None
 
-# JSON 로그 처리 함수
-def process_json_logs(file_stream):
+# JSON 로그 처리
+def process_json_logs(file_stream, log_type):
     logs = json.load(file_stream)
     for log in logs:
         raw_timestamp = log.get("timestamp")
-        parsed_timestamp = parse_timestamp(raw_timestamp)  # 타임스탬프 변환
+        parsed_timestamp = parse_timestamp(raw_timestamp)
         if not parsed_timestamp:
-            continue  # 변환 실패 시 무시
+            continue
 
         method = log.get("method", "")
-        status = log.get("status", "200")  # 상태 코드 기본값
+        status = log.get("status", "200")
         level = determine_level(method, status)
         message = log.get("message", "")
-        source_ip = log.get("source_ip", "")  # `source`로 매핑
-        insert_log(parsed_timestamp, level, message, method, source_ip)
+        source_ip = log.get("source_ip", "")
+        insert_log(parsed_timestamp, level, message, method, source_ip, log_type)
 
-# 텍스트 로그 처리 함수
-def process_text_logs(file_stream):
+# 텍스트 로그 처리
+def process_text_logs(file_stream, log_type):
     for line in file_stream:
         line = line.decode('utf-8').strip()
         for pattern in [APACHE_LOG_PATTERN, NGINX_LOG_PATTERN]:
@@ -122,9 +85,9 @@ def process_text_logs(file_stream):
             if match:
                 data = match.groupdict()
                 raw_timestamp = data['timestamp']
-                parsed_timestamp = parse_timestamp(raw_timestamp)  # 타임스탬프 변환
+                parsed_timestamp = parse_timestamp(raw_timestamp)
                 if not parsed_timestamp:
-                    continue  # 변환 실패 시 무시
+                    continue
                 method = data.get('method', "")
                 level = determine_level(method, data.get('status', "200"))
                 ip_address = data['ip_address']
@@ -132,6 +95,32 @@ def process_text_logs(file_stream):
                 status = data.get('status', "")
                 size = data.get('size', "0")
                 message = f"{url} {status} {size}"
-                insert_log(parsed_timestamp, level, message, method, ip_address)
+                insert_log(parsed_timestamp, level, message, method, ip_address, log_type)
                 break
+
+@upload_logs_bp.route('/', methods=['GET', 'POST'])
+def upload_logs():
+    if request.method == 'GET':
+        return render_template('upload_logs.html')
+
+    file = request.files.get('file')
+    log_type = request.form.get('log_type')
+    if not file or log_type not in {"apache2", "nginx"}:
+        return render_template('upload_logs.html', message="File and log type are required")
+
+    if not file.filename.endswith(('.log', '.txt', '.json')):
+        return render_template('upload_logs.html', message="Supported formats: .log, .txt, .json")
+
+    try:
+        filename = secure_filename(file.filename)
+        file_stream = file.stream
+
+        if filename.endswith('.json'):
+            process_json_logs(file_stream, log_type)
+        elif filename.endswith(('.log', '.txt')):
+            process_text_logs(file_stream, log_type)
+
+        return render_template('upload_logs.html', message="Logs successfully uploaded and processed")
+    except Exception as e:
+        return render_template('upload_logs.html', message=f"Error processing file: {e}")
 
