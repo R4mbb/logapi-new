@@ -67,35 +67,16 @@ def insert_log(timestamp, level, message, method, source, log_type=None):
     conn.close()
 
 def query_logs(query, params=None):
-    """
-    Execute a SELECT query and return results.
-
-    Args:
-        query (str): SQL query to execute.
-        params (tuple): Parameters to pass with the query (default: None).
-
-    Returns:
-        list: Query results as a list of tuples.
-    """
     conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
     cursor.execute(query, params or [])
     results = cursor.fetchall()
+    print(f"#### query : {query}")
     conn.close()
     return results
 
 
 def execute_query(query, params=None):
-    """
-    Execute a query that modifies the database (INSERT, UPDATE, DELETE).
-
-    Args:
-        query (str): The SQL query to execute.
-        params (tuple): The parameters for the query.
-
-    Returns:
-        None
-    """
     conn = sqlite3.connect(DB_PATH)
     cursor = conn.cursor()
     cursor.execute(query, params or [])
