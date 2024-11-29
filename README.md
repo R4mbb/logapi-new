@@ -115,6 +115,8 @@ project-root/
 
 - 그래프는 잘 만들어짐 ㅋㅋ
 
+- *(해결 완료)* 디자인만 손보면 됨. 손보다가 퇴근. collector 에서 넘겨주는 로그값 실시간 반영해야함. 현재 오류 상태임.
+
 ---
 
 ### blueprints/get_logs/routes.py
