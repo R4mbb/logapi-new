@@ -27,52 +27,71 @@ def load_graphs_from_file():
 stored_graphs = load_graphs_from_file()
 
 def init_dashboard_dash(app):
-    """Initialize the dashboard creation page."""
     dash_create = Dash(__name__, server=app, url_base_pathname='/dashboard/create_dash/')
 
     dash_create.layout = html.Div([
-        html.H1("Create a New Dashboard", style={'textAlign': 'center'}),
+        html.H1("Create a New Dashboard", style={
+            'textAlign': 'center',
+            'color': '#f0f0f0',
+            'marginBottom': '20px',
+            'backgroundColor': '#1c1c1c',
+            'padding': '10px',
+            'borderRadius': '5px'
+        }),
 
-        # Button to go to Dashboard
-        html.A("Go to Dashboard", href="/dashboard/", className="btn btn-primary", style={'marginBottom': '20px'}),
-
-        html.Label("Log Type"),
-        dcc.Dropdown(
-            id='log-type-dropdown',
-            options=[
-                {'label': 'Apache2 Logs', 'value': 'apache2_logs'},
-                {'label': 'Nginx Logs', 'value': 'nginx_logs'}
-            ],
-            placeholder="Select Log Type"
-        ),
-        html.Label("X-Axis"),
-        dcc.Dropdown(id='x-axis-dropdown', placeholder='Select X-axis'),
-        html.Label("Y-Axis"),
-        dcc.Dropdown(id='y-axis-dropdown', placeholder='Select Y-axis'),
-        html.Label("Color (Optional)"),
-        dcc.Dropdown(id='color-dropdown', placeholder='Select Color'),
-        html.Label("Graph Title"),
-        dcc.Input(id='graph-title', type='text', placeholder='Enter Graph Title'),
-        html.Label("Graph Type"),
-        dcc.Dropdown(
-            id='graph-type-dropdown',
-            options=[
-                {'label': 'Bar Chart', 'value': 'bar'},
-                {'label': 'Line Chart', 'value': 'line'},
-                {'label': 'Scatter Plot', 'value': 'scatter'},
-                {'label': 'Histogram', 'value': 'histogram'},
-                {'label': 'Heatmap', 'value': 'heatmap'},
-                {'label': 'Count Plot', 'value': 'count'}
-            ],
-            placeholder="Select Graph Type"
-        ),
         html.Div([
-            html.Button("Preview", id="preview-btn", n_clicks=0),
-            html.Button("Confirm", id="confirm-btn", n_clicks=0, style={'marginLeft': '10px'}),
-            html.Button("Reset", id="reset-btn", n_clicks=0, style={'marginLeft': '10px', 'backgroundColor': 'red', 'color': 'white'}),
-        ], style={'marginTop': '20px'}),
-        html.Div(id='preview-container', style={'marginTop': '20px'})
-    ])
+            html.Label("Log Type (Required)", style={'fontWeight': 'bold', 'color': '#f0f0f0'}),
+            dcc.Dropdown(
+                id='log-type-dropdown',
+                options=[
+                    {'label': 'Apache2 Logs', 'value': 'apache2_logs'},
+                    {'label': 'Nginx Logs', 'value': 'nginx_logs'}
+                ],
+                placeholder="Select Log Type",
+                style={'marginBottom': '15px', 'backgroundColor': '#2c2c2c', 'color': '#f0f0f0'}
+            ),
+            html.Label("X-Axis (Required)", style={'fontWeight': 'bold', 'color': '#f0f0f0'}),
+            dcc.Dropdown(id='x-axis-dropdown', placeholder='Select X-axis',
+                         style={'marginBottom': '15px', 'backgroundColor': '#2c2c2c', 'color': '#f0f0f0'}),
+            html.Label("Y-Axis (Required)", style={'fontWeight': 'bold', 'color': '#f0f0f0'}),
+            dcc.Dropdown(id='y-axis-dropdown', placeholder='Select Y-axis',
+                         style={'marginBottom': '15px', 'backgroundColor': '#2c2c2c', 'color': '#f0f0f0'}),
+            html.Label("Color (Optional)", style={'fontWeight': 'bold', 'color': '#f0f0f0'}),
+            dcc.Dropdown(id='color-dropdown', placeholder='Select Color',
+                         style={'marginBottom': '15px', 'backgroundColor': '#2c2c2c', 'color': '#f0f0f0'}),
+            html.Label("Graph Title (Required)", style={'fontWeight': 'bold', 'color': '#f0f0f0'}),
+            dcc.Input(id='graph-title', type='text', placeholder='Enter Graph Title',
+                      style={'marginBottom': '15px', 'backgroundColor': '#2c2c2c', 'color': '#f0f0f0'}),
+            html.Label("Graph Type (Required)", style={'fontWeight': 'bold', 'color': '#f0f0f0'}),
+            dcc.Dropdown(
+                id='graph-type-dropdown',
+                options=[
+                    {'label': 'Bar Chart', 'value': 'bar'},
+                    {'label': 'Line Chart', 'value': 'line'},
+                    {'label': 'Scatter Plot', 'value': 'scatter'},
+                    {'label': 'Histogram', 'value': 'histogram'},
+                    {'label': 'Heatmap', 'value': 'heatmap'},
+                    {'label': 'Count Plot', 'value': 'count'}
+                ],
+                placeholder="Select Graph Type",
+                style={'marginBottom': '15px', 'backgroundColor': '#2c2c2c', 'color': '#f0f0f0'}
+            ),
+        ], style={'maxWidth': '600px', 'margin': 'auto', 'padding': '20px', 'backgroundColor': '#1c1c1c', 'borderRadius': '5px'}),
+
+        html.Div([
+            html.Button("Preview", id="preview-btn", n_clicks=0, style={
+                'marginRight': '10px', 'padding': '10px 20px', 'backgroundColor': '#007bff', 'color': '#fff'
+            }),
+            html.Button("Confirm", id="confirm-btn", n_clicks=0, style={
+                'marginRight': '10px', 'padding': '10px 20px', 'backgroundColor': '#28a745', 'color': '#fff'
+            }),
+            html.Button("Reset", id="reset-btn", n_clicks=0, style={
+                'padding': '10px 20px', 'backgroundColor': '#dc3545', 'color': '#fff'
+            }),
+        ], style={'textAlign': 'center', 'marginTop': '20px'}),
+
+        html.Div(id='preview-container', style={'marginTop': '30px', 'textAlign': 'center', 'color': '#f0f0f0'})
+    ], style={'backgroundColor': '#121212', 'padding': '0', 'margin': '0', 'minHeight': '100vh', 'width': '100vw'})
 
     @dash_create.callback(
         Output('x-axis-dropdown', 'options', allow_duplicate=True),
@@ -168,17 +187,25 @@ def init_dashboard_dash(app):
 
 
 def init_dashboard_view_dash(app):
-    """Initialize the dashboard view page."""
     dash_view = Dash(__name__, server=app, url_base_pathname='/dashboard/')
 
     dash_view.layout = html.Div([
-        html.H1("Dashboard View", style={'textAlign': 'center'}),
+        html.Div([
+            html.H1("Dashboard View", style={
+                'textAlign': 'center',
+                'color': '#f0f0f0',
+                'backgroundColor': '#1c1c1c',
+                'padding': '10px',
+                'borderRadius': '5px'
+            }),
+            html.A("Create Dashboard", href="/dashboard/create_dash/", className="btn btn-primary", 
+                   style={'display': 'block', 'margin': '20px auto', 'textAlign': 'center',
+                          'backgroundColor': '#007bff', 'color': '#fff', 'padding': '10px 20px', 'borderRadius': '5px'})
+        ]),
 
-        html.A("Create Dashboard", href="/dashboard/create_dash/", className="btn btn-primary", style={'marginBottom': '20px'}),
-
-        html.Div(id='graphs-container'),
+        html.Div(id='graphs-container', style={'marginTop': '50px', 'padding': '20px'}),
         dcc.Interval(id='refresh-interval', interval=10000, n_intervals=0)
-    ])
+    ], style={'backgroundColor': '#121212', 'padding': '0', 'margin': '0', 'minHeight': '100vh', 'width': '100vw'})
 
     @dash_view.callback(
         Output('graphs-container', 'children'),

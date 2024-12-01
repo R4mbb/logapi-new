@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Dashboard</title>
+</head>
+<body>
+    <h1>Create Dashboard</h1>
+    <form method="POST" action="/dashboard/create_dash/submit">
+        <label for="log-type">Log Type:</label>
+        <select name="log_type" id="log-type">
+            <option value="apache2_logs">Apache2 Logs</option>
+            <option value="nginx_logs">Nginx Logs</option>
+        </select>
+        <label for="graph-title">Graph Title:</label>
+        <input type="text" name="title" id="graph-title" required>
+        <label for="x-axis">X-Axis:</label>
+        <input type="text" name="x_axis" id="x-axis" required>
+        <label for="y-axis">Y-Axis:</label>
+        <input type="text" name="y_axis" id="y-axis" required>
+        <label for="graph-type">Graph Type:</label>
+        <select name="graph_type" id="graph-type">
+            <option value="bar">Bar Chart</option>
+            <option value="line">Line Chart</option>
+            <option value="scatter">Scatter Plot</option>
+            <option value="histogram">Histogram</option>
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
+

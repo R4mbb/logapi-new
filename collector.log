@@ -16564,3 +16564,629 @@ sqlite3.OperationalError: no such table: logs
 2024-12-02 01:00:06,572 - INFO -  * Detected change in '/home/r4mbb/logapi-new/blueprints/dashboard/routes.py', reloading
 2024-12-02 01:00:06,573 - INFO -  * Detected change in '/home/r4mbb/logapi-new/blueprints/dashboard/routes.py', reloading
 2024-12-02 01:00:08,968 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:00:06 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:05:25,789 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-02 01:05:25,789 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-02 01:05:25,789 - INFO - Added job "start_log_collector" to job store "default"
+2024-12-02 01:05:25,789 - INFO - Added job "manage_database" to job store "default"
+2024-12-02 01:05:25,789 - INFO - Scheduler started
+2024-12-02 01:05:25,805 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.22.249.161:5000
+2024-12-02 01:05:25,805 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-02 01:05:25,805 - INFO -  * Restarting with watchdog (inotify)
+2024-12-02 01:05:26,947 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-02 01:05:26,947 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-02 01:05:26,948 - INFO - Added job "start_log_collector" to job store "default"
+2024-12-02 01:05:26,948 - INFO - Added job "manage_database" to job store "default"
+2024-12-02 01:05:26,948 - INFO - Scheduler started
+2024-12-02 01:05:26,972 - WARNING -  * Debugger is active!
+2024-12-02 01:05:26,973 - INFO -  * Debugger PIN: 581-180-133
+2024-12-02 01:06:53,775 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-02 01:06:53,775 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-02 01:06:53,775 - INFO - Added job "start_log_collector" to job store "default"
+2024-12-02 01:06:53,775 - INFO - Added job "manage_database" to job store "default"
+2024-12-02 01:06:53,775 - INFO - Scheduler started
+2024-12-02 01:06:53,794 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.22.249.161:5000
+2024-12-02 01:06:53,794 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-02 01:06:53,795 - INFO -  * Restarting with watchdog (inotify)
+2024-12-02 01:06:54,955 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-02 01:06:54,956 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-02 01:06:54,956 - INFO - Added job "start_log_collector" to job store "default"
+2024-12-02 01:06:54,956 - INFO - Added job "manage_database" to job store "default"
+2024-12-02 01:06:54,956 - INFO - Scheduler started
+2024-12-02 01:06:54,971 - WARNING -  * Debugger is active!
+2024-12-02 01:06:54,971 - INFO -  * Debugger PIN: 581-180-133
+2024-12-02 01:06:55,575 - INFO - 127.0.0.1 - - [02/Dec/2024 01:06:55] "GET / HTTP/1.1" 200 -
+2024-12-02 01:06:56,108 - INFO - 127.0.0.1 - - [02/Dec/2024 01:06:56] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 01:06:59,193 - INFO - 127.0.0.1 - - [02/Dec/2024 01:06:59] "GET /recent_logs/ HTTP/1.1" 200 -
+2024-12-02 01:07:03,783 - INFO - Running job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:07:03 KST)" (scheduled at 2024-12-02 01:07:03.774905+09:00)
+2024-12-02 01:07:04,959 - INFO - Running job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:07:04 KST)" (scheduled at 2024-12-02 01:07:04.955748+09:00)
+2024-12-02 01:07:10,252 - INFO - 127.0.0.1 - - [02/Dec/2024 01:07:10] "GET /upload_logs/ HTTP/1.1" 200 -
+2024-12-02 01:07:16,682 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:07:13 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:07:17,863 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:07:14 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:07:23,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:07:23 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:07:24,955 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:07:24 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:07:33,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:07:33 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:07:34,955 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:07:34 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:07:46,745 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:07:43 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:07:47,926 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:07:44 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:07:53,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:07:53 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:07:54,955 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:07:54 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:08:03,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:08:03 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:08:04,955 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:08:04 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:08:13,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:08:13 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:08:14,955 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:08:14 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:08:26,754 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:08:23 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:08:27,576 - INFO - 127.0.0.1 - - [02/Dec/2024 01:08:27] "GET /upload_logs/ HTTP/1.1" 200 -
+2024-12-02 01:08:27,935 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:08:24 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:08:33,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:08:33 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:08:34,955 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:08:34 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:08:43,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:08:43 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:08:44,955 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:08:44 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:08:56,993 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:08:53 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:08:58,174 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:08:54 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:08:58,663 - INFO - 127.0.0.1 - - [02/Dec/2024 01:08:58] "GET /upload_logs/ HTTP/1.1" 200 -
+2024-12-02 01:09:00,678 - INFO - 127.0.0.1 - - [02/Dec/2024 01:09:00] "GET /recent_logs/ HTTP/1.1" 200 -
+2024-12-02 01:09:03,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:09:03 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:09:04,955 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:09:04 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:09:13,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:09:13 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:09:14,955 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:09:14 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:09:23,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:09:23 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:09:24,955 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:09:24 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:09:36,743 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:09:33 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:09:37,923 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:09:34 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:09:43,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:09:43 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:09:44,955 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:09:44 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:09:53,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:09:53 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:09:54,955 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:09:54 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:10:06,838 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:10:03 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:10:08,019 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:10:04 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:10:13,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:10:13 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:10:14,955 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:10:14 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:10:23,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:10:23 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:10:24,955 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:10:24 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:10:33,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:10:33 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:10:34,955 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:10:34 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:10:36,355 - INFO - 127.0.0.1 - - [02/Dec/2024 01:10:36] "GET /upload_logs/ HTTP/1.1" 200 -
+2024-12-02 01:10:46,758 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:10:43 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:10:47,939 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:10:44 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:10:53,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:10:53 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:10:54,955 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:10:54 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:11:00,347 - INFO - 127.0.0.1 - - [02/Dec/2024 01:11:00] "GET /recent_logs/ HTTP/1.1" 200 -
+2024-12-02 01:11:03,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:11:03 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:11:04,955 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:11:04 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:11:16,817 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:11:13 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:11:17,998 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:11:14 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:11:23,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:11:23 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:11:24,955 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:11:24 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:11:33,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:11:33 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:11:34,955 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:11:34 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:11:43,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:11:43 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:11:44,955 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:11:44 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:11:56,822 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:11:53 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:11:56,822 - WARNING - Run time of job "manage_database (trigger: interval[0:05:00], next run at: 2024-12-02 01:11:53 KST)" was missed by 0:00:03.047517
+2024-12-02 01:11:58,002 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:11:54 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:11:58,003 - WARNING - Run time of job "manage_database (trigger: interval[0:05:00], next run at: 2024-12-02 01:11:54 KST)" was missed by 0:00:03.047279
+2024-12-02 01:12:03,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:12:03 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:12:04,955 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:12:04 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:12:11,286 - INFO - 127.0.0.1 - - [02/Dec/2024 01:12:11] "GET /upload_logs/ HTTP/1.1" 200 -
+2024-12-02 01:12:13,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:12:13 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:12:14,955 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:12:14 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:12:23,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:12:23 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:12:27,382 - INFO - 127.0.0.1 - - [02/Dec/2024 01:12:27] "GET /recent_logs/ HTTP/1.1" 200 -
+2024-12-02 01:12:27,984 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:12:24 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:12:28,002 - INFO - 127.0.0.1 - - [02/Dec/2024 01:12:28] "GET /recent_logs/ HTTP/1.1" 200 -
+2024-12-02 01:12:28,283 - INFO - 127.0.0.1 - - [02/Dec/2024 01:12:28] "GET /recent_logs/ HTTP/1.1" 200 -
+2024-12-02 01:12:28,479 - INFO - 127.0.0.1 - - [02/Dec/2024 01:12:28] "GET /recent_logs/ HTTP/1.1" 200 -
+2024-12-02 01:12:34,955 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:12:34 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:12:36,803 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:12:33 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:12:43,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:12:43 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:12:44,955 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:12:44 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:12:53,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:12:53 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:12:54,955 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:12:54 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:13:06,820 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:13:03 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:13:08,001 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:13:04 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:13:13,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:13:13 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:13:14,955 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:13:14 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:13:23,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:13:23 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:13:24,955 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:13:24 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:13:33,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:13:33 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:13:38,007 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:13:34 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:13:44,955 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:13:44 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:13:46,826 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:13:43 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:13:53,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:13:53 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:13:54,955 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:13:54 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:14:03,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:14:03 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:14:04,955 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:14:04 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:14:16,838 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:14:13 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:14:18,018 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:14:14 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:14:23,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:14:23 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:14:24,955 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:14:24 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:14:33,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:14:33 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:14:34,955 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:14:34 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:14:43,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:14:43 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:14:44,955 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:14:44 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:14:56,780 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:14:53 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:14:57,961 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:14:54 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:15:03,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:15:03 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:15:04,955 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:15:04 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:15:13,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:15:13 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:15:14,955 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:15:14 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:15:26,704 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:15:23 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:15:27,885 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:15:24 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:15:33,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:15:33 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:15:34,956 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:15:34 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:15:43,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:15:43 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:15:44,955 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:15:44 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:15:53,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:15:53 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:15:54,955 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:15:54 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:16:06,699 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:16:03 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:16:07,880 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:16:04 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:16:13,556 - INFO - 127.0.0.1 - - [02/Dec/2024 01:16:13] "GET /upload_logs/ HTTP/1.1" 200 -
+2024-12-02 01:16:13,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:16:13 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:16:14,955 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:16:14 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:16:15,098 - INFO - 127.0.0.1 - - [02/Dec/2024 01:16:15] "GET /recent_logs/ HTTP/1.1" 200 -
+2024-12-02 01:16:23,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:16:23 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:16:24,955 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:16:24 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:16:36,441 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:16:33 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:16:37,622 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:16:34 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:16:42,385 - INFO -  * Detected change in '/home/r4mbb/logapi-new/blueprints/main/routes.py', reloading
+2024-12-02 01:16:42,387 - INFO -  * Detected change in '/home/r4mbb/logapi-new/blueprints/main/routes.py', reloading
+2024-12-02 01:16:42,388 - INFO -  * Detected change in '/home/r4mbb/logapi-new/blueprints/main/routes.py', reloading
+2024-12-02 01:16:42,395 - INFO -  * Detected change in '/home/r4mbb/logapi-new/blueprints/main/routes.py', reloading
+2024-12-02 01:16:42,396 - INFO -  * Detected change in '/home/r4mbb/logapi-new/blueprints/main/routes.py', reloading
+2024-12-02 01:16:43,775 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:16:43 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:16:45,416 - INFO - 127.0.0.1 - - [02/Dec/2024 01:16:45] "GET /upload_logs/ HTTP/1.1" 200 -
+2024-12-02 01:16:52,791 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:16:44 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:16:55,367 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-02 01:16:55,367 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-02 01:16:55,367 - INFO - Added job "start_log_collector" to job store "default"
+2024-12-02 01:16:55,367 - INFO - Added job "manage_database" to job store "default"
+2024-12-02 01:16:55,367 - INFO - Scheduler started
+2024-12-02 01:16:55,383 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.22.249.161:5000
+2024-12-02 01:16:55,383 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-02 01:16:55,383 - INFO -  * Restarting with watchdog (inotify)
+2024-12-02 01:16:56,370 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-02 01:16:56,370 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-02 01:16:56,370 - INFO - Added job "start_log_collector" to job store "default"
+2024-12-02 01:16:56,370 - INFO - Added job "manage_database" to job store "default"
+2024-12-02 01:16:56,370 - INFO - Scheduler started
+2024-12-02 01:16:56,384 - WARNING -  * Debugger is active!
+2024-12-02 01:16:56,385 - INFO -  * Debugger PIN: 581-180-133
+2024-12-02 01:16:57,115 - INFO - 127.0.0.1 - - [02/Dec/2024 01:16:57] "GET / HTTP/1.1" 200 -
+2024-12-02 01:16:57,182 - INFO - 127.0.0.1 - - [02/Dec/2024 01:16:57] "GET / HTTP/1.1" 200 -
+2024-12-02 01:17:05,378 - INFO - Running job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:17:05 KST)" (scheduled at 2024-12-02 01:17:05.367437+09:00)
+2024-12-02 01:17:06,377 - INFO - Running job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:17:06 KST)" (scheduled at 2024-12-02 01:17:06.370314+09:00)
+2024-12-02 01:17:18,468 - INFO - 127.0.0.1 - - [02/Dec/2024 01:17:18] "GET / HTTP/1.1" 200 -
+2024-12-02 01:17:18,861 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:17:15 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:17:19,864 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:17:16 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:17:25,367 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:17:25 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:17:26,370 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:17:26 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:17:35,367 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:17:35 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:17:36,370 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:17:36 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:17:47,626 - INFO - 127.0.0.1 - - [02/Dec/2024 01:17:47] "GET /upload_logs/ HTTP/1.1" 200 -
+2024-12-02 01:17:48,678 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:17:45 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:17:49,686 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:17:46 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:17:49,700 - INFO - 127.0.0.1 - - [02/Dec/2024 01:17:49] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 01:17:49,706 - INFO - 127.0.0.1 - - [02/Dec/2024 01:17:49] "[36mGET /dashboard/_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2024-12-02 01:17:50,000 - INFO - 127.0.0.1 - - [02/Dec/2024 01:17:50] "[36mGET /dashboard/_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2024-12-02 01:17:52,750 - INFO - 127.0.0.1 - - [02/Dec/2024 01:17:52] "[32mGET /dashboard HTTP/1.1[0m" 308 -
+2024-12-02 01:17:52,754 - INFO - 127.0.0.1 - - [02/Dec/2024 01:17:52] "GET /dashboard/ HTTP/1.1" 200 -
+2024-12-02 01:17:52,986 - INFO - 127.0.0.1 - - [02/Dec/2024 01:17:52] "GET /dashboard/_dash-layout HTTP/1.1" 200 -
+2024-12-02 01:17:53,067 - INFO - 127.0.0.1 - - [02/Dec/2024 01:17:53] "GET /dashboard/_dash-dependencies HTTP/1.1" 200 -
+2024-12-02 01:17:53,461 - INFO - 127.0.0.1 - - [02/Dec/2024 01:17:53] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 01:17:53,594 - INFO - 127.0.0.1 - - [02/Dec/2024 01:17:53] "[36mGET /dashboard/_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2024-12-02 01:17:53,755 - INFO - 127.0.0.1 - - [02/Dec/2024 01:17:53] "[36mGET /dashboard/_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2024-12-02 01:17:53,972 - INFO - 127.0.0.1 - - [02/Dec/2024 01:17:53] "GET / HTTP/1.1" 200 -
+2024-12-02 01:17:55,136 - INFO - 127.0.0.1 - - [02/Dec/2024 01:17:55] "[32mGET /recent_logs HTTP/1.1[0m" 308 -
+2024-12-02 01:17:55,220 - INFO - 127.0.0.1 - - [02/Dec/2024 01:17:55] "GET /recent_logs/ HTTP/1.1" 200 -
+2024-12-02 01:17:55,367 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:17:55 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:17:56,370 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:17:56 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:17:57,329 - INFO - 127.0.0.1 - - [02/Dec/2024 01:17:57] "GET /dashboard/ HTTP/1.1" 200 -
+2024-12-02 01:17:57,606 - INFO - 127.0.0.1 - - [02/Dec/2024 01:17:57] "GET /dashboard/_dash-layout HTTP/1.1" 200 -
+2024-12-02 01:17:57,687 - INFO - 127.0.0.1 - - [02/Dec/2024 01:17:57] "GET /dashboard/_dash-dependencies HTTP/1.1" 200 -
+2024-12-02 01:17:58,074 - INFO - 127.0.0.1 - - [02/Dec/2024 01:17:58] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 01:17:58,213 - INFO - 127.0.0.1 - - [02/Dec/2024 01:17:58] "[36mGET /dashboard/_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2024-12-02 01:17:58,369 - INFO - 127.0.0.1 - - [02/Dec/2024 01:17:58] "[36mGET /dashboard/_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2024-12-02 01:18:05,367 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:18:05 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:18:06,370 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:18:06 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:18:15,367 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:18:15 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:18:16,370 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:18:16 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:18:28,634 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:18:25 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:18:29,637 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:18:26 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:18:35,367 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:18:35 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:18:36,370 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:18:36 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:18:45,367 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:18:45 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:18:46,370 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:18:46 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:18:58,632 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:18:55 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:18:59,635 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:18:56 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:19:05,367 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:19:05 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:19:06,370 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:19:06 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:19:15,367 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:19:15 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:19:16,370 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:19:16 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:19:25,367 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:19:25 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:19:26,370 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:19:26 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:19:38,635 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:19:35 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:19:39,638 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:19:36 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:19:45,367 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:19:45 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:19:46,370 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:19:46 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:19:55,367 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:19:55 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:19:56,370 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:19:56 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:20:08,631 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:20:05 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:20:09,634 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:20:06 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:20:15,367 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:20:15 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:20:16,370 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:20:16 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:20:25,367 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:20:25 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:20:26,370 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:20:26 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:20:35,367 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:20:35 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:20:36,370 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:20:36 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:20:48,632 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:20:45 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:20:49,635 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:20:46 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:20:55,367 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:20:55 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:20:56,370 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:20:56 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:21:05,367 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:21:05 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:21:06,370 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:21:06 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:21:15,367 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:21:15 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:21:19,601 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:21:16 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:21:26,370 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:21:26 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:21:28,598 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:21:25 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:21:35,367 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:21:35 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:21:36,370 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:21:36 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:21:45,367 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:21:45 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:21:46,373 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:21:46 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:21:58,585 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:21:55 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:21:58,590 - WARNING - Run time of job "manage_database (trigger: interval[0:05:00], next run at: 2024-12-02 01:21:55 KST)" was missed by 0:00:03.222718
+2024-12-02 01:21:59,588 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:21:56 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:21:59,590 - WARNING - Run time of job "manage_database (trigger: interval[0:05:00], next run at: 2024-12-02 01:21:56 KST)" was missed by 0:00:03.220300
+2024-12-02 01:22:05,367 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:22:05 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:22:06,370 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:22:06 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:22:15,367 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:22:15 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:22:16,370 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:22:16 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:22:25,367 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:22:25 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:22:26,370 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:22:26 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:22:38,607 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:22:35 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:22:39,610 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:22:36 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:22:45,367 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:22:45 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:22:46,370 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:22:46 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:22:55,367 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:22:55 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:22:56,370 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:22:56 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:23:08,608 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:23:05 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:23:09,611 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:23:06 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:23:15,367 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:23:15 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:23:16,370 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:23:16 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:23:25,367 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:23:25 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:23:26,370 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:23:26 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:23:35,367 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:23:35 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:23:36,370 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:23:36 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:23:48,418 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:23:45 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:23:49,421 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:23:46 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:23:55,367 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:23:55 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:23:56,370 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:23:56 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:24:05,367 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:24:05 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:24:06,370 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:24:06 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:24:18,506 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:24:15 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:24:19,509 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:24:16 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:24:25,367 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:24:25 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:24:26,370 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:24:26 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:24:35,367 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:24:35 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:24:36,370 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:24:36 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:24:45,367 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:24:45 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:24:46,370 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:24:46 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:24:56,660 - INFO -  * Detected change in '/home/r4mbb/logapi-new/blueprints/dashboard/routes.py', reloading
+2024-12-02 01:24:56,665 - INFO -  * Detected change in '/home/r4mbb/logapi-new/blueprints/dashboard/routes.py', reloading
+2024-12-02 01:24:56,665 - INFO -  * Detected change in '/home/r4mbb/logapi-new/blueprints/dashboard/routes.py', reloading
+2024-12-02 01:24:56,671 - INFO -  * Detected change in '/home/r4mbb/logapi-new/blueprints/dashboard/routes.py', reloading
+2024-12-02 01:24:56,671 - INFO -  * Detected change in '/home/r4mbb/logapi-new/blueprints/dashboard/routes.py', reloading
+2024-12-02 01:24:58,608 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:24:55 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:25:05,367 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:25:05 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:25:15,367 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:25:15 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:25:28,641 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:25:25 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:25:35,367 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:25:35 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:25:45,367 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:25:45 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:25:55,367 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:25:55 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:26:08,641 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:26:05 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:26:15,367 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:26:15 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:26:18,560 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:24:56 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:26:20,636 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-02 01:26:20,636 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-02 01:26:20,636 - INFO - Added job "start_log_collector" to job store "default"
+2024-12-02 01:26:20,636 - INFO - Added job "manage_database" to job store "default"
+2024-12-02 01:26:20,636 - INFO - Scheduler started
+2024-12-02 01:26:20,656 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.22.249.161:5000
+2024-12-02 01:26:20,656 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-02 01:26:20,657 - INFO -  * Restarting with watchdog (inotify)
+2024-12-02 01:26:21,612 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-02 01:26:21,612 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-02 01:26:21,613 - INFO - Added job "start_log_collector" to job store "default"
+2024-12-02 01:26:21,613 - INFO - Added job "manage_database" to job store "default"
+2024-12-02 01:26:21,613 - INFO - Scheduler started
+2024-12-02 01:26:21,631 - WARNING -  * Debugger is active!
+2024-12-02 01:26:21,631 - INFO -  * Debugger PIN: 581-180-133
+2024-12-02 01:26:22,305 - INFO - 127.0.0.1 - - [02/Dec/2024 01:26:22] "GET / HTTP/1.1" 200 -
+2024-12-02 01:26:23,736 - INFO - 127.0.0.1 - - [02/Dec/2024 01:26:23] "GET /upload_logs/ HTTP/1.1" 200 -
+2024-12-02 01:26:24,449 - INFO - 127.0.0.1 - - [02/Dec/2024 01:26:24] "GET /recent_logs/ HTTP/1.1" 200 -
+2024-12-02 01:26:24,797 - INFO - 127.0.0.1 - - [02/Dec/2024 01:26:24] "GET /recent_logs/ HTTP/1.1" 200 -
+2024-12-02 01:26:25,079 - INFO - 127.0.0.1 - - [02/Dec/2024 01:26:25] "GET /recent_logs/ HTTP/1.1" 200 -
+2024-12-02 01:26:25,358 - INFO - 127.0.0.1 - - [02/Dec/2024 01:26:25] "GET /recent_logs/ HTTP/1.1" 200 -
+2024-12-02 01:26:25,549 - INFO - 127.0.0.1 - - [02/Dec/2024 01:26:25] "GET /upload_logs/ HTTP/1.1" 200 -
+2024-12-02 01:26:25,823 - INFO - 127.0.0.1 - - [02/Dec/2024 01:26:25] "GET /upload_logs/ HTTP/1.1" 200 -
+2024-12-02 01:26:26,030 - INFO - 127.0.0.1 - - [02/Dec/2024 01:26:26] "GET /upload_logs/ HTTP/1.1" 200 -
+2024-12-02 01:26:30,648 - INFO - Running job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:26:30 KST)" (scheduled at 2024-12-02 01:26:30.636584+09:00)
+2024-12-02 01:26:31,619 - INFO - Running job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:26:31 KST)" (scheduled at 2024-12-02 01:26:31.612313+09:00)
+2024-12-02 01:26:31,657 - INFO - 127.0.0.1 - - [02/Dec/2024 01:26:31] "GET /dashboard/ HTTP/1.1" 200 -
+2024-12-02 01:26:31,937 - INFO - 127.0.0.1 - - [02/Dec/2024 01:26:31] "GET /dashboard/_dash-layout HTTP/1.1" 200 -
+2024-12-02 01:26:31,979 - INFO - 127.0.0.1 - - [02/Dec/2024 01:26:31] "GET /dashboard/_dash-dependencies HTTP/1.1" 200 -
+2024-12-02 01:26:32,709 - INFO - 127.0.0.1 - - [02/Dec/2024 01:26:32] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 01:26:32,714 - INFO - 127.0.0.1 - - [02/Dec/2024 01:26:32] "[36mGET /dashboard/_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2024-12-02 01:26:33,003 - INFO - 127.0.0.1 - - [02/Dec/2024 01:26:33] "[36mGET /dashboard/_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2024-12-02 01:26:40,320 - INFO - 127.0.0.1 - - [02/Dec/2024 01:26:40] "GET /dashboard/create_dash/ HTTP/1.1" 200 -
+2024-12-02 01:26:40,420 - INFO - 127.0.0.1 - - [02/Dec/2024 01:26:40] "GET /dashboard/create_dash/_dash-layout HTTP/1.1" 200 -
+2024-12-02 01:26:40,568 - INFO - 127.0.0.1 - - [02/Dec/2024 01:26:40] "GET /dashboard/create_dash/_dash-dependencies HTTP/1.1" 200 -
+2024-12-02 01:26:40,665 - INFO - 127.0.0.1 - - [02/Dec/2024 01:26:40] "[36mGET /dashboard/create_dash/_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2024-12-02 01:26:43,600 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:26:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:26:44,393 - INFO - 127.0.0.1 - - [02/Dec/2024 01:26:44] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 01:26:44,576 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:26:41 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:26:50,636 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:26:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:26:51,612 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:26:51 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:26:53,739 - INFO - 127.0.0.1 - - [02/Dec/2024 01:26:53] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 01:27:00,636 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:27:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:27:01,612 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:27:01 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:27:03,308 - INFO - 127.0.0.1 - - [02/Dec/2024 01:27:03] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 01:27:13,658 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:27:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:27:14,634 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:27:11 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:27:16,839 - INFO - 127.0.0.1 - - [02/Dec/2024 01:27:16] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 01:27:20,636 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:27:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:27:21,612 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:27:21 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:27:25,543 - INFO - 127.0.0.1 - - [02/Dec/2024 01:27:25] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 01:27:30,636 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:27:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:27:31,612 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:27:31 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:27:34,862 - INFO - 127.0.0.1 - - [02/Dec/2024 01:27:34] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 01:27:40,636 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:27:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:27:41,612 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:27:41 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:27:43,609 - INFO - 127.0.0.1 - - [02/Dec/2024 01:27:43] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 01:27:53,796 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:27:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:27:54,772 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:27:51 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:27:56,383 - INFO - 127.0.0.1 - - [02/Dec/2024 01:27:56] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 01:28:00,636 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:28:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:28:01,612 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:28:01 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:28:10,636 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:28:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:28:11,612 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:28:11 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:28:20,636 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:28:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:28:21,612 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:28:21 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:28:26,646 - INFO - 127.0.0.1 - - [02/Dec/2024 01:28:26] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 01:28:33,799 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:28:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:28:34,774 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:28:31 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:28:40,636 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:28:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:28:41,612 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:28:41 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:28:50,636 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:28:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:28:51,612 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:28:51 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:28:56,755 - INFO - 127.0.0.1 - - [02/Dec/2024 01:28:56] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 01:28:57,154 - INFO - 127.0.0.1 - - [02/Dec/2024 01:28:57] "GET /dashboard/create_dash/ HTTP/1.1" 200 -
+2024-12-02 01:28:57,454 - INFO - 127.0.0.1 - - [02/Dec/2024 01:28:57] "GET /dashboard/create_dash/_dash-layout HTTP/1.1" 200 -
+2024-12-02 01:29:00,641 - INFO - 127.0.0.1 - - [02/Dec/2024 01:29:00] "GET /dashboard/create_dash/_dash-dependencies HTTP/1.1" 200 -
+2024-12-02 01:29:00,951 - INFO - 127.0.0.1 - - [02/Dec/2024 01:29:00] "[36mGET /dashboard/create_dash/_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2024-12-02 01:29:03,763 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:29:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:29:04,119 - INFO - 127.0.0.1 - - [02/Dec/2024 01:29:04] "GET / HTTP/1.1" 200 -
+2024-12-02 01:29:04,739 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:29:01 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:29:10,636 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:29:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:29:11,612 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:29:11 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:29:20,636 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:29:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:29:21,612 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:29:21 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:29:30,636 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:29:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:29:31,612 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:29:31 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:29:43,790 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:29:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:29:44,766 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:29:41 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:29:50,636 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:29:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:29:51,612 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:29:51 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:30:00,636 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:30:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:30:01,612 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:30:01 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:30:13,230 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:30:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:30:14,205 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:30:11 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:30:20,636 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:30:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:30:21,612 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:30:21 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:30:30,636 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:30:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:30:31,612 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:30:31 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:30:40,636 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:30:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:30:41,612 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:30:41 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:30:54,099 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:30:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:30:55,075 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:30:51 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:31:00,636 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:31:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:31:01,612 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:31:01 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:31:10,636 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:31:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:31:11,612 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:31:11 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:31:12,649 - INFO -  * Detected change in '/home/r4mbb/logapi-new/blueprints/dashboard/routes.py', reloading
+2024-12-02 01:31:12,651 - INFO -  * Detected change in '/home/r4mbb/logapi-new/blueprints/dashboard/routes.py', reloading
+2024-12-02 01:31:12,651 - INFO -  * Detected change in '/home/r4mbb/logapi-new/blueprints/dashboard/routes.py', reloading
+2024-12-02 01:31:12,654 - INFO -  * Detected change in '/home/r4mbb/logapi-new/blueprints/dashboard/routes.py', reloading
+2024-12-02 01:31:12,654 - INFO -  * Detected change in '/home/r4mbb/logapi-new/blueprints/dashboard/routes.py', reloading
+2024-12-02 01:31:24,228 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:31:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:31:24,235 - WARNING - Run time of job "manage_database (trigger: interval[0:05:00], next run at: 2024-12-02 01:31:20 KST)" was missed by 0:00:03.598633
+2024-12-02 01:31:30,636 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:31:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:31:40,636 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:31:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:31:50,636 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:31:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:31:54,945 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:31:21 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:31:54,946 - ERROR - Error submitting job "manage_database (trigger: interval[0:05:00], next run at: 2024-12-02 01:31:21 KST)" to executor "default"
+Traceback (most recent call last):
+  File "/home/r4mbb/.local/lib/python3.10/site-packages/apscheduler/schedulers/base.py", line 1195, in _process_jobs
+    executor.submit_job(job, run_times)
+  File "/home/r4mbb/.local/lib/python3.10/site-packages/apscheduler/executors/base.py", line 74, in submit_job
+    self._do_submit_job(job, run_times)
+  File "/home/r4mbb/.local/lib/python3.10/site-packages/apscheduler/executors/pool.py", line 27, in _do_submit_job
+    f = self._pool.submit(
+  File "/usr/lib/python3.10/concurrent/futures/thread.py", line 167, in submit
+    raise RuntimeError('cannot schedule new futures after shutdown')
+RuntimeError: cannot schedule new futures after shutdown
+2024-12-02 01:32:01,384 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-02 01:32:01,384 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-02 01:32:01,384 - INFO - Added job "start_log_collector" to job store "default"
+2024-12-02 01:32:01,384 - INFO - Added job "manage_database" to job store "default"
+2024-12-02 01:32:01,384 - INFO - Scheduler started
+2024-12-02 01:32:01,417 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.22.249.161:5000
+2024-12-02 01:32:01,418 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-02 01:32:01,418 - INFO -  * Restarting with watchdog (inotify)
+2024-12-02 01:32:03,403 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-02 01:32:03,403 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-02 01:32:03,404 - INFO - Added job "start_log_collector" to job store "default"
+2024-12-02 01:32:03,404 - INFO - Added job "manage_database" to job store "default"
+2024-12-02 01:32:03,404 - INFO - Scheduler started
+2024-12-02 01:32:03,434 - WARNING -  * Debugger is active!
+2024-12-02 01:32:03,434 - INFO -  * Debugger PIN: 581-180-133
+2024-12-02 01:32:04,690 - INFO - 127.0.0.1 - - [02/Dec/2024 01:32:04] "GET / HTTP/1.1" 200 -
+2024-12-02 01:32:07,431 - INFO - 127.0.0.1 - - [02/Dec/2024 01:32:07] "GET / HTTP/1.1" 200 -
+2024-12-02 01:32:08,976 - INFO - 127.0.0.1 - - [02/Dec/2024 01:32:08] "GET /dashboard/ HTTP/1.1" 200 -
+2024-12-02 01:32:09,260 - INFO - 127.0.0.1 - - [02/Dec/2024 01:32:09] "GET /dashboard/_dash-layout HTTP/1.1" 200 -
+2024-12-02 01:32:09,392 - INFO - 127.0.0.1 - - [02/Dec/2024 01:32:09] "GET /dashboard/_dash-dependencies HTTP/1.1" 200 -
+2024-12-02 01:32:10,378 - INFO - 127.0.0.1 - - [02/Dec/2024 01:32:10] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 01:32:10,400 - INFO - 127.0.0.1 - - [02/Dec/2024 01:32:10] "[36mGET /dashboard/_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2024-12-02 01:32:10,697 - INFO - 127.0.0.1 - - [02/Dec/2024 01:32:10] "[36mGET /dashboard/_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2024-12-02 01:32:11,394 - INFO - Running job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:32:11 KST)" (scheduled at 2024-12-02 01:32:11.383996+09:00)
+2024-12-02 01:32:13,419 - INFO - Running job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:32:13 KST)" (scheduled at 2024-12-02 01:32:13.403754+09:00)
+2024-12-02 01:32:13,560 - INFO - 127.0.0.1 - - [02/Dec/2024 01:32:13] "GET /dashboard/create_dash/ HTTP/1.1" 200 -
+2024-12-02 01:32:13,650 - INFO - 127.0.0.1 - - [02/Dec/2024 01:32:13] "GET /dashboard/create_dash/_dash-layout HTTP/1.1" 200 -
+2024-12-02 01:32:13,790 - INFO - 127.0.0.1 - - [02/Dec/2024 01:32:13] "GET /dashboard/create_dash/_dash-dependencies HTTP/1.1" 200 -
+2024-12-02 01:32:13,899 - INFO - 127.0.0.1 - - [02/Dec/2024 01:32:13] "[36mGET /dashboard/create_dash/_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2024-12-02 01:32:21,384 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:32:21 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:32:23,403 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:32:23 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:32:25,900 - INFO - 127.0.0.1 - - [02/Dec/2024 01:32:25] "GET /dashboard/ HTTP/1.1" 200 -
+2024-12-02 01:32:26,191 - INFO - 127.0.0.1 - - [02/Dec/2024 01:32:26] "GET /dashboard/_dash-dependencies HTTP/1.1" 200 -
+2024-12-02 01:32:26,193 - INFO - 127.0.0.1 - - [02/Dec/2024 01:32:26] "GET /dashboard/_dash-layout HTTP/1.1" 200 -
+2024-12-02 01:32:26,517 - INFO - 127.0.0.1 - - [02/Dec/2024 01:32:26] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 01:32:26,533 - INFO - 127.0.0.1 - - [02/Dec/2024 01:32:26] "[36mGET /dashboard/_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2024-12-02 01:32:26,814 - INFO - 127.0.0.1 - - [02/Dec/2024 01:32:26] "[36mGET /dashboard/_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2024-12-02 01:32:34,602 - INFO - 127.0.0.1 - - [02/Dec/2024 01:32:34] "GET /dashboard/create_dash/ HTTP/1.1" 200 -
+2024-12-02 01:32:34,682 - INFO - 127.0.0.1 - - [02/Dec/2024 01:32:34] "GET /dashboard/create_dash/_dash-layout HTTP/1.1" 200 -
+2024-12-02 01:32:34,833 - INFO - 127.0.0.1 - - [02/Dec/2024 01:32:34] "GET /dashboard/create_dash/_dash-dependencies HTTP/1.1" 200 -
+2024-12-02 01:32:34,929 - INFO - 127.0.0.1 - - [02/Dec/2024 01:32:34] "[36mGET /dashboard/create_dash/_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2024-12-02 01:32:34,969 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:32:31 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:32:36,989 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:32:33 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:32:41,384 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:32:41 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:32:43,403 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:32:43 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:32:51,384 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:32:51 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:32:53,403 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:32:53 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:33:01,384 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:33:01 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:33:03,404 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:33:03 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:33:14,971 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:33:11 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:33:16,990 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:33:13 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:33:21,384 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:33:21 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:33:23,404 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:33:23 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:33:31,384 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:33:31 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:33:33,403 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:33:33 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:33:41,384 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:33:41 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:33:46,978 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:33:43 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:33:53,403 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:33:53 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:33:54,958 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:33:51 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:34:01,384 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:34:01 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:34:03,403 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:34:03 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:34:11,384 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:34:11 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:34:13,403 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:34:13 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:34:24,926 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:34:21 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:34:26,946 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:34:23 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:34:31,384 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:34:31 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:34:33,403 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:34:33 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:34:41,384 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:34:41 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:34:43,403 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:34:43 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:34:51,384 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:34:51 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:34:53,403 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:34:53 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:35:04,889 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:35:01 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:35:06,908 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:35:03 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:35:11,384 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:35:11 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:35:13,403 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:35:13 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:35:21,384 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:35:21 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:35:23,403 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:35:23 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:35:34,900 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:35:31 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:35:36,920 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:35:33 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:35:41,384 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:35:41 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:35:43,403 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:35:43 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:35:51,384 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:35:51 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:35:53,403 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:35:53 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:35:56,376 - INFO -  * Detected change in '/home/r4mbb/logapi-new/blueprints/dashboard/routes.py', reloading
+2024-12-02 01:35:56,378 - INFO -  * Detected change in '/home/r4mbb/logapi-new/blueprints/dashboard/routes.py', reloading
+2024-12-02 01:35:56,379 - INFO -  * Detected change in '/home/r4mbb/logapi-new/blueprints/dashboard/routes.py', reloading
+2024-12-02 01:35:56,387 - INFO -  * Detected change in '/home/r4mbb/logapi-new/blueprints/dashboard/routes.py', reloading
+2024-12-02 01:35:56,387 - INFO -  * Detected change in '/home/r4mbb/logapi-new/blueprints/dashboard/routes.py', reloading
+2024-12-02 01:36:01,384 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:36:01 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:36:14,888 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:36:11 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:36:21,384 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:36:21 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:36:31,384 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:36:31 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:36:41,384 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:36:41 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:36:47,893 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:36:03 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:36:50,825 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-02 01:36:50,825 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-02 01:36:50,825 - INFO - Added job "start_log_collector" to job store "default"
+2024-12-02 01:36:50,825 - INFO - Added job "manage_database" to job store "default"
+2024-12-02 01:36:50,825 - INFO - Scheduler started
+2024-12-02 01:36:50,861 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.22.249.161:5000
+2024-12-02 01:36:50,861 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-02 01:36:50,862 - INFO -  * Restarting with watchdog (inotify)
+2024-12-02 01:36:52,762 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-02 01:36:52,762 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-02 01:36:52,763 - INFO - Added job "start_log_collector" to job store "default"
+2024-12-02 01:36:52,763 - INFO - Added job "manage_database" to job store "default"
+2024-12-02 01:36:52,763 - INFO - Scheduler started
+2024-12-02 01:36:52,811 - WARNING -  * Debugger is active!
+2024-12-02 01:36:52,812 - INFO -  * Debugger PIN: 581-180-133
+2024-12-02 01:36:54,172 - INFO - 127.0.0.1 - - [02/Dec/2024 01:36:54] "GET / HTTP/1.1" 200 -
+2024-12-02 01:36:55,344 - INFO - 127.0.0.1 - - [02/Dec/2024 01:36:55] "GET /dashboard/ HTTP/1.1" 200 -
+2024-12-02 01:36:55,630 - INFO - 127.0.0.1 - - [02/Dec/2024 01:36:55] "GET /dashboard/_dash-layout HTTP/1.1" 200 -
+2024-12-02 01:36:55,712 - INFO - 127.0.0.1 - - [02/Dec/2024 01:36:55] "GET /dashboard/_dash-dependencies HTTP/1.1" 200 -
+2024-12-02 01:36:56,693 - INFO - 127.0.0.1 - - [02/Dec/2024 01:36:56] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 01:36:56,703 - INFO - 127.0.0.1 - - [02/Dec/2024 01:36:56] "[36mGET /dashboard/_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2024-12-02 01:36:56,995 - INFO - 127.0.0.1 - - [02/Dec/2024 01:36:56] "[36mGET /dashboard/_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2024-12-02 01:37:00,857 - INFO - Running job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:37:00 KST)" (scheduled at 2024-12-02 01:37:00.824972+09:00)
+2024-12-02 01:37:02,777 - INFO - Running job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:37:02 KST)" (scheduled at 2024-12-02 01:37:02.762560+09:00)
+2024-12-02 01:37:03,037 - INFO - 127.0.0.1 - - [02/Dec/2024 01:37:03] "GET /dashboard/create_dash/ HTTP/1.1" 200 -
+2024-12-02 01:37:03,118 - INFO - 127.0.0.1 - - [02/Dec/2024 01:37:03] "GET /dashboard/create_dash/_dash-layout HTTP/1.1" 200 -
+2024-12-02 01:37:03,268 - INFO - 127.0.0.1 - - [02/Dec/2024 01:37:03] "GET /dashboard/create_dash/_dash-dependencies HTTP/1.1" 200 -
+2024-12-02 01:37:03,379 - INFO - 127.0.0.1 - - [02/Dec/2024 01:37:03] "[36mGET /dashboard/create_dash/_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2024-12-02 01:37:10,825 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:37:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:37:12,762 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:37:12 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:37:24,243 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:37:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:37:26,181 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:37:22 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:37:30,825 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:37:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:37:32,762 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:37:32 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 01:39:00,128 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-02 01:39:00,128 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-02 01:39:00,128 - INFO - Added job "start_log_collector" to job store "default"
+2024-12-02 01:39:00,128 - INFO - Added job "manage_database" to job store "default"
+2024-12-02 01:39:00,128 - INFO - Scheduler started
+2024-12-02 01:39:00,144 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.22.249.161:5000
+2024-12-02 01:39:00,144 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-02 01:39:00,145 - INFO -  * Restarting with watchdog (inotify)
+2024-12-02 01:39:01,124 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-02 01:39:01,124 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-02 01:39:01,124 - INFO - Added job "start_log_collector" to job store "default"
+2024-12-02 01:39:01,124 - INFO - Added job "manage_database" to job store "default"
+2024-12-02 01:39:01,124 - INFO - Scheduler started
+2024-12-02 01:39:01,139 - WARNING -  * Debugger is active!
+2024-12-02 01:39:01,140 - INFO -  * Debugger PIN: 581-180-133
+2024-12-02 01:39:03,514 - INFO - 127.0.0.1 - - [02/Dec/2024 01:39:03] "GET /dashboard/ HTTP/1.1" 200 -
+2024-12-02 01:39:03,548 - INFO - 127.0.0.1 - - [02/Dec/2024 01:39:03] "GET /dashboard/_dash-layout HTTP/1.1" 200 -
+2024-12-02 01:39:03,728 - INFO - 127.0.0.1 - - [02/Dec/2024 01:39:03] "GET /dashboard/_dash-dependencies HTTP/1.1" 200 -
+2024-12-02 01:39:07,767 - INFO - 127.0.0.1 - - [02/Dec/2024 01:39:07] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 01:39:07,774 - INFO - 127.0.0.1 - - [02/Dec/2024 01:39:07] "[36mGET /dashboard/_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2024-12-02 01:39:08,069 - INFO - 127.0.0.1 - - [02/Dec/2024 01:39:08] "[36mGET /dashboard/_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2024-12-02 01:39:10,422 - INFO - 127.0.0.1 - - [02/Dec/2024 01:39:10] "GET /dashboard/create_dash/ HTTP/1.1" 200 -
+2024-12-02 01:39:10,505 - INFO - 127.0.0.1 - - [02/Dec/2024 01:39:10] "GET /dashboard/create_dash/_dash-layout HTTP/1.1" 200 -
+2024-12-02 01:39:10,661 - INFO - 127.0.0.1 - - [02/Dec/2024 01:39:10] "GET /dashboard/create_dash/_dash-dependencies HTTP/1.1" 200 -
+2024-12-02 01:39:10,746 - INFO - 127.0.0.1 - - [02/Dec/2024 01:39:10] "[36mGET /dashboard/create_dash/_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2024-12-02 01:39:13,448 - WARNING - Run time of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:39:10 KST)" was missed by 0:00:03.319635
+2024-12-02 01:39:14,443 - WARNING - Run time of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 01:39:11 KST)" was missed by 0:00:03.319499
