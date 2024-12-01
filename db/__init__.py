@@ -1,4 +1,6 @@
 import sqlite3
+import logging
+import pandas as pd
 
 DB_PATH = 'logs.db'
 
@@ -83,4 +85,26 @@ def execute_query(query, params=None):
     conn.commit()
     conn.close()
 
+def get_live_logs(log_type, x_axis, y_axis, color):
+    try:
+        columns = [x_axis] + ([y_axis] if y_axis != 'count' else []) + ([color] if color else [])
+        query = f"SELECT {', '.join(columns)} FROM {log_type}"
+        rows = query_logs(query)
+
+        if not rows:
+            return pd.DataFrame()
+
+        df = pd.DataFrame(rows, columns=columns)
+
+        if y_axis == 'count':
+            if color:
+                df = df.groupby([x_axis, color]).size().reset_index(name='count')
+            else:
+                df = df.groupby(x_axis).size().reset_index(name='count')
+
+        return df
+
+    except Exception as e:
+        logging.error(f"Error fetching live logs for log_type '{log_type}': {e}")
+        return pd.DataFrame()
 

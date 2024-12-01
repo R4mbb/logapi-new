@@ -1,26 +1,24 @@
-from flask import Blueprint, request, jsonify
+from flask import Blueprint
 from dash import Dash, dcc, html, Input, Output, State
-from dash.dependencies import ALL
+from dash.exceptions import PreventUpdate
 import pandas as pd
 import plotly.express as px
-import plotly.io as pio
-import json
-
-from db import query_logs
-from .blueprints.collector import start_log_collector  # 기존 Collector를 대시보드와 연결
+import os, json
+import logging
+from db import query_logs, get_live_logs
 
 dashboard_bp = Blueprint('dashboard', __name__, url_prefix='/dashboard')
 
-# Initialize global variables
-stored_graphs = []
 GRAPH_STORAGE_FILE = "stored_graphs.json"
+stored_graphs = []
 
-# Save and load graphs
 def save_graphs_to_file():
+    """Save the stored graphs to a JSON file."""
     with open(GRAPH_STORAGE_FILE, "w") as f:
         json.dump(stored_graphs, f)
 
 def load_graphs_from_file():
+    """Load stored graphs from a JSON file."""
     if os.path.exists(GRAPH_STORAGE_FILE):
         with open(GRAPH_STORAGE_FILE, "r") as f:
             return json.load(f)
@@ -28,96 +26,198 @@ def load_graphs_from_file():
 
 stored_graphs = load_graphs_from_file()
 
-
 def init_dashboard_dash(app):
-    dash_view = Dash(__name__, server=app, url_base_pathname='/dashboard/')
+    """Initialize the dashboard creation page."""
+    dash_create = Dash(__name__, server=app, url_base_pathname='/dashboard/create_dash/')
 
-    # Dash Layout
-    dash_view.layout = html.Div([
-        html.H1("Dashboard", style={'textAlign': 'center'}),
-        html.Div(id='graphs-container', style={'marginTop': '20px'}),
-        html.Button("Refresh Graphs", id='refresh-btn', n_clicks=0),
-        dcc.Interval(id='refresh-interval', interval=10 * 1000, n_intervals=0)  # 10초 주기
+    dash_create.layout = html.Div([
+        html.H1("Create a New Dashboard", style={'textAlign': 'center'}),
+
+        # Button to go to Dashboard
+        html.A("Go to Dashboard", href="/dashboard/", className="btn btn-primary", style={'marginBottom': '20px'}),
+
+        html.Label("Log Type"),
+        dcc.Dropdown(
+            id='log-type-dropdown',
+            options=[
+                {'label': 'Apache2 Logs', 'value': 'apache2_logs'},
+                {'label': 'Nginx Logs', 'value': 'nginx_logs'}
+            ],
+            placeholder="Select Log Type"
+        ),
+        html.Label("X-Axis"),
+        dcc.Dropdown(id='x-axis-dropdown', placeholder='Select X-axis'),
+        html.Label("Y-Axis"),
+        dcc.Dropdown(id='y-axis-dropdown', placeholder='Select Y-axis'),
+        html.Label("Color (Optional)"),
+        dcc.Dropdown(id='color-dropdown', placeholder='Select Color'),
+        html.Label("Graph Title"),
+        dcc.Input(id='graph-title', type='text', placeholder='Enter Graph Title'),
+        html.Label("Graph Type"),
+        dcc.Dropdown(
+            id='graph-type-dropdown',
+            options=[
+                {'label': 'Bar Chart', 'value': 'bar'},
+                {'label': 'Line Chart', 'value': 'line'},
+                {'label': 'Scatter Plot', 'value': 'scatter'},
+                {'label': 'Histogram', 'value': 'histogram'},
+                {'label': 'Heatmap', 'value': 'heatmap'},
+                {'label': 'Count Plot', 'value': 'count'}
+            ],
+            placeholder="Select Graph Type"
+        ),
+        html.Div([
+            html.Button("Preview", id="preview-btn", n_clicks=0),
+            html.Button("Confirm", id="confirm-btn", n_clicks=0, style={'marginLeft': '10px'}),
+            html.Button("Reset", id="reset-btn", n_clicks=0, style={'marginLeft': '10px', 'backgroundColor': 'red', 'color': 'white'}),
+        ], style={'marginTop': '20px'}),
+        html.Div(id='preview-container', style={'marginTop': '20px'})
     ])
 
-    # 실시간 데이터를 업데이트하는 콜백
-    @dash_view.callback(
-        Output('graphs-container', 'children'),
-        [Input('refresh-btn', 'n_clicks'), Input('refresh-interval', 'n_intervals')],
-    )
-    def refresh_graphs(n_clicks, n_intervals):
-        global stored_graphs
-        stored_graphs = load_graphs_from_file()
-        
-        # 쿼리된 로그 데이터를 처리
-        for graph in stored_graphs:
-            try:
-                figure = pio.from_json(graph['graph_html'])  # 기존 그래프 로드
-                log_type = graph.get('log_type', 'apache2_logs')  # 그래프의 로그 타입
-                x_axis = figure['data'][0]['x'][0]  # X축 필드
-                y_axis = figure['data'][0]['y'][0]  # Y축 필드
-
-                # 데이터베이스에서 새로운 데이터 가져오기
-                query = f"SELECT {x_axis}, {y_axis} FROM {log_type} ORDER BY timestamp DESC LIMIT 100"
-                new_data = query_logs(query)
-                if new_data:
-                    df = pd.DataFrame(new_data, columns=[x_axis, y_axis])
-                    figure['data'][0]['x'] = df[x_axis].tolist()
-                    figure['data'][0]['y'] = df[y_axis].tolist()
-
-                    graph['graph_html'] = pio.to_json(figure)  # 그래프 업데이트
-            except Exception as e:
-                print(f"Error updating graph {graph.get('title')}: {e}")
-
-        save_graphs_to_file()
-
-        # 그래프 렌더링
-        return [
-            html.Div([
-                html.H5(graph['title']),
-                dcc.Graph(figure=pio.from_json(graph['graph_html'])),
-                html.Button("Delete", id={'type': 'delete-btn', 'index': idx}, style={'marginTop': '10px', 'color': 'red'})
-            ], style={'marginBottom': '20px'})
-            for idx, graph in enumerate(stored_graphs)
-        ]
-
-    # Delete 버튼 콜백
-    @dash_view.callback(
-        Output('graphs-container', 'children'),
-        [Input({'type': 'delete-btn', 'index': ALL}, 'n_clicks')],
+    @dash_create.callback(
+        Output('x-axis-dropdown', 'options', allow_duplicate=True),
+        Output('y-axis-dropdown', 'options', allow_duplicate=True),
+        Output('color-dropdown', 'options', allow_duplicate=True),
+        Input('log-type-dropdown', 'value'),
         prevent_initial_call=True
     )
-    def delete_graph(delete_clicks):
-        global stored_graphs
-        if not any(delete_clicks):
-            raise PreventUpdate
+    def update_dropdowns(log_type):
+        if not log_type:
+            return [], [], []
 
-        stored_graphs = [graph for idx, graph in enumerate(stored_graphs) if not delete_clicks[idx]]
+        rows = query_logs(f"PRAGMA table_info({log_type})")
+        if not rows:
+            return [], [], []
+
+        columns = [{'label': col[1], 'value': col[1]} for col in rows]
+        count_option = [{'label': 'Count', 'value': 'count'}]
+        return columns + count_option, columns + count_option, columns
+
+    @dash_create.callback(
+        Output('preview-container', 'children', allow_duplicate=True),
+        Input('preview-btn', 'n_clicks'),
+        State('log-type-dropdown', 'value'),
+        State('x-axis-dropdown', 'value'),
+        State('y-axis-dropdown', 'value'),
+        State('color-dropdown', 'value'),
+        State('graph-title', 'value'),
+        State('graph-type-dropdown', 'value'),
+        prevent_initial_call=True
+    )
+    def preview_graph(n_clicks, log_type, x_axis, y_axis, color, title, graph_type):
+        if not log_type or not x_axis or not y_axis:
+            return html.Div("Please select Log Type, X-axis, and Y-axis.", style={'color': 'red'})
+
+        df = get_live_logs(log_type, x_axis, y_axis, color)
+        if df.empty:
+            return html.Div("No data available for the selected criteria.", style={'color': 'red'})
+
+        if color and color not in df.columns:
+            color = None
+
+        try:
+            if graph_type == 'count':
+                df = df.groupby(x_axis).size().reset_index(name='count')
+                fig = px.bar(df, x=x_axis, y='count', color=color, title=title or "Count Plot")
+            elif graph_type == 'bar':
+                fig = px.bar(df, x=x_axis, y=y_axis, color=color, title=title or "Bar Chart")
+            elif graph_type == 'line':
+                fig = px.line(df, x=x_axis, y=y_axis, color=color, title=title or "Line Chart")
+            elif graph_type == 'scatter':
+                fig = px.scatter(df, x=x_axis, y=y_axis, color=color, title=title or "Scatter Plot")
+            elif graph_type == 'histogram':
+                fig = px.histogram(df, x=x_axis, y=y_axis, color=color, title=title or "Histogram")
+            elif graph_type == 'heatmap':
+                fig = px.density_heatmap(df, x=x_axis, y=y_axis, z=color, title=title or "Heatmap")
+
+            return dcc.Graph(figure=fig)
+        except Exception as e:
+            logging.error(f"Failed to generate graph: {e}")
+            return html.Div(f"Error generating graph: {str(e)}", style={'color': 'red'})
+
+    @dash_create.callback(
+        Output('preview-container', 'children', allow_duplicate=True),
+        Input('confirm-btn', 'n_clicks'),
+        State('log-type-dropdown', 'value'),
+        State('x-axis-dropdown', 'value'),
+        State('y-axis-dropdown', 'value'),
+        State('color-dropdown', 'value'),
+        State('graph-title', 'value'),
+        State('graph-type-dropdown', 'value'),
+        prevent_initial_call=True
+    )
+    def confirm_graph(n_clicks, log_type, x_axis, y_axis, color, title, graph_type):
+        if not title:
+            return html.Div("Graph title is required.", style={'color': 'red'})
+
+        global stored_graphs
+        graph_meta = {
+            "log_type": log_type,
+            "x_axis": x_axis,
+            "y_axis": y_axis,
+            "color": color,
+            "title": title,
+            "graph_type": graph_type
+        }
+        stored_graphs.append(graph_meta)
         save_graphs_to_file()
 
-        return [
-            html.Div([
-                html.H5(graph['title']),
-                dcc.Graph(figure=pio.from_json(graph['graph_html'])),
-                html.Button("Delete", id={'type': 'delete-btn', 'index': idx}, style={'marginTop': '10px', 'color': 'red'})
-            ], style={'marginBottom': '20px'})
-            for idx, graph in enumerate(stored_graphs)
-        ]
+        return html.Div("Graph confirmed and saved to dashboard.", style={'color': 'green'})
+
+    return dash_create
+
+
+def init_dashboard_view_dash(app):
+    """Initialize the dashboard view page."""
+    dash_view = Dash(__name__, server=app, url_base_pathname='/dashboard/')
+
+    dash_view.layout = html.Div([
+        html.H1("Dashboard View", style={'textAlign': 'center'}),
+
+        html.A("Create Dashboard", href="/dashboard/create_dash/", className="btn btn-primary", style={'marginBottom': '20px'}),
+
+        html.Div(id='graphs-container'),
+        dcc.Interval(id='refresh-interval', interval=10000, n_intervals=0)
+    ])
+
+    @dash_view.callback(
+        Output('graphs-container', 'children'),
+        Input('refresh-interval', 'n_intervals')
+    )
+    def update_dashboard(n_intervals):
+        live_graphs = []
+        global stored_graphs
+        stored_graphs = load_graphs_from_file()  # Reload the latest saved graphs
+
+        for graph_meta in stored_graphs:
+            df = get_live_logs(graph_meta['log_type'], graph_meta['x_axis'], graph_meta['y_axis'], graph_meta['color'])
+            if df.empty:
+                live_graphs.append(html.Div([
+                    html.H5(f"Graph: {graph_meta['title']}"),
+                    html.Div("No data available for this graph.", style={'color': 'red', 'textAlign': 'center'}),
+                ]))
+                continue
+
+            if graph_meta['graph_type'] == 'count':
+                df = df.groupby(graph_meta['x_axis']).size().reset_index(name='count')
+                fig = px.bar(df, x=graph_meta['x_axis'], y='count', title=graph_meta['title'])
+            elif graph_meta['graph_type'] == 'bar':
+                fig = px.bar(df, x=graph_meta['x_axis'], y=graph_meta['y_axis'], color=graph_meta['color'], title=graph_meta['title'])
+            elif graph_meta['graph_type'] == 'line':
+                fig = px.line(df, x=graph_meta['x_axis'], y=graph_meta['y_axis'], color=graph_meta['color'], title=graph_meta['title'])
+            elif graph_meta['graph_type'] == 'scatter':
+                fig = px.scatter(df, x=graph_meta['x_axis'], y=graph_meta['y_axis'], color=graph_meta['color'], title=graph_meta['title'])
+            elif graph_meta['graph_type'] == 'histogram':
+                fig = px.histogram(df, x=graph_meta['x_axis'], y=graph_meta['y_axis'], color=graph_meta['color'], title=graph_meta['title'])
+            elif graph_meta['graph_type'] == 'heatmap':
+                fig = px.density_heatmap(df, x=graph_meta['x_axis'], y=graph_meta['y_axis'], z=graph_meta['color'], title=graph_meta['title'])
+
+            live_graphs.append(html.Div([
+                html.H5(f"Graph: {graph_meta['title']}"),
+                dcc.Graph(figure=fig),
+            ]))
+
+        return live_graphs
 
     return dash_view
-
-
-@dashboard_bp.route('/')
-def start_dashboard():
-    return "Dashboard is running. Visit /dashboard/ to view the dashboards."
-
-
-@dashboard_bp.route('/start_collector', methods=['POST'])
-def start_collector():
-    """Start the log collector in a separate thread."""
-    try:
-        start_log_collector()  # Start the collector to monitor logs
-        return jsonify({"message": "Collector started successfully."}), 200
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
 
