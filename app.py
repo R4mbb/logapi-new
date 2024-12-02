@@ -30,7 +30,7 @@ scheduler = BackgroundScheduler()
 scheduler.add_job(
     func=start_log_collector,
     trigger="interval",  # 일정 간격으로 실행
-    seconds=10,          # 1초 간격으로 실행
+    seconds=10,          # 10초 간격으로 실행
     id="log_collector",
     max_instances=1,
     replace_existing=True
@@ -39,7 +39,7 @@ scheduler.add_job(
 # 데이터베이스 정리 작업 등록
 scheduler.add_job(
     func=manage_database,
-    trigger="interval",  # 일정 간격으로 실행
+    trigger="interval",    # 일정 간격으로 실행
     minutes=5,             # 5분 간격으로 실행
     id="database_cleanup",
     max_instances=1,
