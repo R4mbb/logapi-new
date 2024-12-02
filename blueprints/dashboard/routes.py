@@ -1,6 +1,7 @@
 from flask import Blueprint
 from dash import Dash, dcc, html, Input, Output, State
 from dash.exceptions import PreventUpdate
+import dash_bootstrap_components as dbc
 import pandas as pd
 import plotly.express as px
 import os, json
@@ -27,72 +28,72 @@ def load_graphs_from_file():
 stored_graphs = load_graphs_from_file()
 
 def init_dashboard_dash(app):
-    dash_create = Dash(__name__, server=app, url_base_pathname='/dashboard/create_dash/')
+    dash_create = Dash(
+        __name__,
+        server=app,
+        url_base_pathname='/dashboard/create_dash/',
+        external_stylesheets=[dbc.themes.BOOTSTRAP]
+    )
 
-    dash_create.layout = html.Div([
-        html.H1("Create a New Dashboard", style={
-            'textAlign': 'center',
-            'color': '#f0f0f0',
-            'marginBottom': '20px',
-            'backgroundColor': '#1c1c1c',
-            'padding': '10px',
-            'borderRadius': '5px'
-        }),
+    dash_create.layout = dbc.Container([
+        dbc.Row([
+            dbc.Col(html.H1("Create a New Dashboard", className="text-center text-white bg-dark p-3 mb-4 rounded"))
+        ]),
 
-        html.Div([
-            html.Label("Log Type (Required)", style={'fontWeight': 'bold', 'color': '#f0f0f0'}),
-            dcc.Dropdown(
-                id='log-type-dropdown',
-                options=[
-                    {'label': 'Apache2 Logs', 'value': 'apache2_logs'},
-                    {'label': 'Nginx Logs', 'value': 'nginx_logs'}
-                ],
-                placeholder="Select Log Type",
-                style={'marginBottom': '15px', 'backgroundColor': '#2c2c2c', 'color': '#f0f0f0'}
-            ),
-            html.Label("X-Axis (Required)", style={'fontWeight': 'bold', 'color': '#f0f0f0'}),
-            dcc.Dropdown(id='x-axis-dropdown', placeholder='Select X-axis',
-                         style={'marginBottom': '15px', 'backgroundColor': '#2c2c2c', 'color': '#f0f0f0'}),
-            html.Label("Y-Axis (Required)", style={'fontWeight': 'bold', 'color': '#f0f0f0'}),
-            dcc.Dropdown(id='y-axis-dropdown', placeholder='Select Y-axis',
-                         style={'marginBottom': '15px', 'backgroundColor': '#2c2c2c', 'color': '#f0f0f0'}),
-            html.Label("Color (Optional)", style={'fontWeight': 'bold', 'color': '#f0f0f0'}),
-            dcc.Dropdown(id='color-dropdown', placeholder='Select Color',
-                         style={'marginBottom': '15px', 'backgroundColor': '#2c2c2c', 'color': '#f0f0f0'}),
-            html.Label("Graph Title (Required)", style={'fontWeight': 'bold', 'color': '#f0f0f0'}),
-            dcc.Input(id='graph-title', type='text', placeholder='Enter Graph Title',
-                      style={'marginBottom': '15px', 'backgroundColor': '#2c2c2c', 'color': '#f0f0f0'}),
-            html.Label("Graph Type (Required)", style={'fontWeight': 'bold', 'color': '#f0f0f0'}),
-            dcc.Dropdown(
-                id='graph-type-dropdown',
-                options=[
-                    {'label': 'Bar Chart', 'value': 'bar'},
-                    {'label': 'Line Chart', 'value': 'line'},
-                    {'label': 'Scatter Plot', 'value': 'scatter'},
-                    {'label': 'Histogram', 'value': 'histogram'},
-                    {'label': 'Heatmap', 'value': 'heatmap'},
-                    {'label': 'Count Plot', 'value': 'count'}
-                ],
-                placeholder="Select Graph Type",
-                style={'marginBottom': '15px', 'backgroundColor': '#2c2c2c', 'color': '#f0f0f0'}
-            ),
-        ], style={'maxWidth': '600px', 'margin': 'auto', 'padding': '20px', 'backgroundColor': '#1c1c1c', 'borderRadius': '5px'}),
+        dbc.Row([
+            dbc.Col([
+                dbc.Label("Log Type (Required)", className="fw-bold text-white"),
+                dcc.Dropdown(
+                    id='log-type-dropdown',
+                    options=[
+                        {'label': 'Apache2 Logs', 'value': 'apache2_logs'},
+                        {'label': 'Nginx Logs', 'value': 'nginx_logs'}
+                    ],
+                    placeholder="Select Log Type",
+                    className="mb-3",
+                    style={'color': '#000000'}  # 드롭다운 텍스트 색상 검정으로 변경
+                ),
+                dbc.Label("X-Axis (Required)", className="fw-bold text-white"),
+                dcc.Dropdown(id='x-axis-dropdown', placeholder='Select X-axis', className="mb-3", style={'color': '#000000'}),
+                dbc.Label("Y-Axis (Required)", className="fw-bold text-white"),
+                dcc.Dropdown(id='y-axis-dropdown', placeholder='Select Y-axis', className="mb-3", style={'color': '#000000'}),
+                dbc.Label("Color (Optional)", className="fw-bold text-white"),
+                dcc.Dropdown(id='color-dropdown', placeholder='Select Color', className="mb-3", style={'color': '#000000'}),
+                dbc.Label("Graph Title (Required)", className="fw-bold text-white"),
+                dbc.Input(id='graph-title', type='text', placeholder='Enter Graph Title', className="mb-3"),
+                dbc.Label("Graph Type (Required)", className="fw-bold text-white"),
+                dcc.Dropdown(
+                    id='graph-type-dropdown',
+                    options=[
+                        {'label': 'Bar Chart', 'value': 'bar'},
+                        {'label': 'Line Chart', 'value': 'line'},
+                        {'label': 'Scatter Plot', 'value': 'scatter'},
+                        {'label': 'Histogram', 'value': 'histogram'},
+                        {'label': 'Heatmap', 'value': 'heatmap'},
+                        {'label': 'Count Plot', 'value': 'count'}
+                    ],
+                    placeholder="Select Graph Type",
+                    className="mb-3",
+                    style={'color': '#000000'}
+                ),
+            ], md=6, className="bg-dark text-white rounded p-4"),
+        ], justify="center"),
 
-        html.Div([
-            html.Button("Preview", id="preview-btn", n_clicks=0, style={
-                'marginRight': '10px', 'padding': '10px 20px', 'backgroundColor': '#007bff', 'color': '#fff'
-            }),
-            html.Button("Confirm", id="confirm-btn", n_clicks=0, style={
-                'marginRight': '10px', 'padding': '10px 20px', 'backgroundColor': '#28a745', 'color': '#fff'
-            }),
-            html.Button("Reset", id="reset-btn", n_clicks=0, style={
-                'padding': '10px 20px', 'backgroundColor': '#dc3545', 'color': '#fff'
-            }),
-        ], style={'textAlign': 'center', 'marginTop': '20px'}),
+        dbc.Row([
+            dbc.Col([
+                dbc.Button("Preview", id="preview-btn", n_clicks=0, color="primary", className="me-2"),
+                dbc.Button("Confirm", id="confirm-btn", n_clicks=0, color="success", className="me-2"),
+                dbc.Button("Reset", id="reset-btn", n_clicks=0, color="danger")
+            ], className="text-center mt-4")
+        ]),
 
-        html.Div(id='preview-container', style={'marginTop': '30px', 'textAlign': 'center', 'color': '#f0f0f0'})
-    ], style={'backgroundColor': '#121212', 'padding': '0', 'margin': '0', 'minHeight': '100vh', 'width': '100vw'})
+        dbc.Row([
+            dbc.Col(html.Div(id='preview-container', className="text-white mt-4"))
+        ])
+    ], fluid=True, className="bg-dark vh-100 text-white")
 
+
+    # Callbacks
     @dash_create.callback(
         Output('x-axis-dropdown', 'options', allow_duplicate=True),
         Output('y-axis-dropdown', 'options', allow_duplicate=True),
@@ -125,11 +126,11 @@ def init_dashboard_dash(app):
     )
     def preview_graph(n_clicks, log_type, x_axis, y_axis, color, title, graph_type):
         if not log_type or not x_axis or not y_axis:
-            return html.Div("Please select Log Type, X-axis, and Y-axis.", style={'color': 'red'})
+            return dbc.Alert("Please select Log Type, X-axis, and Y-axis.", color="danger")
 
         df = get_live_logs(log_type, x_axis, y_axis, color)
         if df.empty:
-            return html.Div("No data available for the selected criteria.", style={'color': 'red'})
+            return dbc.Alert("No data available for the selected criteria.", color="warning")
 
         if color and color not in df.columns:
             color = None
@@ -149,10 +150,10 @@ def init_dashboard_dash(app):
             elif graph_type == 'heatmap':
                 fig = px.density_heatmap(df, x=x_axis, y=y_axis, z=color, title=title or "Heatmap")
 
-            return dcc.Graph(figure=fig)
+            return dcc.Graph(figure=fig, className="bg-light rounded")
         except Exception as e:
             logging.error(f"Failed to generate graph: {e}")
-            return html.Div(f"Error generating graph: {str(e)}", style={'color': 'red'})
+            return dbc.Alert(f"Error generating graph: {str(e)}", color="danger")
 
     @dash_create.callback(
         Output('preview-container', 'children', allow_duplicate=True),
@@ -167,7 +168,7 @@ def init_dashboard_dash(app):
     )
     def confirm_graph(n_clicks, log_type, x_axis, y_axis, color, title, graph_type):
         if not title:
-            return html.Div("Graph title is required.", style={'color': 'red'})
+            return dbc.Alert("Graph title is required.", color="danger")
 
         global stored_graphs
         graph_meta = {
@@ -181,31 +182,34 @@ def init_dashboard_dash(app):
         stored_graphs.append(graph_meta)
         save_graphs_to_file()
 
-        return html.Div("Graph confirmed and saved to dashboard.", style={'color': 'green'})
+        return dbc.Alert("Graph confirmed and saved to dashboard.", color="success")
 
     return dash_create
 
 
 def init_dashboard_view_dash(app):
-    dash_view = Dash(__name__, server=app, url_base_pathname='/dashboard/')
+    dash_view = Dash(
+        __name__,
+        server=app,
+        url_base_pathname='/dashboard/',
+        external_stylesheets=[dbc.themes.BOOTSTRAP]
+    )
 
-    dash_view.layout = html.Div([
-        html.Div([
-            html.H1("Dashboard View", style={
-                'textAlign': 'center',
-                'color': '#f0f0f0',
-                'backgroundColor': '#1c1c1c',
-                'padding': '10px',
-                'borderRadius': '5px'
-            }),
-            html.A("Create Dashboard", href="/dashboard/create_dash/", className="btn btn-primary", 
-                   style={'display': 'block', 'margin': '20px auto', 'textAlign': 'center',
-                          'backgroundColor': '#007bff', 'color': '#fff', 'padding': '10px 20px', 'borderRadius': '5px'})
+    dash_view.layout = dbc.Container([
+        dbc.Row([
+            dbc.Col(html.H1("Dashboard View", className="text-center text-white bg-dark p-3 mb-4 rounded"))
         ]),
 
-        html.Div(id='graphs-container', style={'marginTop': '50px', 'padding': '20px'}),
+        dbc.Row([
+            dbc.Col(dbc.Button("Create Dashboard", href="/dashboard/create_dash/", color="primary", className="w-100 mb-3", target="_blank"))
+        ]),
+
+        dbc.Row([
+            dbc.Col(html.Div(id='graphs-container'), className="p-3 bg-dark text-white rounded")
+        ]),
+
         dcc.Interval(id='refresh-interval', interval=10000, n_intervals=0)
-    ], style={'backgroundColor': '#121212', 'padding': '0', 'margin': '0', 'minHeight': '100vh', 'width': '100vw'})
+    ], fluid=True, className="bg-dark vh-100 text-white")
 
     @dash_view.callback(
         Output('graphs-container', 'children'),
@@ -219,10 +223,9 @@ def init_dashboard_view_dash(app):
         for graph_meta in stored_graphs:
             df = get_live_logs(graph_meta['log_type'], graph_meta['x_axis'], graph_meta['y_axis'], graph_meta['color'])
             if df.empty:
-                live_graphs.append(html.Div([
-                    html.H5(f"Graph: {graph_meta['title']}"),
-                    html.Div("No data available for this graph.", style={'color': 'red', 'textAlign': 'center'}),
-                ]))
+                live_graphs.append(
+                    dbc.Alert("No data available for this graph.", color="warning", className="text-center")
+                )
                 continue
 
             if graph_meta['graph_type'] == 'count':
@@ -239,12 +242,19 @@ def init_dashboard_view_dash(app):
             elif graph_meta['graph_type'] == 'heatmap':
                 fig = px.density_heatmap(df, x=graph_meta['x_axis'], y=graph_meta['y_axis'], z=graph_meta['color'], title=graph_meta['title'])
 
-            live_graphs.append(html.Div([
-                html.H5(f"Graph: {graph_meta['title']}"),
-                dcc.Graph(figure=fig),
-            ]))
+            live_graphs.append(
+                dbc.Card(
+                    [
+                        dbc.CardHeader(html.H5(graph_meta['title'], className="text-center text-white")),
+                        dbc.CardBody(dcc.Graph(figure=fig, className="bg-light")),
+                    ],
+                    className="mb-3 bg-secondary text-white"
+                )
+            )
+
+        if not live_graphs:
+            return dbc.Alert("No graphs to display. Create one now!", color="warning", className="text-center mt-5")
 
         return live_graphs
 
     return dash_view
-

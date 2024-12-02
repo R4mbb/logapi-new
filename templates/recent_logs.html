@@ -45,8 +45,8 @@
         .table {
             background-color: #1e1e1e;
             color: #ffffff;
-	    --bs-table-striped-color: #ffffff;
-	    --bs-table-hover-color: #e3b6b6;
+            --bs-table-striped-color: #ffffff;
+            --bs-table-hover-color: #e3b6b6;
         }
         .table th {
             background-color: #333;
@@ -66,6 +66,37 @@
             justify-content: flex-end;
             gap: 10px;
         }
+	/* 테이블 전체 너비를 부모 컨테이너에 맞추기 */
+	.card-body .table {
+	    width: 100%; /* 부모 컨테이너의 너비에 맞춤 */
+	    table-layout: fixed; /* 테이블 열 크기 고정 */
+	    word-wrap: break-word; /* 텍스트 줄바꿈 처리 */
+	}
+
+	/* Message 열 크기 고정 및 줄바꿈 */
+	.card-body .table td.message-cell {
+	    max-width: 400px; /* Message 열 최대 너비 */
+	    overflow-wrap: break-word; /* 단어 단위로 줄바꿈 */
+	    white-space: normal; /* 텍스트를 여러 줄로 표시 */
+	    text-align: left; /* 왼쪽 정렬 */
+	}
+	/* logs-table-body에 종속 스타일 */
+	#logs-table-body {
+	    max-height: 400px; /* 부모 카드 크기에 맞게 높이 제한 */
+	    overflow-y: auto; /* 세로 스크롤 허용 */
+	    overflow-x: hidden; /* 가로 스크롤 숨김 */
+	}
+
+	#logs-table-body tr {
+	    display: table-row; /* 기본 테이블 행 레이아웃 유지 */
+	}
+
+	#logs-table-body td {
+	    word-wrap: break-word; /* 긴 텍스트 줄바꿈 */
+	    white-space: pre-wrap; /* 줄바꿈 및 공백 유지 */
+	    text-align: left; /* 텍스트 왼쪽 정렬 */
+	}
+
     </style>
 </head>
 <body>
@@ -137,7 +168,7 @@
                     <h5 class="card-title">Results</h5>
                     <p class="results-header" id="results-count">No results yet.</p>
                 </div>
-                <div class="table-wrapper">
+                <div>
                     <table class="table table-striped table-hover mt-3">
                         <thead>
                             <tr>
@@ -154,17 +185,6 @@
                         </tbody>
                     </table>
                 </div>
-                <!-- 페이지네이션 -->
-                <nav>
-                    <ul class="pagination justify-content-center">
-                        <li class="page-item">
-                            <button class="page-link" id="prev-page">Previous</button>
-                        </li>
-                        <li class="page-item">
-                            <button class="page-link" id="next-page">Next</button>
-                        </li>
-                    </ul>
-                </nav>
             </div>
         </div>
     </div>
@@ -229,28 +249,33 @@
             });
         }
 
-        // 테이블에 로그 데이터 렌더링
-        function renderLogs(logs) {
-            const tableBody = $("#logs-table-body");
-            tableBody.empty();
-            if (logs.length === 0) {
-                tableBody.append('<tr><td colspan="6" class="no-results">No results found.</td></tr>');
-                return;
-            }
-            logs.forEach(log => {
-                const row = `
-                    <tr>
-                        <td>${log.id}</td>
-                        <td>${log.timestamp}</td>
-                        <td>${log.level}</td>
-                        <td>${log.message}</td>
-                        <td>${log.method || "-"}</td>
-                        <td>${log.source || "-"}</td>
-                    </tr>
-                `;
-                tableBody.append(row);
-            });
-        }
+	// 테이블에 로그 데이터 렌더링
+	function renderLogs(logs) {
+	    const tableBody = $("#logs-table-body");
+	    tableBody.empty(); // 기존 데이터를 초기화
+
+	    if (logs.length === 0) {
+		tableBody.append('<tr><td colspan="6" class="no-results">No results found.</td></tr>');
+		return;
+	    }
+
+	    // 각 로그 데이터를 테이블의 열에 매핑
+	    logs.forEach(log => {
+		const row = `
+		    <tr>
+			<td>${log.id || "-"}</td>
+			<td>${log.timestamp || "-"}</td>
+			<td>${log.level || "-"}</td>
+			<td class="message-cell">${log.message || "-"}</td>
+			<td>${log.method || "-"}</td>
+			<td>${log.source || "-"}</td>
+		    </tr>
+		`;
+		tableBody.append(row);
+	    });
+	}
+
+
     </script>
 </body>
 </html>

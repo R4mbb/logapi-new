@@ -3,7 +3,7 @@ from flask import Flask
 from blueprints.upload_logs import upload_logs_bp
 from blueprints.get_logs import get_logs_bp
 from blueprints.dashboard.routes import dashboard_bp, init_dashboard_dash, init_dashboard_view_dash
-from blueprints.main import main_bp
+from blueprints.main.routes import init_main_page
 from blueprints.recent_logs import recent_logs_bp
 from blueprints.collector import start_log_collector
 from db.cleanup import manage_database
@@ -20,7 +20,7 @@ init_db()
 app.register_blueprint(upload_logs_bp)
 app.register_blueprint(get_logs_bp)
 app.register_blueprint(dashboard_bp)
-app.register_blueprint(main_bp)
+#app.register_blueprint(main_bp)
 app.register_blueprint(recent_logs_bp)
 
 # APScheduler 초기화
@@ -52,6 +52,7 @@ scheduler.start()
 # 대시보드 활성화
 init_dashboard_view_dash(app)
 init_dashboard_dash(app)
+init_main_page(app)
 
 # 애플리케이션 실행
 if __name__ == "__main__":

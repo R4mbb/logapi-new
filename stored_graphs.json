@@ -1,1 +1,1 @@
-[{"log_type": "apache2_logs", "x_axis": "timestamp", "y_axis": "count", "color": "method", "title": "123", "graph_type": "line"}, {"log_type": "apache2_logs", "x_axis": "timestamp", "y_axis": "source", "color": "method", "title": "1", "graph_type": "count"}, {"log_type": "apache2_logs", "x_axis": "timestamp", "y_axis": "count", "color": "method", "title": "123123123123", "graph_type": "line"}]
+[{"log_type": "apache2_logs", "x_axis": "method", "y_axis": "count", "color": "timestamp", "title": "1", "graph_type": "histogram"}]

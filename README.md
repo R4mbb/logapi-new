@@ -1,11 +1,15 @@
 [2024-11-26] - 양재원
 
+[2024-12-02] - 양재원 (완성)
+
+---
+
 ### 아래는 해당 프로젝트의 전체적인 구조다.
 
 ## Apache2 / Nginx 웹 서버 로그를 대상으로 수집 / 분석 / 대시보드화 한다.
 
 ```bash
-project-root/
+logapi-new/
 ├── app.py                     # Flask 애플리케이션 엔트리포인트
 ├── blueprints/
 │   ├── upload_logs/
@@ -26,24 +30,19 @@ project-root/
 │   ├── recent_logs/
 │   │   ├── __init__.py        # 블루프린트
 │   │   └── routes.py          # 최근 로그 검색
-│   ├── analysis/
-│   │   ├── __init__.py        # 블루프린트
-│   │   └── analysis.py        # 분석한 로그 분석
 ├── db/
 │   ├── __init__.py            # DB 초기화 및 작업 유틸리티
-│   ├── cleanup.py             # 주기적으로 디비 청소(압축 백업)
+│   ├── cleanup.py             # 주기적으로 디비 청소 (export/ 압축 백업)
 ├── templates/
-│   ├── dashboard.html         # 대시보드 HTML 템플릿
 │   ├── upload_logs.html       # 로그 파일 업로드 템플릿
-│   ├── main_page.html         # 메인 페이지 템플릿
-│   ├── create_graph.html      # 대시보드 그래프 만드는 템플릿
 │   ├── recent_logs.html       # 최근 로그와 로그 검색 템플릿
 ├── export/
 │   ├── logs_export.csv.gz     # DB 일정량 가득차면 파일로 백업 후 디비 청소
 ├── Dockerfile                 # Docker 빌드 파일
 ├── docker-compose.yml         # Docker Compose 설정 파일
-└── requirements.txt           # Python 종속성
-└── sorted_graph.json          # 생성한 그래프 저장 관리 파일
+├── requirements.txt           # Python 종속성
+├── sorted_graph.json          # 생성한 그래프 저장 관리 파일
+└── collector.log              # 로그 api 서비스 관련 로그 수집 파일
 ```
 
 
@@ -67,14 +66,6 @@ project-root/
 
 ## 2. Blueprint 모듈
 
-### blueprints/analysis/analysis.py
-
-- 기능 구현 필요: 로그 데이터 분석 기능 추가(Pandas 활용).
-
-- 예측 분석: 에러 발생 패턴을 기반으로 경고 시스템 구축.
-
-- 유닛 테스트 작성: 분석 함수의 정확도를 검증하는 테스트 추가.
-
 
 ### blueprints/recent_logs/routes.py
 
@@ -90,10 +81,6 @@ project-root/
 
 
 ### blueprints/dashboard/routes.py
-
-### (***) 대시보드 이상해짐
-
-- UI/UX 업그레이드, 어둡고 모던한 디자인 선호.
 
 - 시각화 강화: Dash 통합으로 대화형 대시보드 지원.
 
@@ -119,6 +106,8 @@ project-root/
 
 - 이젠 시간나면 cleanup 수정하고 아니면 디자인만 손보기 (dashboard, create_dash 수정 중.).
 
+- (완료)
+
 ---
 
 ### blueprints/get_logs/routes.py
@@ -143,15 +132,9 @@ project-root/
 
 ### blueprints/main/routes.py
 
-- UI/UX 강화.
+- 서버 자원 상태 출력
 
-- 템플릿 데이터 관리:
-
-- 렌더링 시 기본 데이터(예: 앱 이름, 버전 정보)를 전달하여 유지보수성을 향상.
-
-- 확장성 고려:
-
-- 페이지 네비게이션이나 다국어 지원을 추가하려면 별도의 config를 활용.
+- (완료)
 
 
 ### blueprints/collector/collector.py
@@ -177,51 +160,7 @@ project-root/
 
 - DB 쿼리 logs 테이블에서 변경 필요.
 
-- (미완료)
-
----
-
-
-## 4. Frontend Templates
-
-### templates/main_page.html
-
-- 확장성: 메뉴를 Navbar로 통합하여 페이지 확장성을 확보.
-
-- 스타일 커스터마이징: 로컬 CSS 사용으로 디자인 제어 강화.
-
-- 다국어 지원: 텍스트를 국제화(i18n) 처리.
-
-
-### templates/upload_logs.html
-
-- 파일 유효성 검사: 파일 크기와 포맷에 대한 클라이언트 검증 추가.
-
-- 업로드 진행률 표시: Progress Bar로 사용자 경험 향상.
-
-- 보안 강화: 업로드 처리에 추가적인 보안 점검.
-
-
-### templates/recent_logs.html
-
-- 비동기 검색: AJAX를 활용해 실시간 필터링.
-
-- 페이지네이션: 결과를 페이징 처리로 제한.
-
-- 로그 통계: 레벨별 빈도를 시각화해 대시보드 느낌 강화.
-
----
-
-
-## 종합적으로:
-
-### 성능 개선: 대규모 데이터 처리에 적합한 최적화.
-
-### 보안 강화: CSRF 방어와 SQL Injection 방지.
-
-### 사용자 경험 향상: 비동기 처리, 대시보드 통합, 직관적 UI 제공.
-
-### 확장 가능성: 로그 포맷 지원 확대와 국제화(i18n) 적용.
+- (미완료 *시간부족)
 
 ---
 

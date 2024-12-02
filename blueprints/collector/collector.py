@@ -20,9 +20,9 @@ logging.basicConfig(
 def get_active_webservers():
     """Detect active web servers (Apache2, Nginx)."""
     active_servers = []
-    if os.path.exists("/etc/apache2/") and os.path.isfile(APACHE_LOG_PATH):
+    if os.path.exists("/var/log/apache2/") and os.path.isfile(APACHE_LOG_PATH):
         active_servers.append("apache2")
-    if os.path.exists("/etc/nginx/") and os.path.isfile(NGINX_LOG_PATH):
+    if os.path.exists("/var/log/nginx/") and os.path.isfile(NGINX_LOG_PATH):
         active_servers.append("nginx")
     return active_servers
 

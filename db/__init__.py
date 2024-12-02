@@ -73,7 +73,6 @@ def query_logs(query, params=None):
     cursor = conn.cursor()
     cursor.execute(query, params or [])
     results = cursor.fetchall()
-    print(f"#### query : {query}")
     conn.close()
     return results
 
