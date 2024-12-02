@@ -21265,3 +21265,982 @@ sqlite3.OperationalError: no such table: logs
 2024-12-02 20:26:41,210 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 20:26:41 KST)" skipped: maximum number of running instances reached (1)
 2024-12-02 20:26:42,180 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 20:26:42 KST)" skipped: maximum number of running instances reached (1)
 2024-12-02 20:26:42,895 - INFO - 127.0.0.1 - - [02/Dec/2024 20:26:42] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:33:30,035 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-02 21:33:30,035 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-02 21:33:30,035 - INFO - Added job "start_log_collector" to job store "default"
+2024-12-02 21:33:30,035 - INFO - Added job "manage_database" to job store "default"
+2024-12-02 21:33:30,035 - INFO - Scheduler started
+2024-12-02 21:33:30,055 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://172.22.249.161:5000
+2024-12-02 21:33:30,055 - INFO - [33mPress CTRL+C to quit[0m
+2024-12-02 21:33:30,055 - INFO -  * Restarting with watchdog (inotify)
+2024-12-02 21:33:30,981 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-02 21:33:30,981 - INFO - Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-12-02 21:33:30,981 - INFO - Added job "start_log_collector" to job store "default"
+2024-12-02 21:33:30,981 - INFO - Added job "manage_database" to job store "default"
+2024-12-02 21:33:30,981 - INFO - Scheduler started
+2024-12-02 21:33:31,001 - WARNING -  * Debugger is active!
+2024-12-02 21:33:31,002 - INFO -  * Debugger PIN: 231-675-730
+2024-12-02 21:33:31,900 - INFO - 127.0.0.1 - - [02/Dec/2024 21:33:31] "GET / HTTP/1.1" 200 -
+2024-12-02 21:33:32,299 - INFO - 127.0.0.1 - - [02/Dec/2024 21:33:32] "GET /_favicon.ico?v=2.18.2 HTTP/1.1" 200 -
+2024-12-02 21:33:32,301 - INFO - 127.0.0.1 - - [02/Dec/2024 21:33:32] "GET /_dash-dependencies HTTP/1.1" 200 -
+2024-12-02 21:33:32,302 - INFO - 127.0.0.1 - - [02/Dec/2024 21:33:32] "GET /_dash-layout HTTP/1.1" 200 -
+2024-12-02 21:33:32,627 - INFO - 127.0.0.1 - - [02/Dec/2024 21:33:32] "[36mGET /_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2024-12-02 21:33:32,646 - INFO - 127.0.0.1 - - [02/Dec/2024 21:33:32] "[36mGET /_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2024-12-02 21:33:32,775 - INFO - 127.0.0.1 - - [02/Dec/2024 21:33:32] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:33:33,531 - INFO - 127.0.0.1 - - [02/Dec/2024 21:33:33] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:33:38,048 - INFO - 127.0.0.1 - - [02/Dec/2024 21:33:38] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:33:40,045 - INFO - Running job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:33:40 KST)" (scheduled at 2024-12-02 21:33:40.035074+09:00)
+2024-12-02 21:33:40,271 - INFO - 127.0.0.1 - - [02/Dec/2024 21:33:40] "GET /dashboard/ HTTP/1.1" 200 -
+2024-12-02 21:33:40,386 - INFO - 127.0.0.1 - - [02/Dec/2024 21:33:40] "GET /dashboard/_dash-layout HTTP/1.1" 200 -
+2024-12-02 21:33:40,517 - INFO - 127.0.0.1 - - [02/Dec/2024 21:33:40] "GET /dashboard/_dash-dependencies HTTP/1.1" 200 -
+2024-12-02 21:33:40,996 - INFO - Running job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:33:40 KST)" (scheduled at 2024-12-02 21:33:40.981436+09:00)
+2024-12-02 21:33:42,971 - INFO - 127.0.0.1 - - [02/Dec/2024 21:33:42] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:33:43,296 - INFO - 127.0.0.1 - - [02/Dec/2024 21:33:43] "[36mGET /dashboard/_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2024-12-02 21:33:43,303 - INFO - 127.0.0.1 - - [02/Dec/2024 21:33:43] "[36mGET /dashboard/_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2024-12-02 21:33:43,461 - INFO - 127.0.0.1 - - [02/Dec/2024 21:33:43] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:33:50,368 - INFO - 127.0.0.1 - - [02/Dec/2024 21:33:50] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:33:51,902 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:33:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:33:52,850 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:33:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:33:53,674 - INFO - 127.0.0.1 - - [02/Dec/2024 21:33:53] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:33:56,041 - INFO - 127.0.0.1 - - [02/Dec/2024 21:33:56] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:33:57,017 - INFO - 127.0.0.1 - - [02/Dec/2024 21:33:57] "GET /dashboard/create_dash/ HTTP/1.1" 200 -
+2024-12-02 21:33:57,321 - INFO - 127.0.0.1 - - [02/Dec/2024 21:33:57] "GET /dashboard/create_dash/_dash-dependencies HTTP/1.1" 200 -
+2024-12-02 21:33:57,323 - INFO - 127.0.0.1 - - [02/Dec/2024 21:33:57] "GET /dashboard/create_dash/_dash-layout HTTP/1.1" 200 -
+2024-12-02 21:33:57,378 - INFO - 127.0.0.1 - - [02/Dec/2024 21:33:57] "GET /dashboard/create_dash/_favicon.ico?v=2.18.2 HTTP/1.1" 200 -
+2024-12-02 21:33:57,554 - INFO - 127.0.0.1 - - [02/Dec/2024 21:33:57] "[36mGET /dashboard/create_dash/_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2024-12-02 21:33:59,409 - INFO - 127.0.0.1 - - [02/Dec/2024 21:33:59] "GET /dashboard/ HTTP/1.1" 200 -
+2024-12-02 21:33:59,810 - INFO - 127.0.0.1 - - [02/Dec/2024 21:33:59] "GET /dashboard/_favicon.ico?v=2.18.2 HTTP/1.1" 200 -
+2024-12-02 21:33:59,812 - INFO - 127.0.0.1 - - [02/Dec/2024 21:33:59] "GET /dashboard/_dash-dependencies HTTP/1.1" 200 -
+2024-12-02 21:33:59,813 - INFO - 127.0.0.1 - - [02/Dec/2024 21:33:59] "GET /dashboard/_dash-layout HTTP/1.1" 200 -
+2024-12-02 21:34:00,007 - INFO - 127.0.0.1 - - [02/Dec/2024 21:34:00] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:34:00,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:34:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:34:00,780 - INFO - 127.0.0.1 - - [02/Dec/2024 21:34:00] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:34:00,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:34:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:34:05,168 - INFO - 127.0.0.1 - - [02/Dec/2024 21:34:05] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:34:09,388 - INFO - 127.0.0.1 - - [02/Dec/2024 21:34:09] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:34:10,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:34:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:34:10,154 - INFO - 127.0.0.1 - - [02/Dec/2024 21:34:10] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:34:10,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:34:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:34:14,584 - INFO - 127.0.0.1 - - [02/Dec/2024 21:34:14] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:34:18,838 - INFO - 127.0.0.1 - - [02/Dec/2024 21:34:18] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:34:19,602 - INFO - 127.0.0.1 - - [02/Dec/2024 21:34:19] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:34:20,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:34:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:34:22,897 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:34:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:34:25,994 - INFO - 127.0.0.1 - - [02/Dec/2024 21:34:25] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:34:30,313 - INFO - 127.0.0.1 - - [02/Dec/2024 21:34:30] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:34:30,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:34:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:34:31,075 - INFO - 127.0.0.1 - - [02/Dec/2024 21:34:31] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:34:31,950 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:34:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:34:35,462 - INFO - 127.0.0.1 - - [02/Dec/2024 21:34:35] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:34:39,613 - INFO - 127.0.0.1 - - [02/Dec/2024 21:34:39] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:34:40,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:34:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:34:40,377 - INFO - 127.0.0.1 - - [02/Dec/2024 21:34:40] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:34:40,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:34:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:34:48,913 - INFO - 127.0.0.1 - - [02/Dec/2024 21:34:48] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:34:50,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:34:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:34:50,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:34:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:35:00,666 - INFO - 127.0.0.1 - - [02/Dec/2024 21:35:00] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:35:01,921 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:35:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:35:02,867 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:35:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:35:09,941 - INFO - 127.0.0.1 - - [02/Dec/2024 21:35:09] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:35:10,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:35:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:35:10,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:35:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:35:19,524 - INFO - 127.0.0.1 - - [02/Dec/2024 21:35:19] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:35:20,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:35:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:35:20,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:35:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:35:22,718 - INFO - 127.0.0.1 - - [02/Dec/2024 21:35:22] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:35:24,042 - INFO - 127.0.0.1 - - [02/Dec/2024 21:35:24] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:35:28,716 - INFO - 127.0.0.1 - - [02/Dec/2024 21:35:28] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:35:31,824 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:35:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:35:32,771 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:35:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:35:40,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:35:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:35:40,431 - INFO - 127.0.0.1 - - [02/Dec/2024 21:35:40] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:35:40,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:35:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:35:49,490 - INFO - 127.0.0.1 - - [02/Dec/2024 21:35:49] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:35:50,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:35:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:35:50,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:35:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:35:59,160 - INFO - 127.0.0.1 - - [02/Dec/2024 21:35:59] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:36:00,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:36:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:36:00,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:36:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:36:10,358 - INFO - 127.0.0.1 - - [02/Dec/2024 21:36:10] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:36:11,854 - INFO - 127.0.0.1 - - [02/Dec/2024 21:36:11] "GET /dashboard/create_dash/ HTTP/1.1" 200 -
+2024-12-02 21:36:11,878 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:36:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:36:12,145 - INFO - 127.0.0.1 - - [02/Dec/2024 21:36:12] "GET /dashboard/create_dash/_dash-layout HTTP/1.1" 200 -
+2024-12-02 21:36:12,232 - INFO - 127.0.0.1 - - [02/Dec/2024 21:36:12] "GET /dashboard/create_dash/_favicon.ico?v=2.18.2 HTTP/1.1" 200 -
+2024-12-02 21:36:12,235 - INFO - 127.0.0.1 - - [02/Dec/2024 21:36:12] "GET /dashboard/create_dash/_dash-dependencies HTTP/1.1" 200 -
+2024-12-02 21:36:12,534 - INFO - 127.0.0.1 - - [02/Dec/2024 21:36:12] "[36mGET /dashboard/create_dash/_dash-component-suites/dash/dcc/async-dropdown.js HTTP/1.1[0m" 304 -
+2024-12-02 21:36:12,825 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:36:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:36:16,607 - INFO - 127.0.0.1 - - [02/Dec/2024 21:36:16] "POST /dashboard/create_dash/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:36:20,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:36:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:36:20,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:36:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:36:23,476 - INFO - 127.0.0.1 - - [02/Dec/2024 21:36:23] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:36:24,507 - INFO - 127.0.0.1 - - [02/Dec/2024 21:36:24] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:36:30,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:36:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:36:30,439 - INFO - 127.0.0.1 - - [02/Dec/2024 21:36:30] "POST /dashboard/create_dash/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:36:30,641 - INFO - 127.0.0.1 - - [02/Dec/2024 21:36:30] "[36mGET /dashboard/create_dash/_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2024-12-02 21:36:30,771 - INFO - 127.0.0.1 - - [02/Dec/2024 21:36:30] "[36mGET /dashboard/create_dash/_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2024-12-02 21:36:30,982 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:36:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:36:41,909 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:36:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:36:42,855 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:36:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:36:50,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:36:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:36:50,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:36:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:37:00,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:37:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:37:00,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:37:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:37:08,840 - INFO - 127.0.0.1 - - [02/Dec/2024 21:37:08] "POST /dashboard/create_dash/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:37:10,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:37:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:37:10,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:37:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:37:21,824 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:37:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:37:22,771 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:37:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:37:24,009 - INFO - 127.0.0.1 - - [02/Dec/2024 21:37:24] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:37:25,046 - INFO - 127.0.0.1 - - [02/Dec/2024 21:37:25] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:37:30,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:37:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:37:30,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:37:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:37:40,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:37:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:37:40,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:37:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:37:51,784 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:37:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:37:52,730 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:37:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:38:00,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:38:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:38:00,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:38:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:38:10,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:38:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:38:10,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:38:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:38:21,973 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:38:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:38:22,920 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:38:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:38:24,444 - INFO - 127.0.0.1 - - [02/Dec/2024 21:38:24] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:38:25,477 - INFO - 127.0.0.1 - - [02/Dec/2024 21:38:25] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:38:30,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:38:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:38:30,035 - INFO - Running job "manage_database (trigger: interval[0:05:00], next run at: 2024-12-02 21:38:30 KST)" (scheduled at 2024-12-02 21:38:30.035294+09:00)
+2024-12-02 21:38:30,037 - ERROR - Job "manage_database (trigger: interval[0:05:00], next run at: 2024-12-02 21:43:30 KST)" raised an exception
+Traceback (most recent call last):
+  File "/home/r4mbb/.local/lib/python3.10/site-packages/apscheduler/executors/base.py", line 131, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/home/r4mbb/logapi-new/db/cleanup.py", line 75, in manage_database
+    log_count = get_log_count()
+  File "/home/r4mbb/logapi-new/db/cleanup.py", line 22, in get_log_count
+    cursor.execute("SELECT COUNT(*) FROM logs")
+sqlite3.OperationalError: no such table: logs
+2024-12-02 21:38:30,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:38:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:38:30,982 - INFO - Running job "manage_database (trigger: interval[0:05:00], next run at: 2024-12-02 21:38:30 KST)" (scheduled at 2024-12-02 21:38:30.981608+09:00)
+2024-12-02 21:38:30,983 - ERROR - Job "manage_database (trigger: interval[0:05:00], next run at: 2024-12-02 21:43:30 KST)" raised an exception
+Traceback (most recent call last):
+  File "/home/r4mbb/.local/lib/python3.10/site-packages/apscheduler/executors/base.py", line 131, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/home/r4mbb/logapi-new/db/cleanup.py", line 75, in manage_database
+    log_count = get_log_count()
+  File "/home/r4mbb/logapi-new/db/cleanup.py", line 22, in get_log_count
+    cursor.execute("SELECT COUNT(*) FROM logs")
+sqlite3.OperationalError: no such table: logs
+2024-12-02 21:38:33,172 - INFO - 127.0.0.1 - - [02/Dec/2024 21:38:33] "GET /dashboard/ HTTP/1.1" 200 -
+2024-12-02 21:38:33,391 - INFO - 127.0.0.1 - - [02/Dec/2024 21:38:33] "GET /dashboard/_dash-layout HTTP/1.1" 200 -
+2024-12-02 21:38:33,532 - INFO - 127.0.0.1 - - [02/Dec/2024 21:38:33] "GET /dashboard/_favicon.ico?v=2.18.2 HTTP/1.1" 200 -
+2024-12-02 21:38:33,534 - INFO - 127.0.0.1 - - [02/Dec/2024 21:38:33] "GET /dashboard/_dash-dependencies HTTP/1.1" 200 -
+2024-12-02 21:38:33,583 - INFO - 127.0.0.1 - - [02/Dec/2024 21:38:33] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:38:33,874 - INFO - 127.0.0.1 - - [02/Dec/2024 21:38:33] "[36mGET /dashboard/_dash-component-suites/dash/dcc/async-graph.js HTTP/1.1[0m" 304 -
+2024-12-02 21:38:33,882 - INFO - 127.0.0.1 - - [02/Dec/2024 21:38:33] "[36mGET /dashboard/_dash-component-suites/plotly/package_data/plotly.min.js HTTP/1.1[0m" 304 -
+2024-12-02 21:38:40,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:38:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:38:40,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:38:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:38:42,947 - INFO - 127.0.0.1 - - [02/Dec/2024 21:38:42] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:38:50,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:38:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:38:50,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:38:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:38:52,723 - INFO - 127.0.0.1 - - [02/Dec/2024 21:38:52] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:39:01,941 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:39:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:39:02,888 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:39:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:39:03,967 - INFO - 127.0.0.1 - - [02/Dec/2024 21:39:03] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:39:08,637 - INFO - 127.0.0.1 - - [02/Dec/2024 21:39:08] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:39:08,872 - INFO - 127.0.0.1 - - [02/Dec/2024 21:39:08] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:39:10,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:39:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:39:10,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:39:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:39:13,319 - INFO - 127.0.0.1 - - [02/Dec/2024 21:39:13] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:39:15,136 - INFO - 127.0.0.1 - - [02/Dec/2024 21:39:15] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:39:17,974 - INFO - 127.0.0.1 - - [02/Dec/2024 21:39:17] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:39:20,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:39:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:39:20,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:39:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:39:22,962 - INFO - 127.0.0.1 - - [02/Dec/2024 21:39:22] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:39:24,273 - INFO - 127.0.0.1 - - [02/Dec/2024 21:39:24] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:39:27,742 - INFO - 127.0.0.1 - - [02/Dec/2024 21:39:27] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:39:32,008 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:39:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:39:32,954 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:39:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:39:34,371 - INFO - 127.0.0.1 - - [02/Dec/2024 21:39:34] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:39:36,265 - INFO - 127.0.0.1 - - [02/Dec/2024 21:39:36] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:39:39,061 - INFO - 127.0.0.1 - - [02/Dec/2024 21:39:39] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:39:40,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:39:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:39:40,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:39:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:39:43,894 - INFO - 127.0.0.1 - - [02/Dec/2024 21:39:43] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:39:45,103 - INFO - 127.0.0.1 - - [02/Dec/2024 21:39:45] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:39:48,493 - INFO - 127.0.0.1 - - [02/Dec/2024 21:39:48] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:39:50,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:39:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:39:50,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:39:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:39:52,848 - INFO - 127.0.0.1 - - [02/Dec/2024 21:39:52] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:39:54,730 - INFO - 127.0.0.1 - - [02/Dec/2024 21:39:54] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:39:57,591 - INFO - 127.0.0.1 - - [02/Dec/2024 21:39:57] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:40:00,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:40:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:40:00,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:40:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:40:02,730 - INFO - 127.0.0.1 - - [02/Dec/2024 21:40:02] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:40:06,162 - INFO - 127.0.0.1 - - [02/Dec/2024 21:40:06] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:40:09,718 - INFO - 127.0.0.1 - - [02/Dec/2024 21:40:09] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:40:12,001 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:40:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:40:12,947 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:40:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:40:14,083 - INFO - 127.0.0.1 - - [02/Dec/2024 21:40:14] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:40:18,971 - INFO - 127.0.0.1 - - [02/Dec/2024 21:40:18] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:40:20,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:40:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:40:20,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:40:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:40:21,992 - INFO - 127.0.0.1 - - [02/Dec/2024 21:40:21] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:40:23,524 - INFO - 127.0.0.1 - - [02/Dec/2024 21:40:23] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:40:24,685 - INFO - 127.0.0.1 - - [02/Dec/2024 21:40:24] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:40:28,016 - INFO - 127.0.0.1 - - [02/Dec/2024 21:40:28] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:40:30,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:40:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:40:30,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:40:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:40:32,528 - INFO - 127.0.0.1 - - [02/Dec/2024 21:40:32] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:40:39,707 - INFO - 127.0.0.1 - - [02/Dec/2024 21:40:39] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:40:41,990 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:40:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:40:42,937 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:40:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:40:45,913 - INFO - 127.0.0.1 - - [02/Dec/2024 21:40:45] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:40:49,190 - INFO - 127.0.0.1 - - [02/Dec/2024 21:40:49] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:40:50,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:40:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:40:50,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:40:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:40:53,454 - INFO - 127.0.0.1 - - [02/Dec/2024 21:40:53] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:40:58,368 - INFO - 127.0.0.1 - - [02/Dec/2024 21:40:58] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:41:00,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:41:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:41:00,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:41:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:41:02,732 - INFO - 127.0.0.1 - - [02/Dec/2024 21:41:02] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:41:07,812 - INFO - 127.0.0.1 - - [02/Dec/2024 21:41:07] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:41:10,036 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:41:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:41:10,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:41:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:41:14,396 - INFO - 127.0.0.1 - - [02/Dec/2024 21:41:14] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:41:19,482 - INFO - 127.0.0.1 - - [02/Dec/2024 21:41:19] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:41:21,976 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:41:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:41:22,534 - INFO - 127.0.0.1 - - [02/Dec/2024 21:41:22] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:41:22,923 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:41:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:41:24,049 - INFO - 127.0.0.1 - - [02/Dec/2024 21:41:24] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:41:25,270 - INFO - 127.0.0.1 - - [02/Dec/2024 21:41:25] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:41:28,613 - INFO - 127.0.0.1 - - [02/Dec/2024 21:41:28] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:41:30,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:41:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:41:30,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:41:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:41:33,000 - INFO - 127.0.0.1 - - [02/Dec/2024 21:41:33] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:41:38,012 - INFO - 127.0.0.1 - - [02/Dec/2024 21:41:38] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:41:40,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:41:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:41:40,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:41:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:41:42,486 - INFO - 127.0.0.1 - - [02/Dec/2024 21:41:42] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:41:49,708 - INFO - 127.0.0.1 - - [02/Dec/2024 21:41:49] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:41:51,950 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:41:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:41:52,896 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:41:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:41:54,135 - INFO - 127.0.0.1 - - [02/Dec/2024 21:41:54] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:41:58,911 - INFO - 127.0.0.1 - - [02/Dec/2024 21:41:58] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:42:00,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:42:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:42:00,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:42:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:42:03,255 - INFO - 127.0.0.1 - - [02/Dec/2024 21:42:03] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:42:08,283 - INFO - 127.0.0.1 - - [02/Dec/2024 21:42:08] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:42:10,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:42:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:42:10,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:42:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:42:12,717 - INFO - 127.0.0.1 - - [02/Dec/2024 21:42:12] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:42:17,749 - INFO - 127.0.0.1 - - [02/Dec/2024 21:42:17] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:42:20,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:42:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:42:23,123 - INFO - 127.0.0.1 - - [02/Dec/2024 21:42:23] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:42:23,173 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:42:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:42:24,680 - INFO - 127.0.0.1 - - [02/Dec/2024 21:42:24] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:42:25,958 - INFO - 127.0.0.1 - - [02/Dec/2024 21:42:25] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:42:29,407 - INFO - 127.0.0.1 - - [02/Dec/2024 21:42:29] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:42:30,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:42:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:42:32,226 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:42:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:42:33,836 - INFO - 127.0.0.1 - - [02/Dec/2024 21:42:33] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:42:38,874 - INFO - 127.0.0.1 - - [02/Dec/2024 21:42:38] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:42:40,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:42:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:42:40,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:42:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:42:43,299 - INFO - 127.0.0.1 - - [02/Dec/2024 21:42:43] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:42:48,331 - INFO - 127.0.0.1 - - [02/Dec/2024 21:42:48] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:42:50,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:42:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:42:50,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:42:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:42:52,770 - INFO - 127.0.0.1 - - [02/Dec/2024 21:42:52] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:42:59,631 - INFO - 127.0.0.1 - - [02/Dec/2024 21:42:59] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:43:01,869 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:43:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:43:02,815 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:43:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:43:04,052 - INFO - 127.0.0.1 - - [02/Dec/2024 21:43:04] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:43:09,087 - INFO - 127.0.0.1 - - [02/Dec/2024 21:43:09] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:43:10,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:43:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:43:10,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:43:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:43:13,513 - INFO - 127.0.0.1 - - [02/Dec/2024 21:43:13] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:43:18,532 - INFO - 127.0.0.1 - - [02/Dec/2024 21:43:18] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:43:20,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:43:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:43:20,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:43:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:43:21,727 - INFO - 127.0.0.1 - - [02/Dec/2024 21:43:21] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:43:23,276 - INFO - 127.0.0.1 - - [02/Dec/2024 21:43:23] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:43:24,555 - INFO - 127.0.0.1 - - [02/Dec/2024 21:43:24] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:43:27,999 - INFO - 127.0.0.1 - - [02/Dec/2024 21:43:27] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:43:31,880 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:43:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:43:31,881 - WARNING - Run time of job "manage_database (trigger: interval[0:05:00], next run at: 2024-12-02 21:48:30 KST)" was missed by 0:00:01.845771
+2024-12-02 21:43:32,827 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:43:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:43:32,827 - WARNING - Run time of job "manage_database (trigger: interval[0:05:00], next run at: 2024-12-02 21:48:30 KST)" was missed by 0:00:01.845670
+2024-12-02 21:43:34,274 - INFO - 127.0.0.1 - - [02/Dec/2024 21:43:34] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:43:39,308 - INFO - 127.0.0.1 - - [02/Dec/2024 21:43:39] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:43:40,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:43:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:43:40,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:43:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:43:43,730 - INFO - 127.0.0.1 - - [02/Dec/2024 21:43:43] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:43:46,608 - INFO - 127.0.0.1 - - [02/Dec/2024 21:43:46] "GET /upload_logs/ HTTP/1.1" 200 -
+2024-12-02 21:43:50,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:43:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:43:50,079 - INFO - 127.0.0.1 - - [02/Dec/2024 21:43:50] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:43:50,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:43:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:43:54,813 - INFO - 127.0.0.1 - - [02/Dec/2024 21:43:54] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:43:59,832 - INFO - 127.0.0.1 - - [02/Dec/2024 21:43:59] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:44:00,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:44:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:44:00,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:44:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:44:06,117 - INFO - 127.0.0.1 - - [02/Dec/2024 21:44:06] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:44:11,134 - INFO - 127.0.0.1 - - [02/Dec/2024 21:44:11] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:44:11,888 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:44:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:44:12,834 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:44:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:44:15,582 - INFO - 127.0.0.1 - - [02/Dec/2024 21:44:15] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:44:20,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:44:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:44:20,600 - INFO - 127.0.0.1 - - [02/Dec/2024 21:44:20] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:44:20,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:44:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:44:22,166 - INFO - 127.0.0.1 - - [02/Dec/2024 21:44:22] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:44:23,371 - INFO - 127.0.0.1 - - [02/Dec/2024 21:44:23] "[32mPOST /upload_logs HTTP/1.1[0m" 308 -
+2024-12-02 21:44:25,037 - INFO - 127.0.0.1 - - [02/Dec/2024 21:44:25] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:44:28,952 - INFO - 127.0.0.1 - - [02/Dec/2024 21:44:28] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:44:29,264 - INFO - 127.0.0.1 - - [02/Dec/2024 21:44:29] "POST /upload_logs/ HTTP/1.1" 200 -
+2024-12-02 21:44:30,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:44:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:44:30,047 - INFO - 127.0.0.1 - - [02/Dec/2024 21:44:30] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:44:30,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:44:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:44:34,783 - INFO - 127.0.0.1 - - [02/Dec/2024 21:44:34] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:44:41,070 - INFO - 127.0.0.1 - - [02/Dec/2024 21:44:41] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:44:41,887 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:44:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:44:42,833 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:44:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:44:46,097 - INFO - 127.0.0.1 - - [02/Dec/2024 21:44:46] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:44:50,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:44:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:44:50,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:44:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:45:00,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:45:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:45:00,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:45:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:45:10,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:45:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:45:10,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:45:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:45:21,896 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:45:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:45:22,843 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:45:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:45:22,918 - INFO - 127.0.0.1 - - [02/Dec/2024 21:45:22] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:45:23,602 - INFO - 127.0.0.1 - - [02/Dec/2024 21:45:23] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:45:24,937 - INFO - 127.0.0.1 - - [02/Dec/2024 21:45:24] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:45:25,460 - INFO - 127.0.0.1 - - [02/Dec/2024 21:45:25] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:45:30,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:45:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:45:30,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:45:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:45:40,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:45:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:45:40,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:45:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:45:51,883 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:45:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:45:52,829 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:45:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:46:00,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:46:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:46:00,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:46:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:46:10,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:46:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:46:10,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:46:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:46:21,897 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:46:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:46:22,843 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:46:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:46:23,370 - INFO - 127.0.0.1 - - [02/Dec/2024 21:46:23] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:46:24,347 - INFO - 127.0.0.1 - - [02/Dec/2024 21:46:24] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:46:25,377 - INFO - 127.0.0.1 - - [02/Dec/2024 21:46:25] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:46:26,194 - INFO - 127.0.0.1 - - [02/Dec/2024 21:46:26] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:46:30,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:46:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:46:30,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:46:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:46:40,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:46:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:46:40,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:46:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:46:50,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:46:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:46:50,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:46:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:47:01,880 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:47:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:47:02,826 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:47:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:47:10,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:47:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:47:10,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:47:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:47:20,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:47:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:47:20,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:47:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:47:21,944 - INFO - 127.0.0.1 - - [02/Dec/2024 21:47:21] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:47:22,628 - INFO - 127.0.0.1 - - [02/Dec/2024 21:47:22] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:47:23,953 - INFO - 127.0.0.1 - - [02/Dec/2024 21:47:23] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:47:24,497 - INFO - 127.0.0.1 - - [02/Dec/2024 21:47:24] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:47:31,893 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:47:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:47:32,839 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:47:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:47:40,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:47:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:47:40,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:47:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:47:50,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:47:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:47:50,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:47:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:47:59,409 - INFO - 127.0.0.1 - - [02/Dec/2024 21:47:59] "GET /recent_logs/ HTTP/1.1" 200 -
+2024-12-02 21:48:00,003 - INFO - 127.0.0.1 - - [02/Dec/2024 21:48:00] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:48:00,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:48:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:48:00,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:48:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:48:06,381 - INFO - 127.0.0.1 - - [02/Dec/2024 21:48:06] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:48:10,795 - INFO - 127.0.0.1 - - [02/Dec/2024 21:48:10] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:48:11,899 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:48:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:48:12,845 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:48:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:48:15,811 - INFO - 127.0.0.1 - - [02/Dec/2024 21:48:15] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:48:20,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:48:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:48:20,244 - INFO - 127.0.0.1 - - [02/Dec/2024 21:48:20] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:48:20,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:48:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:48:22,383 - INFO - 127.0.0.1 - - [02/Dec/2024 21:48:22] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:48:24,967 - INFO - 127.0.0.1 - - [02/Dec/2024 21:48:24] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:48:25,235 - INFO - 127.0.0.1 - - [02/Dec/2024 21:48:25] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:48:29,972 - INFO - 127.0.0.1 - - [02/Dec/2024 21:48:29] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:48:30,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:48:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:48:30,035 - INFO - Running job "manage_database (trigger: interval[0:05:00], next run at: 2024-12-02 21:53:30 KST)" (scheduled at 2024-12-02 21:48:30.035294+09:00)
+2024-12-02 21:48:30,036 - ERROR - Job "manage_database (trigger: interval[0:05:00], next run at: 2024-12-02 21:53:30 KST)" raised an exception
+Traceback (most recent call last):
+  File "/home/r4mbb/.local/lib/python3.10/site-packages/apscheduler/executors/base.py", line 131, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/home/r4mbb/logapi-new/db/cleanup.py", line 75, in manage_database
+    log_count = get_log_count()
+  File "/home/r4mbb/logapi-new/db/cleanup.py", line 22, in get_log_count
+    cursor.execute("SELECT COUNT(*) FROM logs")
+sqlite3.OperationalError: no such table: logs
+2024-12-02 21:48:30,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:48:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:48:30,981 - INFO - Running job "manage_database (trigger: interval[0:05:00], next run at: 2024-12-02 21:53:30 KST)" (scheduled at 2024-12-02 21:48:30.981608+09:00)
+2024-12-02 21:48:30,982 - ERROR - Job "manage_database (trigger: interval[0:05:00], next run at: 2024-12-02 21:53:30 KST)" raised an exception
+Traceback (most recent call last):
+  File "/home/r4mbb/.local/lib/python3.10/site-packages/apscheduler/executors/base.py", line 131, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/home/r4mbb/logapi-new/db/cleanup.py", line 75, in manage_database
+    log_count = get_log_count()
+  File "/home/r4mbb/logapi-new/db/cleanup.py", line 22, in get_log_count
+    cursor.execute("SELECT COUNT(*) FROM logs")
+sqlite3.OperationalError: no such table: logs
+2024-12-02 21:48:32,236 - INFO - 127.0.0.1 - - [02/Dec/2024 21:48:32] "POST /recent_logs/search HTTP/1.1" 200 -
+2024-12-02 21:48:34,708 - INFO - 127.0.0.1 - - [02/Dec/2024 21:48:34] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:48:41,029 - INFO - 127.0.0.1 - - [02/Dec/2024 21:48:41] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:48:41,906 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:48:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:48:42,853 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:48:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:48:46,030 - INFO - 127.0.0.1 - - [02/Dec/2024 21:48:46] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:48:50,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:48:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:48:50,450 - INFO - 127.0.0.1 - - [02/Dec/2024 21:48:50] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:48:50,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:48:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:48:55,426 - INFO - 127.0.0.1 - - [02/Dec/2024 21:48:55] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:48:59,841 - INFO - 127.0.0.1 - - [02/Dec/2024 21:48:59] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:49:00,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:49:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:49:00,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:49:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:49:04,833 - INFO - 127.0.0.1 - - [02/Dec/2024 21:49:04] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:49:09,267 - INFO - 127.0.0.1 - - [02/Dec/2024 21:49:09] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:49:10,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:49:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:49:12,950 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:49:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:49:16,259 - INFO - 127.0.0.1 - - [02/Dec/2024 21:49:16] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:49:20,682 - INFO - 127.0.0.1 - - [02/Dec/2024 21:49:20] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:49:20,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:49:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:49:22,004 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:49:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:49:22,799 - INFO - 127.0.0.1 - - [02/Dec/2024 21:49:22] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:49:25,328 - INFO - 127.0.0.1 - - [02/Dec/2024 21:49:25] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:49:25,547 - INFO - 127.0.0.1 - - [02/Dec/2024 21:49:25] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:49:30,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:49:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:49:30,184 - INFO - 127.0.0.1 - - [02/Dec/2024 21:49:30] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:49:30,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:49:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:49:34,629 - INFO - 127.0.0.1 - - [02/Dec/2024 21:49:34] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:49:39,672 - INFO - 127.0.0.1 - - [02/Dec/2024 21:49:39] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:49:40,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:49:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:49:40,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:49:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:49:44,139 - INFO - 127.0.0.1 - - [02/Dec/2024 21:49:44] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:49:51,249 - INFO - 127.0.0.1 - - [02/Dec/2024 21:49:51] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:49:52,104 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:49:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:49:53,050 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:49:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:49:55,725 - INFO - 127.0.0.1 - - [02/Dec/2024 21:49:55] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:50:00,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:50:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:50:00,774 - INFO - 127.0.0.1 - - [02/Dec/2024 21:50:00] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:50:00,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:50:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:50:05,252 - INFO - 127.0.0.1 - - [02/Dec/2024 21:50:05] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:50:10,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:50:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:50:10,291 - INFO - 127.0.0.1 - - [02/Dec/2024 21:50:10] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:50:10,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:50:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:50:14,758 - INFO - 127.0.0.1 - - [02/Dec/2024 21:50:14] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:50:21,438 - INFO - 127.0.0.1 - - [02/Dec/2024 21:50:21] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:50:21,676 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:50:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:50:22,623 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:50:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:50:23,014 - INFO - 127.0.0.1 - - [02/Dec/2024 21:50:23] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:50:25,831 - INFO - 127.0.0.1 - - [02/Dec/2024 21:50:25] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:50:26,150 - INFO - 127.0.0.1 - - [02/Dec/2024 21:50:26] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:50:30,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:50:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:50:30,857 - INFO - 127.0.0.1 - - [02/Dec/2024 21:50:30] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:50:30,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:50:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:50:35,085 - INFO - 127.0.0.1 - - [02/Dec/2024 21:50:35] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:50:40,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:50:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:50:40,094 - INFO - 127.0.0.1 - - [02/Dec/2024 21:50:40] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:50:40,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:50:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:50:44,552 - INFO - 127.0.0.1 - - [02/Dec/2024 21:50:44] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:50:49,599 - INFO - 127.0.0.1 - - [02/Dec/2024 21:50:49] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:50:50,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:50:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:50:50,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:50:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:50:56,114 - INFO - 127.0.0.1 - - [02/Dec/2024 21:50:56] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:51:01,280 - INFO - 127.0.0.1 - - [02/Dec/2024 21:51:01] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:51:02,080 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:51:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:51:03,026 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:51:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:51:05,779 - INFO - 127.0.0.1 - - [02/Dec/2024 21:51:05] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:51:10,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:51:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:51:10,783 - INFO - 127.0.0.1 - - [02/Dec/2024 21:51:10] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:51:10,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:51:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:51:15,125 - INFO - 127.0.0.1 - - [02/Dec/2024 21:51:15] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:51:20,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:51:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:51:20,056 - INFO - 127.0.0.1 - - [02/Dec/2024 21:51:20] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:51:20,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:51:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:51:21,632 - INFO - 127.0.0.1 - - [02/Dec/2024 21:51:21] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:51:24,477 - INFO - 127.0.0.1 - - [02/Dec/2024 21:51:24] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:51:24,790 - INFO - 127.0.0.1 - - [02/Dec/2024 21:51:24] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:51:31,373 - INFO - 127.0.0.1 - - [02/Dec/2024 21:51:31] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:51:31,863 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:51:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:51:32,809 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:51:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:51:35,909 - INFO - 127.0.0.1 - - [02/Dec/2024 21:51:35] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:51:40,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:51:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:51:40,975 - INFO - 127.0.0.1 - - [02/Dec/2024 21:51:40] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:51:40,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:51:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:51:45,420 - INFO - 127.0.0.1 - - [02/Dec/2024 21:51:45] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:51:50,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:51:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:51:50,257 - INFO - 127.0.0.1 - - [02/Dec/2024 21:51:50] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:51:50,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:51:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:51:54,690 - INFO - 127.0.0.1 - - [02/Dec/2024 21:51:54] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:51:59,724 - INFO - 127.0.0.1 - - [02/Dec/2024 21:51:59] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:52:00,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:52:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:52:00,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:52:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:52:06,069 - INFO - 127.0.0.1 - - [02/Dec/2024 21:52:06] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:52:11,218 - INFO - 127.0.0.1 - - [02/Dec/2024 21:52:11] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:52:11,893 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:52:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:52:12,840 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:52:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:52:15,617 - INFO - 127.0.0.1 - - [02/Dec/2024 21:52:15] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:52:20,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:52:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:52:20,592 - INFO - 127.0.0.1 - - [02/Dec/2024 21:52:20] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:52:20,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:52:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:52:22,070 - INFO - 127.0.0.1 - - [02/Dec/2024 21:52:22] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:52:24,840 - INFO - 127.0.0.1 - - [02/Dec/2024 21:52:24] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:52:25,157 - INFO - 127.0.0.1 - - [02/Dec/2024 21:52:25] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:52:29,885 - INFO - 127.0.0.1 - - [02/Dec/2024 21:52:29] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:52:30,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:52:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:52:30,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:52:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:52:34,348 - INFO - 127.0.0.1 - - [02/Dec/2024 21:52:34] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:52:41,367 - INFO - 127.0.0.1 - - [02/Dec/2024 21:52:41] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:52:41,932 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:52:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:52:42,879 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:52:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:52:45,902 - INFO - 127.0.0.1 - - [02/Dec/2024 21:52:45] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:52:50,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:52:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:52:50,823 - INFO - 127.0.0.1 - - [02/Dec/2024 21:52:50] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:52:50,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:52:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:52:55,223 - INFO - 127.0.0.1 - - [02/Dec/2024 21:52:55] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:53:00,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:53:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:53:00,238 - INFO - 127.0.0.1 - - [02/Dec/2024 21:53:00] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:53:00,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:53:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:53:04,681 - INFO - 127.0.0.1 - - [02/Dec/2024 21:53:04] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:53:11,481 - INFO - 127.0.0.1 - - [02/Dec/2024 21:53:11] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:53:11,825 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:53:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:53:12,771 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:53:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:53:16,009 - INFO - 127.0.0.1 - - [02/Dec/2024 21:53:16] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:53:20,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:53:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:53:20,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:53:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:53:21,099 - INFO - 127.0.0.1 - - [02/Dec/2024 21:53:21] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:53:22,645 - INFO - 127.0.0.1 - - [02/Dec/2024 21:53:22] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:53:25,463 - INFO - 127.0.0.1 - - [02/Dec/2024 21:53:25] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:53:25,784 - INFO - 127.0.0.1 - - [02/Dec/2024 21:53:25] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:53:30,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:53:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:53:30,035 - INFO - Running job "manage_database (trigger: interval[0:05:00], next run at: 2024-12-02 21:58:30 KST)" (scheduled at 2024-12-02 21:53:30.035294+09:00)
+2024-12-02 21:53:30,036 - ERROR - Job "manage_database (trigger: interval[0:05:00], next run at: 2024-12-02 21:58:30 KST)" raised an exception
+Traceback (most recent call last):
+  File "/home/r4mbb/.local/lib/python3.10/site-packages/apscheduler/executors/base.py", line 131, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/home/r4mbb/logapi-new/db/cleanup.py", line 75, in manage_database
+    log_count = get_log_count()
+  File "/home/r4mbb/logapi-new/db/cleanup.py", line 22, in get_log_count
+    cursor.execute("SELECT COUNT(*) FROM logs")
+sqlite3.OperationalError: no such table: logs
+2024-12-02 21:53:30,419 - INFO - 127.0.0.1 - - [02/Dec/2024 21:53:30] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:53:30,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:53:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:53:30,982 - INFO - Running job "manage_database (trigger: interval[0:05:00], next run at: 2024-12-02 21:58:30 KST)" (scheduled at 2024-12-02 21:53:30.981608+09:00)
+2024-12-02 21:53:30,982 - ERROR - Job "manage_database (trigger: interval[0:05:00], next run at: 2024-12-02 21:58:30 KST)" raised an exception
+Traceback (most recent call last):
+  File "/home/r4mbb/.local/lib/python3.10/site-packages/apscheduler/executors/base.py", line 131, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/home/r4mbb/logapi-new/db/cleanup.py", line 75, in manage_database
+    log_count = get_log_count()
+  File "/home/r4mbb/logapi-new/db/cleanup.py", line 22, in get_log_count
+    cursor.execute("SELECT COUNT(*) FROM logs")
+sqlite3.OperationalError: no such table: logs
+2024-12-02 21:53:34,668 - INFO - 127.0.0.1 - - [02/Dec/2024 21:53:34] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:53:39,725 - INFO - 127.0.0.1 - - [02/Dec/2024 21:53:39] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:53:40,038 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:53:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:53:40,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:53:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:53:46,148 - INFO - 127.0.0.1 - - [02/Dec/2024 21:53:46] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:53:51,379 - INFO - 127.0.0.1 - - [02/Dec/2024 21:53:51] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:53:52,023 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:53:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:53:52,969 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:53:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:53:55,754 - INFO - 127.0.0.1 - - [02/Dec/2024 21:53:55] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:54:00,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:54:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:54:00,560 - INFO - 127.0.0.1 - - [02/Dec/2024 21:54:00] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:54:00,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:54:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:54:04,952 - INFO - 127.0.0.1 - - [02/Dec/2024 21:54:04] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:54:09,981 - INFO - 127.0.0.1 - - [02/Dec/2024 21:54:09] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:54:10,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:54:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:54:10,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:54:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:54:14,432 - INFO - 127.0.0.1 - - [02/Dec/2024 21:54:14] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:54:21,451 - INFO - 127.0.0.1 - - [02/Dec/2024 21:54:21] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:54:21,958 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:54:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:54:22,904 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:54:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:54:23,160 - INFO - 127.0.0.1 - - [02/Dec/2024 21:54:23] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:54:25,997 - INFO - 127.0.0.1 - - [02/Dec/2024 21:54:25] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:54:26,307 - INFO - 127.0.0.1 - - [02/Dec/2024 21:54:26] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:54:30,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:54:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:54:30,935 - INFO - 127.0.0.1 - - [02/Dec/2024 21:54:30] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:54:30,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:54:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:54:35,198 - INFO - 127.0.0.1 - - [02/Dec/2024 21:54:35] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:54:40,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:54:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:54:40,210 - INFO - 127.0.0.1 - - [02/Dec/2024 21:54:40] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:54:40,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:54:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:54:44,653 - INFO - 127.0.0.1 - - [02/Dec/2024 21:54:44] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:54:49,680 - INFO - 127.0.0.1 - - [02/Dec/2024 21:54:49] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:54:50,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:54:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:54:50,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:54:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:54:56,130 - INFO - 127.0.0.1 - - [02/Dec/2024 21:54:56] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:55:01,253 - INFO - 127.0.0.1 - - [02/Dec/2024 21:55:01] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:55:01,952 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:55:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:55:02,898 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:55:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:55:05,576 - INFO - 127.0.0.1 - - [02/Dec/2024 21:55:05] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:55:10,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:55:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:55:10,446 - INFO - 127.0.0.1 - - [02/Dec/2024 21:55:10] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:55:10,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:55:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:55:14,805 - INFO - 127.0.0.1 - - [02/Dec/2024 21:55:14] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:55:19,767 - INFO - 127.0.0.1 - - [02/Dec/2024 21:55:19] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:55:20,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:55:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:55:20,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:55:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:55:21,359 - INFO - 127.0.0.1 - - [02/Dec/2024 21:55:21] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:55:24,207 - INFO - 127.0.0.1 - - [02/Dec/2024 21:55:24] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:55:24,513 - INFO - 127.0.0.1 - - [02/Dec/2024 21:55:24] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:55:31,468 - INFO - 127.0.0.1 - - [02/Dec/2024 21:55:31] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:55:32,037 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:55:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:55:32,983 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:55:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:55:35,908 - INFO - 127.0.0.1 - - [02/Dec/2024 21:55:35] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:55:40,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:55:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:55:40,745 - INFO - 127.0.0.1 - - [02/Dec/2024 21:55:40] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:55:40,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:55:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:55:45,045 - INFO - 127.0.0.1 - - [02/Dec/2024 21:55:45] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:55:49,955 - INFO - 127.0.0.1 - - [02/Dec/2024 21:55:49] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:55:50,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:55:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:55:50,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:55:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:55:54,357 - INFO - 127.0.0.1 - - [02/Dec/2024 21:55:54] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:55:59,437 - INFO - 127.0.0.1 - - [02/Dec/2024 21:55:59] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:56:00,036 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:56:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:56:00,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:56:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:56:06,195 - INFO - 127.0.0.1 - - [02/Dec/2024 21:56:06] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:56:11,239 - INFO - 127.0.0.1 - - [02/Dec/2024 21:56:11] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:56:12,052 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:56:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:56:12,999 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:56:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:56:15,555 - INFO - 127.0.0.1 - - [02/Dec/2024 21:56:15] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:56:20,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:56:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:56:20,391 - INFO - 127.0.0.1 - - [02/Dec/2024 21:56:20] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:56:20,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:56:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:56:21,843 - INFO - 127.0.0.1 - - [02/Dec/2024 21:56:21] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:56:24,535 - INFO - 127.0.0.1 - - [02/Dec/2024 21:56:24] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:56:24,892 - INFO - 127.0.0.1 - - [02/Dec/2024 21:56:24] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:56:29,596 - INFO - 127.0.0.1 - - [02/Dec/2024 21:56:29] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:56:30,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:56:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:56:30,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:56:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:56:34,092 - INFO - 127.0.0.1 - - [02/Dec/2024 21:56:34] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:56:41,408 - INFO - 127.0.0.1 - - [02/Dec/2024 21:56:41] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:56:42,040 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:56:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:56:42,986 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:56:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:56:45,785 - INFO - 127.0.0.1 - - [02/Dec/2024 21:56:45] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:56:50,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:56:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:56:50,607 - INFO - 127.0.0.1 - - [02/Dec/2024 21:56:50] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:56:50,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:56:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:56:54,907 - INFO - 127.0.0.1 - - [02/Dec/2024 21:56:54] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:56:59,824 - INFO - 127.0.0.1 - - [02/Dec/2024 21:56:59] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:57:00,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:57:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:57:00,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:57:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:57:04,288 - INFO - 127.0.0.1 - - [02/Dec/2024 21:57:04] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:57:09,435 - INFO - 127.0.0.1 - - [02/Dec/2024 21:57:09] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:57:10,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:57:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:57:12,973 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:57:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:57:16,027 - INFO - 127.0.0.1 - - [02/Dec/2024 21:57:16] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:57:20,922 - INFO - 127.0.0.1 - - [02/Dec/2024 21:57:20] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:57:20,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:57:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:57:22,027 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:57:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:57:22,374 - INFO - 127.0.0.1 - - [02/Dec/2024 21:57:22] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:57:25,088 - INFO - 127.0.0.1 - - [02/Dec/2024 21:57:25] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:57:25,427 - INFO - 127.0.0.1 - - [02/Dec/2024 21:57:25] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:57:30,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:57:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:57:30,095 - INFO - 127.0.0.1 - - [02/Dec/2024 21:57:30] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:57:30,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:57:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:57:34,473 - INFO - 127.0.0.1 - - [02/Dec/2024 21:57:34] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:57:39,545 - INFO - 127.0.0.1 - - [02/Dec/2024 21:57:39] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:57:40,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:57:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:57:40,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:57:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:57:44,140 - INFO - 127.0.0.1 - - [02/Dec/2024 21:57:44] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:57:51,270 - INFO - 127.0.0.1 - - [02/Dec/2024 21:57:51] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:57:52,005 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:57:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:57:52,952 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:57:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:57:55,542 - INFO - 127.0.0.1 - - [02/Dec/2024 21:57:55] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:58:00,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:58:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:58:00,362 - INFO - 127.0.0.1 - - [02/Dec/2024 21:58:00] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:58:00,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:58:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:58:04,799 - INFO - 127.0.0.1 - - [02/Dec/2024 21:58:04] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:58:09,822 - INFO - 127.0.0.1 - - [02/Dec/2024 21:58:09] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:58:10,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:58:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:58:10,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:58:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:58:14,265 - INFO - 127.0.0.1 - - [02/Dec/2024 21:58:14] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:58:21,522 - INFO - 127.0.0.1 - - [02/Dec/2024 21:58:21] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:58:22,262 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:58:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:58:23,078 - INFO - 127.0.0.1 - - [02/Dec/2024 21:58:23] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:58:23,209 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:58:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:58:25,921 - INFO - 127.0.0.1 - - [02/Dec/2024 21:58:25] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:58:26,247 - INFO - 127.0.0.1 - - [02/Dec/2024 21:58:26] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:58:30,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:58:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:58:30,035 - INFO - Running job "manage_database (trigger: interval[0:05:00], next run at: 2024-12-02 22:03:30 KST)" (scheduled at 2024-12-02 21:58:30.035294+09:00)
+2024-12-02 21:58:30,036 - ERROR - Job "manage_database (trigger: interval[0:05:00], next run at: 2024-12-02 22:03:30 KST)" raised an exception
+Traceback (most recent call last):
+  File "/home/r4mbb/.local/lib/python3.10/site-packages/apscheduler/executors/base.py", line 131, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/home/r4mbb/logapi-new/db/cleanup.py", line 75, in manage_database
+    log_count = get_log_count()
+  File "/home/r4mbb/logapi-new/db/cleanup.py", line 22, in get_log_count
+    cursor.execute("SELECT COUNT(*) FROM logs")
+sqlite3.OperationalError: no such table: logs
+2024-12-02 21:58:30,968 - INFO - 127.0.0.1 - - [02/Dec/2024 21:58:30] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:58:30,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:58:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:58:30,981 - INFO - Running job "manage_database (trigger: interval[0:05:00], next run at: 2024-12-02 22:03:30 KST)" (scheduled at 2024-12-02 21:58:30.981608+09:00)
+2024-12-02 21:58:30,982 - ERROR - Job "manage_database (trigger: interval[0:05:00], next run at: 2024-12-02 22:03:30 KST)" raised an exception
+Traceback (most recent call last):
+  File "/home/r4mbb/.local/lib/python3.10/site-packages/apscheduler/executors/base.py", line 131, in run_job
+    retval = job.func(*job.args, **job.kwargs)
+  File "/home/r4mbb/logapi-new/db/cleanup.py", line 75, in manage_database
+    log_count = get_log_count()
+  File "/home/r4mbb/logapi-new/db/cleanup.py", line 22, in get_log_count
+    cursor.execute("SELECT COUNT(*) FROM logs")
+sqlite3.OperationalError: no such table: logs
+2024-12-02 21:58:35,411 - INFO - 127.0.0.1 - - [02/Dec/2024 21:58:35] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:58:40,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:58:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:58:40,437 - INFO - 127.0.0.1 - - [02/Dec/2024 21:58:40] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:58:40,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:58:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:58:44,870 - INFO - 127.0.0.1 - - [02/Dec/2024 21:58:44] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:58:49,879 - INFO - 127.0.0.1 - - [02/Dec/2024 21:58:49] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:58:50,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:58:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:58:50,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:58:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:58:56,169 - INFO - 127.0.0.1 - - [02/Dec/2024 21:58:56] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:59:01,179 - INFO - 127.0.0.1 - - [02/Dec/2024 21:59:01] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:59:01,888 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:59:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:59:02,834 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:59:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:59:05,612 - INFO - 127.0.0.1 - - [02/Dec/2024 21:59:05] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:59:10,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:59:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:59:10,636 - INFO - 127.0.0.1 - - [02/Dec/2024 21:59:10] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:59:10,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:59:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:59:15,066 - INFO - 127.0.0.1 - - [02/Dec/2024 21:59:15] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:59:20,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:59:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:59:20,084 - INFO - 127.0.0.1 - - [02/Dec/2024 21:59:20] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:59:20,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:59:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:59:21,657 - INFO - 127.0.0.1 - - [02/Dec/2024 21:59:21] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:59:24,485 - INFO - 127.0.0.1 - - [02/Dec/2024 21:59:24] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:59:24,801 - INFO - 127.0.0.1 - - [02/Dec/2024 21:59:24] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:59:31,421 - INFO - 127.0.0.1 - - [02/Dec/2024 21:59:31] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:59:31,923 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:59:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:59:32,869 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:59:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:59:35,848 - INFO - 127.0.0.1 - - [02/Dec/2024 21:59:35] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:59:40,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:59:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:59:40,870 - INFO - 127.0.0.1 - - [02/Dec/2024 21:59:40] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:59:40,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:59:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:59:45,305 - INFO - 127.0.0.1 - - [02/Dec/2024 21:59:45] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:59:50,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:59:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:59:50,312 - INFO - 127.0.0.1 - - [02/Dec/2024 21:59:50] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:59:50,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 21:59:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 21:59:54,744 - INFO - 127.0.0.1 - - [02/Dec/2024 21:59:54] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 21:59:59,758 - INFO - 127.0.0.1 - - [02/Dec/2024 21:59:59] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:00:00,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:00:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:00:00,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:00:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:00:06,082 - INFO - 127.0.0.1 - - [02/Dec/2024 22:00:06] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:00:11,095 - INFO - 127.0.0.1 - - [02/Dec/2024 22:00:11] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:00:11,924 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:00:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:00:12,871 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:00:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:00:15,530 - INFO - 127.0.0.1 - - [02/Dec/2024 22:00:15] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:00:20,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:00:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:00:20,544 - INFO - 127.0.0.1 - - [02/Dec/2024 22:00:20] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:00:20,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:00:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:00:22,108 - INFO - 127.0.0.1 - - [02/Dec/2024 22:00:22] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:00:25,003 - INFO - 127.0.0.1 - - [02/Dec/2024 22:00:25] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:00:25,270 - INFO - 127.0.0.1 - - [02/Dec/2024 22:00:25] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:00:29,994 - INFO - 127.0.0.1 - - [02/Dec/2024 22:00:29] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:00:30,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:00:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:00:30,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:00:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:00:34,425 - INFO - 127.0.0.1 - - [02/Dec/2024 22:00:34] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:00:41,319 - INFO - 127.0.0.1 - - [02/Dec/2024 22:00:41] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:00:41,918 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:00:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:00:42,865 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:00:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:00:45,749 - INFO - 127.0.0.1 - - [02/Dec/2024 22:00:45] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:00:50,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:00:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:00:50,763 - INFO - 127.0.0.1 - - [02/Dec/2024 22:00:50] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:00:50,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:00:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:00:55,206 - INFO - 127.0.0.1 - - [02/Dec/2024 22:00:55] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:01:00,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:01:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:01:00,208 - INFO - 127.0.0.1 - - [02/Dec/2024 22:01:00] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:01:00,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:01:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:01:04,651 - INFO - 127.0.0.1 - - [02/Dec/2024 22:01:04] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:01:09,662 - INFO - 127.0.0.1 - - [02/Dec/2024 22:01:09] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:01:10,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:01:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:01:12,878 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:01:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:01:15,995 - INFO - 127.0.0.1 - - [02/Dec/2024 22:01:15] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:01:20,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:01:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:01:21,001 - INFO - 127.0.0.1 - - [02/Dec/2024 22:01:21] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:01:21,932 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:01:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:01:22,573 - INFO - 127.0.0.1 - - [02/Dec/2024 22:01:22] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:01:25,406 - INFO - 127.0.0.1 - - [02/Dec/2024 22:01:25] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:01:25,736 - INFO - 127.0.0.1 - - [02/Dec/2024 22:01:25] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:01:30,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:01:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:01:30,448 - INFO - 127.0.0.1 - - [02/Dec/2024 22:01:30] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:01:30,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:01:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:01:34,890 - INFO - 127.0.0.1 - - [02/Dec/2024 22:01:34] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:01:39,900 - INFO - 127.0.0.1 - - [02/Dec/2024 22:01:39] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:01:40,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:01:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:01:40,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:01:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:01:44,330 - INFO - 127.0.0.1 - - [02/Dec/2024 22:01:44] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:01:51,228 - INFO - 127.0.0.1 - - [02/Dec/2024 22:01:51] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:01:51,918 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:01:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:01:52,864 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:01:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:01:55,664 - INFO - 127.0.0.1 - - [02/Dec/2024 22:01:55] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:02:00,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:02:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:02:00,678 - INFO - 127.0.0.1 - - [02/Dec/2024 22:02:00] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:02:00,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:02:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:02:05,111 - INFO - 127.0.0.1 - - [02/Dec/2024 22:02:05] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:02:10,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:02:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:02:10,118 - INFO - 127.0.0.1 - - [02/Dec/2024 22:02:10] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:02:10,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:02:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:02:14,550 - INFO - 127.0.0.1 - - [02/Dec/2024 22:02:14] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:02:21,469 - INFO - 127.0.0.1 - - [02/Dec/2024 22:02:21] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:02:21,933 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:02:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:02:22,880 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:02:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:02:23,027 - INFO - 127.0.0.1 - - [02/Dec/2024 22:02:23] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:02:25,867 - INFO - 127.0.0.1 - - [02/Dec/2024 22:02:25] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:02:26,180 - INFO - 127.0.0.1 - - [02/Dec/2024 22:02:26] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:02:30,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:02:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:02:30,932 - INFO - 127.0.0.1 - - [02/Dec/2024 22:02:30] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:02:30,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:02:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:02:35,348 - INFO - 127.0.0.1 - - [02/Dec/2024 22:02:35] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:02:40,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:02:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:02:40,358 - INFO - 127.0.0.1 - - [02/Dec/2024 22:02:40] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:02:40,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:02:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:02:44,784 - INFO - 127.0.0.1 - - [02/Dec/2024 22:02:44] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:02:49,800 - INFO - 127.0.0.1 - - [02/Dec/2024 22:02:49] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:02:50,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:02:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:02:50,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:02:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:02:56,125 - INFO - 127.0.0.1 - - [02/Dec/2024 22:02:56] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:03:01,139 - INFO - 127.0.0.1 - - [02/Dec/2024 22:03:01] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:03:01,929 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:03:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:03:02,876 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:03:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:03:05,581 - INFO - 127.0.0.1 - - [02/Dec/2024 22:03:05] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:03:10,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:03:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:03:10,586 - INFO - 127.0.0.1 - - [02/Dec/2024 22:03:10] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:03:10,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:03:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:03:15,028 - INFO - 127.0.0.1 - - [02/Dec/2024 22:03:15] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:03:20,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:03:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:03:20,047 - INFO - 127.0.0.1 - - [02/Dec/2024 22:03:20] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:03:20,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:03:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:03:21,598 - INFO - 127.0.0.1 - - [02/Dec/2024 22:03:21] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:03:24,439 - INFO - 127.0.0.1 - - [02/Dec/2024 22:03:24] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:03:24,755 - INFO - 127.0.0.1 - - [02/Dec/2024 22:03:24] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:03:31,360 - INFO - 127.0.0.1 - - [02/Dec/2024 22:03:31] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:03:31,921 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:03:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:03:31,921 - WARNING - Run time of job "manage_database (trigger: interval[0:05:00], next run at: 2024-12-02 22:08:30 KST)" was missed by 0:00:01.886136
+2024-12-02 22:03:32,867 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:03:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:03:32,867 - WARNING - Run time of job "manage_database (trigger: interval[0:05:00], next run at: 2024-12-02 22:08:30 KST)" was missed by 0:00:01.886124
+2024-12-02 22:03:35,795 - INFO - 127.0.0.1 - - [02/Dec/2024 22:03:35] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:03:40,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:03:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:03:40,820 - INFO - 127.0.0.1 - - [02/Dec/2024 22:03:40] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:03:40,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:03:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:03:45,249 - INFO - 127.0.0.1 - - [02/Dec/2024 22:03:45] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:03:50,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:03:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:03:50,265 - INFO - 127.0.0.1 - - [02/Dec/2024 22:03:50] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:03:50,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:03:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:03:54,696 - INFO - 127.0.0.1 - - [02/Dec/2024 22:03:54] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:03:59,698 - INFO - 127.0.0.1 - - [02/Dec/2024 22:03:59] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:04:00,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:04:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:04:02,881 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:04:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:04:06,037 - INFO - 127.0.0.1 - - [02/Dec/2024 22:04:06] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:04:10,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:04:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:04:11,046 - INFO - 127.0.0.1 - - [02/Dec/2024 22:04:11] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:04:11,935 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:04:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:04:15,480 - INFO - 127.0.0.1 - - [02/Dec/2024 22:04:15] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:04:20,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:04:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:04:20,491 - INFO - 127.0.0.1 - - [02/Dec/2024 22:04:20] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:04:20,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:04:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:04:22,054 - INFO - 127.0.0.1 - - [02/Dec/2024 22:04:22] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:04:24,881 - INFO - 127.0.0.1 - - [02/Dec/2024 22:04:24] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:04:25,201 - INFO - 127.0.0.1 - - [02/Dec/2024 22:04:25] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:04:29,922 - INFO - 127.0.0.1 - - [02/Dec/2024 22:04:29] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:04:30,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:04:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:04:30,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:04:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:04:34,365 - INFO - 127.0.0.1 - - [02/Dec/2024 22:04:34] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:04:41,280 - INFO - 127.0.0.1 - - [02/Dec/2024 22:04:41] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:04:41,940 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:04:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:04:42,886 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:04:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:04:45,701 - INFO - 127.0.0.1 - - [02/Dec/2024 22:04:45] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:04:50,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:04:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:04:50,702 - INFO - 127.0.0.1 - - [02/Dec/2024 22:04:50] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:04:50,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:04:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:04:55,086 - INFO - 127.0.0.1 - - [02/Dec/2024 22:04:55] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:05:00,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:05:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:05:00,076 - INFO - 127.0.0.1 - - [02/Dec/2024 22:05:00] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:05:00,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:05:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:05:04,485 - INFO - 127.0.0.1 - - [02/Dec/2024 22:05:04] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:05:11,514 - INFO - 127.0.0.1 - - [02/Dec/2024 22:05:11] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:05:12,036 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:05:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:05:12,982 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:05:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:05:15,950 - INFO - 127.0.0.1 - - [02/Dec/2024 22:05:15] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:05:20,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:05:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:05:20,965 - INFO - 127.0.0.1 - - [02/Dec/2024 22:05:20] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:05:20,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:05:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:05:22,474 - INFO - 127.0.0.1 - - [02/Dec/2024 22:05:22] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:05:25,234 - INFO - 127.0.0.1 - - [02/Dec/2024 22:05:25] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:05:25,562 - INFO - 127.0.0.1 - - [02/Dec/2024 22:05:25] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:05:30,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:05:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:05:30,157 - INFO - 127.0.0.1 - - [02/Dec/2024 22:05:30] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:05:30,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:05:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:05:34,536 - INFO - 127.0.0.1 - - [02/Dec/2024 22:05:34] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:05:39,533 - INFO - 127.0.0.1 - - [02/Dec/2024 22:05:39] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:05:40,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:05:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:05:40,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:05:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:05:46,185 - INFO - 127.0.0.1 - - [02/Dec/2024 22:05:46] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:05:51,313 - INFO - 127.0.0.1 - - [02/Dec/2024 22:05:51] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:05:52,194 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:05:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:05:53,140 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:05:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:05:55,865 - INFO - 127.0.0.1 - - [02/Dec/2024 22:05:55] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:06:00,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:06:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:06:00,809 - INFO - 127.0.0.1 - - [02/Dec/2024 22:06:00] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:06:00,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:06:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:06:05,165 - INFO - 127.0.0.1 - - [02/Dec/2024 22:06:05] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:06:10,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:06:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:06:10,133 - INFO - 127.0.0.1 - - [02/Dec/2024 22:06:10] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:06:10,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:06:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:06:14,569 - INFO - 127.0.0.1 - - [02/Dec/2024 22:06:14] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:06:21,436 - INFO - 127.0.0.1 - - [02/Dec/2024 22:06:21] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:06:21,879 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:06:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:06:22,825 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:06:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:06:23,019 - INFO - 127.0.0.1 - - [02/Dec/2024 22:06:23] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:06:25,862 - INFO - 127.0.0.1 - - [02/Dec/2024 22:06:25] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:06:26,174 - INFO - 127.0.0.1 - - [02/Dec/2024 22:06:26] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:06:30,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:06:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:06:30,901 - INFO - 127.0.0.1 - - [02/Dec/2024 22:06:30] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:06:30,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:06:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:06:35,185 - INFO - 127.0.0.1 - - [02/Dec/2024 22:06:35] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:06:40,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:06:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:06:40,188 - INFO - 127.0.0.1 - - [02/Dec/2024 22:06:40] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:06:40,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:06:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:06:44,633 - INFO - 127.0.0.1 - - [02/Dec/2024 22:06:44] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:06:49,681 - INFO - 127.0.0.1 - - [02/Dec/2024 22:06:49] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:06:50,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:06:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:06:50,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:06:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:06:56,113 - INFO - 127.0.0.1 - - [02/Dec/2024 22:06:56] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:07:01,240 - INFO - 127.0.0.1 - - [02/Dec/2024 22:07:01] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:07:02,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:07:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:07:02,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:07:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:07:05,647 - INFO - 127.0.0.1 - - [02/Dec/2024 22:07:05] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:07:10,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:07:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:07:10,456 - INFO - 127.0.0.1 - - [02/Dec/2024 22:07:10] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:07:10,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:07:10 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:07:14,897 - INFO - 127.0.0.1 - - [02/Dec/2024 22:07:14] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:07:19,923 - INFO - 127.0.0.1 - - [02/Dec/2024 22:07:19] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:07:20,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:07:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:07:20,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:07:20 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:07:21,499 - INFO - 127.0.0.1 - - [02/Dec/2024 22:07:21] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:07:24,340 - INFO - 127.0.0.1 - - [02/Dec/2024 22:07:24] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:07:24,658 - INFO - 127.0.0.1 - - [02/Dec/2024 22:07:24] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:07:31,393 - INFO - 127.0.0.1 - - [02/Dec/2024 22:07:31] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:07:32,008 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:07:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:07:32,954 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:07:30 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:07:35,935 - INFO - 127.0.0.1 - - [02/Dec/2024 22:07:35] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:07:40,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:07:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:07:40,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:07:40 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:07:40,989 - INFO - 127.0.0.1 - - [02/Dec/2024 22:07:40] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:07:45,401 - INFO - 127.0.0.1 - - [02/Dec/2024 22:07:45] "POST /dashboard/_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:07:45,541 - INFO - 127.0.0.1 - - [02/Dec/2024 22:07:45] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:07:50,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:07:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:07:50,223 - INFO - 127.0.0.1 - - [02/Dec/2024 22:07:50] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:07:50,981 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:07:50 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:07:54,672 - INFO - 127.0.0.1 - - [02/Dec/2024 22:07:54] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:07:59,703 - INFO - 127.0.0.1 - - [02/Dec/2024 22:07:59] "POST /_dash-update-component HTTP/1.1" 200 -
+2024-12-02 22:08:00,035 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:08:00 KST)" skipped: maximum number of running instances reached (1)
+2024-12-02 22:08:02,864 - WARNING - Execution of job "start_log_collector (trigger: interval[0:00:10], next run at: 2024-12-02 22:08:00 KST)" skipped: maximum number of running instances reached (1)

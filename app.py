@@ -9,6 +9,9 @@ from blueprints.collector import start_log_collector
 from db.cleanup import manage_database
 from db import init_db
 from apscheduler.schedulers.background import BackgroundScheduler
+import sys
+
+sys.path.append('/app/lib/python3.10/site-packages')
 
 # Flask 애플리케이션 초기화
 app = Flask(__name__)
@@ -57,7 +60,7 @@ init_main_page(app)
 # 애플리케이션 실행
 if __name__ == "__main__":
     try:
-        app.run(host="0.0.0.0", port=5000, debug=True)
+        app.run(host="0.0.0.0", port=5000)
     except (KeyboardInterrupt, SystemExit):
         scheduler.shutdown()  # 안전한 종료
 
